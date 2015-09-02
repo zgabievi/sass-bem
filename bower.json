@@ -1,6 +1,6 @@
 {
-	"name": "BEM",
-	"version": "0.2.2",
+	"name": "bem",
+	"version": "0.2.3",
 	"main": "_bem.scss",
 	"description": "Collection of BEM Mixins & Helpers",
 	"authors": [
