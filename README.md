@@ -13,12 +13,14 @@ $ bower install bem --save
 - Place `/scss/` or `/sass/` directory to your project.
 
 ## Usage
-Place the following code in your `style.scss` file:
+Insert following code top of your file:
+
+for *scss* syntax:
 ```scss
 @import "/bower_components/bem/scss/bem";
 ```
 
-or place the following code in your `style.sass` file:
+for *sass* syntax:
 ```sass
 @import /bower_components/bem/scss/bem
 ```
