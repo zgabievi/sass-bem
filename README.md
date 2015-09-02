@@ -13,7 +13,7 @@ $ bower install bpg-banner --save
 - Place `/scss/` directory to your project.
 
 ## Usage
-Place the following code in your `.scss` file:
+Place the following code in your `style.scss` file:
 ```sass
 @import "/bower_components/bem/scss/bem";
 ```
