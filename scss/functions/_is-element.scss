@@ -1,0 +1,3 @@
+@function is-element($selector) {
+	@return str-index($selector, '__') != null;
+}

@@ -1,0 +1,11 @@
+@mixin block($block) {
+	.#{$block} {
+		@content;
+	}
+}
+
+@mixin b($block) {
+	@include block($block) {
+		@content;
+	}
+}

@@ -1,0 +1,7 @@
+@mixin at($modifier) {
+	$block: get-block(#{&});
+
+	.#{$block}--#{$modifier} & {
+		@content;
+	}
+}
