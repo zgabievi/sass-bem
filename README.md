@@ -13,7 +13,7 @@ $ bower install bem --save
 - Place `/scss/` or `/sass/` directory to your project.
 
 ## Usage
-Insert following code top of your file:
+Insert following code in top of your file:
 
 for `scss` syntax:
 ```scss
