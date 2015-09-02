@@ -15,12 +15,12 @@ $ bower install bem --save
 ## Usage
 Insert following code top of your file:
 
-for *scss* syntax:
+for `scss` syntax:
 ```scss
 @import "/bower_components/bem/scss/bem";
 ```
 
-for *sass* syntax:
+for `sass` syntax:
 ```sass
 @import /bower_components/bem/scss/bem
 ```
