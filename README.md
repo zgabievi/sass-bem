@@ -18,9 +18,7 @@ Place the following code in your `style.scss` file:
 @import "/bower_components/bem/scss/bem";
 ```
 
-or
-
-Place the following code in your `style.sass` file:
+or place the following code in your `style.sass` file:
 ```sass
 @import /bower_components/bem/scss/bem
 ```
