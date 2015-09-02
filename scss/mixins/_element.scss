@@ -4,7 +4,7 @@
 			@content;
 		}
 	} @else {
-		$block: get(#{&});
+		$block: get-block(#{&});
 
 		& .#{$block}__#{$element} {
 			@content;
