@@ -6,7 +6,7 @@ Collection of BEM Mixins &amp; Helpers
 ## Installation
 ### Install With [Bower](http://bower.io/):
 ```
-$ bower install bpg-banner --save
+$ bower install bem --save
 ```
 ### Install Manualy
 - [Download Package Archive](https://github.com/zgabievi/bem/archive/master.zip)
