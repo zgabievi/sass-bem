@@ -1,5 +1,19 @@
 # Documentation
 
++ [Mixins](https://github.com/zgabievi/bem/blob/master/Documentation.md#mixins)
+	- [Block](https://github.com/zgabievi/bem/blob/master/Documentation.md#block-mixin)
+	- [Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#element-mixin)
+	- [Modifier](https://github.com/zgabievi/bem/blob/master/Documentation.md#modifier-mixin)
+	- [Relations](https://github.com/zgabievi/bem/blob/master/Documentation.md#relations)
+	- [States](https://github.com/zgabievi/bem/blob/master/Documentation.md#states)
+	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#pseudo-elements)
++ [Functions](https://github.com/zgabievi/bem/blob/master/Documentation.md#functions)
+	- [bem-index()](https://github.com/zgabievi/bem/blob/master/Documentation.md#bem-index)
+	- [get-block()](https://github.com/zgabievi/bem/blob/master/Documentation.md#get-block)
+	- [is-block()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-block)
+	- [is-element()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-element)
+	- [is-modifier()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-modifier)
+
 ## Mixins
 
 ### Block mixin:
