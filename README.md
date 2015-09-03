@@ -3,6 +3,11 @@
 
 Collection of BEM Mixins &amp; Helpers
 
++ [Installation](https://github.com/zgabievi/bem/blob/master/README.md#installation)
++ [Usage](https://github.com/zgabievi/bem/blob/master/README.md#usage)
++ [Documentation](https://github.com/zgabievi/bem/blob/master/README.md#documentation)
++ [License](https://github.com/zgabievi/bem/blob/master/README.md#license)
+
 ## Installation
 ### Install With [Bower](http://bower.io/):
 ```
@@ -26,6 +31,21 @@ for `sass` syntax:
 ```
 
 ## Documentation
+
++ [Mixins](https://github.com/zgabievi/bem/blob/master/README.md#mixins)
+	1. [Block](https://github.com/zgabievi/bem/blob/master/README.md#block-mixin)
+	2. [Element](https://github.com/zgabievi/bem/blob/master/README.md#element-mixin)
+	3. [Modifier](https://github.com/zgabievi/bem/blob/master/README.md#modifier-mixin)
+	4. [Relations](https://github.com/zgabievi/bem/blob/master/README.md#relations)
+	5. [States](https://github.com/zgabievi/bem/blob/master/README.md#states)
+	6. [Pseudo Element](https://github.com/zgabievi/bem/blob/master/README.md#pseudo-elements)
++ [Functions](https://github.com/zgabievi/bem/blob/master/README.md#functions)
+	1. [bem-index()](https://github.com/zgabievi/bem/blob/master/README.md#bem-index)
+	2. [get-block()](https://github.com/zgabievi/bem/blob/master/README.md#get-block)
+	3. [is-block()](https://github.com/zgabievi/bem/blob/master/README.md#is-block)
+	4. [is-element()](https://github.com/zgabievi/bem/blob/master/README.md#is-element)
+	5. [is-modifier()](https://github.com/zgabievi/bem/blob/master/README.md#is-modifier)
+
 ### Mixins
 #### Block mixin:
 ```scss
