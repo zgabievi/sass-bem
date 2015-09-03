@@ -33,18 +33,18 @@ for `sass` syntax:
 ## Documentation
 
 + [Mixins](https://github.com/zgabievi/bem/blob/master/README.md#mixins)
-	1. [Block](https://github.com/zgabievi/bem/blob/master/README.md#block-mixin)
-	2. [Element](https://github.com/zgabievi/bem/blob/master/README.md#element-mixin)
-	3. [Modifier](https://github.com/zgabievi/bem/blob/master/README.md#modifier-mixin)
-	4. [Relations](https://github.com/zgabievi/bem/blob/master/README.md#relations)
-	5. [States](https://github.com/zgabievi/bem/blob/master/README.md#states)
-	6. [Pseudo Element](https://github.com/zgabievi/bem/blob/master/README.md#pseudo-elements)
+	- [Block](https://github.com/zgabievi/bem/blob/master/README.md#block-mixin)
+	- [Element](https://github.com/zgabievi/bem/blob/master/README.md#element-mixin)
+	- [Modifier](https://github.com/zgabievi/bem/blob/master/README.md#modifier-mixin)
+	- [Relations](https://github.com/zgabievi/bem/blob/master/README.md#relations)
+	- [States](https://github.com/zgabievi/bem/blob/master/README.md#states)
+	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/README.md#pseudo-elements)
 + [Functions](https://github.com/zgabievi/bem/blob/master/README.md#functions)
-	1. [bem-index()](https://github.com/zgabievi/bem/blob/master/README.md#bem-index)
-	2. [get-block()](https://github.com/zgabievi/bem/blob/master/README.md#get-block)
-	3. [is-block()](https://github.com/zgabievi/bem/blob/master/README.md#is-block)
-	4. [is-element()](https://github.com/zgabievi/bem/blob/master/README.md#is-element)
-	5. [is-modifier()](https://github.com/zgabievi/bem/blob/master/README.md#is-modifier)
+	- [bem-index()](https://github.com/zgabievi/bem/blob/master/README.md#bem-index)
+	- [get-block()](https://github.com/zgabievi/bem/blob/master/README.md#get-block)
+	- [is-block()](https://github.com/zgabievi/bem/blob/master/README.md#is-block)
+	- [is-element()](https://github.com/zgabievi/bem/blob/master/README.md#is-element)
+	- [is-modifier()](https://github.com/zgabievi/bem/blob/master/README.md#is-modifier)
 
 ### Mixins
 #### Block mixin:
