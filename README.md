@@ -211,6 +211,37 @@ a:nth-child(odd) {
 	color: aqua;
 }
 ```
+### Functions
+#### bem-index()
+```scss
+bem-index(list__item); // @returns '5'
+bem-index(navbar--inverse); // @returns '7'
+bem-index(form); // @returns '0'
+```
+#### get-block()
+```scss
+get-block('.list__item'); // @returns 'list'
+get-block('.navbar--inverse'); // @returns 'navbar'
+get-block('.form'); // @returns 'form'
+```
+#### is-block()
+```scss
+is-block('.list__item'); // @returns false
+is-block('.navbar--inverse'); // @returns false
+is-block('.form'); // @returns true
+```
+#### is-element()
+```scss
+is-element('.list__item'); // @returns true
+is-element('.navbar--inverse'); // @returns false
+is-element('.form'); // @returns false
+```
+#### is-modifier()
+```scss
+is-element('.list__item'); // @returns false
+is-element('.navbar--inverse'); // @returns true
+is-element('.form'); // @returns false
+```
 
 ## License
 The BEM package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
