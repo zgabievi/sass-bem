@@ -26,137 +26,189 @@ for `sass` syntax:
 ```
 
 ## Documentation
-`scss` input
+### Mixins
+#### Block mixin:
 ```scss
-@include b(navbar) {
-	display: block;
+@include b(list) {
+	list-style-type: disc;
+}
+```
+> You can use `@include block(...) {...}` too
+
+CSS Output:
+```css
+.list {
+	list-style-type: disc;
+}
+```
+---
+#### Element mixin:
+```scss
+@include b(list) {
+	list-style-type: disc;
 
 	@include e(item) {
-		display: inline-block;
+		padding: 0.5em 1em;
+	}
+}
+```
+> You can use `@include element(...) {...}` too
 
-		@include is(active) {
-			background-color: orange;
-		}
+CSS Output:
+```css
+.list {
+	list-style-type: disc;
+}
 
-		@include hover {
-			background-color: blue;
-		}
+.list__item {
+	padding: 0.5em 1em;
+}
+```
+---
+#### Modifier mixin:
+```scss
+@include b(list) {
+	list-style-type: disc;
 
-		@include focus {
-			background-color: green;
-		}
+	@include m(ordered) {
+		list-style-type: decimal;
+	}
+}
+```
+> You can use `@include modifier(...) {...}` too
 
-		@include active {
-			background-color: purple;
+CSS Output:
+```css
+.list {
+	list-style-type: disc;
+}
+
+.list--ordered {
+	list-style-type: decimal;
+}
+```
+---
+#### Relations
+```scss
+@include b(list) {
+	list-style-type: disc;
+
+	@include e(item) {
+		padding: 0.5em 1em;
+		
+		@include at(ordered) {
+			padding: 1em;
 		}
 
 		@include duo {
 			margin-left: 10px;
 		}
 
-		@include with(form) {
+		@include with(element) {
 			margin-left: 5px;
-		}
-
-		@include first {
-			border-radius: 10px;
-		}
-
-		@include last {
-			border-radius: 5px;
-		}
-
-		@include even {
-			background-color: yellow;
-		}
-
-		@include even {
-			background-color: aqua;
-		}
-	}
-
-	@include m(inverse) {
-		background-color: black;
-
-		@include e(item) {
-			background-color: grey;
-		}
-	}
-
-	@include e(form) {
-		background-color: white;
-
-		@include at(inverse) {
-			background-color: lightgray;
 		}
 	}
 }
 ```
-
-`css` output
+CSS Output:
 ```css
-.navbar {
-	display: block;
+.list {
+	list-style-type: disc;
 }
 
-.navbar__item {
-	display: inline-block;
+.list__item {
+	padding: 0.5em 1em;
 }
 
-.navbar__item.is-active {
-	background-color: orange;
+.list--ordered .list__item {
+	padding: 1em;
 }
 
-.navbar__item:hover {
-	background-color: blue;
-}
-
-.navbar__item:focus {
-	background-color: green;
-}
-
-.navbar__item:active {
-	background-color: purple;
-}
-
-.navbar__item + .navbar__item {
+.list__item + .list__item {
 	margin-left: 10px;
 }
 
-.navbar__item + .navbar__form {
+.list__item + .list__element {
 	margin-left: 5px;
 }
+```
+----
+#### States
+```scss
+a {
 
-.navbar__item:first-child {
-	border-radius: 10px;
+	@include is(active) {
+		font-weight: bold;
+	}
+		
+	@include hover {
+		color: red;
+	}
+				
+	@include focus {
+		color: blue;
+	}
+				
+	@include active {
+		color: green;
+	}
+}
+```
+CSS Output:
+```css
+a.is-active {
+	font-weight: bold;
 }
 
-.navbar__item:last-child {
-	border-radius: 5px;
+a:hover {
+	color: red;
 }
 
-.navbar__item:nth-child(even) {
-	background-color: yellow;
+a:focus {
+	color: blue;
 }
 
-.navbar__item:nth-child(even) {
-	background-color: aqua;
+a:active {
+	color: green;
+}
+```
+---
+#### Pseudo Elements
+```scss
+a {
+	@include first {
+		color: orange;
+	}
+	
+	@include last {
+		color: blue;
+	}
+		
+	@include even {
+		color: green;
+	}
+		
+	@include odd {
+		color: aqua;
+	}
+}
+```
+CSS Output:
+```css
+a:first-child {
+	color: orange;
 }
 
-.navbar--inverse {
-	background-color: black;
+a:last-child {
+	color: blue;
 }
 
-.navbar--inverse .navbar__item {
-	background-color: grey;
+a:nth-child(even) {
+	color: green;
 }
 
-.navbar__form {
-	background-color: white;
-}
-
-.navbar--inverse .navbar__form {
-	background-color: lightgray;
+a:nth-child(odd) {
+	color: aqua;
 }
 ```
 
