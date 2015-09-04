@@ -1,0 +1,18 @@
+=at($modifier)
+	$block: get-block(#{&})
+	.#{$block}--#{$modifier} &
+		@content
+
+=with($element)
+	$block: get-block(#{&})
+	& + .#{$block}__#{$element}
+		@content
+
+=duo
+	& + &
+		@content
+
+=while($modifier)
+	$block: get-block(#{&})
+	&.#{$block}--#{$modifier}
+		@content

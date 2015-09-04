@@ -1,0 +1,29 @@
+@mixin at($modifier) {
+	$block: get-block(#{&});
+
+	.#{$block}--#{$modifier} & {
+		@content;
+	}
+}
+
+@mixin with($element) {
+	$block: get-block(#{&});
+
+	& + .#{$block}__#{$element} {
+		@content;
+	}
+}
+
+@mixin duo {
+	& + & {
+		@content;
+	}
+}
+
+@mixin while($modifier) {
+	$block: get-block(#{&});
+
+	&.#{$block}--#{$modifier} {
+		@content;
+	}
+}

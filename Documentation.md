@@ -4,6 +4,8 @@
 
 ### Block mixin:
 
+#### b(...) || block(...)
+
 ```scss
 @include b(list) {
 	list-style-type: disc;
@@ -23,6 +25,8 @@ CSS Output:
 ---
 
 ### Element mixin:
+
+#### e(...) || element(...)
 
 ```scss
 @include b(list) {
@@ -46,6 +50,8 @@ CSS Output:
 
 ### Modifier mixin:
 
+#### m(...) || modifier(...)
+
 ```scss
 @include b(list) {
 	@include m(ordered) {
@@ -68,6 +74,8 @@ CSS Output:
 
 ### Relations
 
+#### at(...)
+
 ```scss
 @include b(list) {
 	@include e(item) {
@@ -87,6 +95,8 @@ CSS Output:
 ```
 
 ----
+
+#### duo()
 
 ```scss
 @include b(list) {
@@ -108,6 +118,8 @@ CSS Output:
 
 ----
 
+#### with(...)
+
 ```scss
 @include b(list) {
 	@include e(item) {
@@ -128,7 +140,31 @@ CSS Output:
 
 ----
 
+#### while(...)
+
+```scss
+@include b(list) {
+	@include m(inline) {
+		@include while(odered) {
+			list-style-type: decimal;
+		}
+	}
+}
+```
+
+CSS Output:
+
+```css
+.list--inline.list--odered {
+	list-style-type: decimal;
+}
+```
+
+----
+
 ### States
+
+#### is(...)
 
 ```scss
 a {
@@ -148,6 +184,8 @@ a.is-active {
 
 ---
 
+#### hover()
+
 ```scss
 a {
 	@include hover {
@@ -166,6 +204,8 @@ a:hover {
 
 ---
 
+#### focus()
+
 ```scss
 a {	
 	@include focus {
@@ -183,6 +223,8 @@ a:focus {
 ```
 
 ---
+
+#### active()
 
 ```scss
 a {		
@@ -204,6 +246,8 @@ a:active {
 
 ### Pseudo Elements
 
+#### first()
+
 ```scss
 a {
 	@include first {
@@ -221,6 +265,8 @@ a:first-child {
 ```
 
 ---
+
+#### last()
 
 ```scss
 a {
@@ -240,6 +286,8 @@ a:last-child {
 
 ---
 
+#### even()
+
 ```scss
 a {
 	@include even {
@@ -257,6 +305,8 @@ a:nth-child(even) {
 ```
 
 ---
+
+#### odd()
 
 ```scss
 a {
