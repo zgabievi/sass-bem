@@ -14,6 +14,7 @@
 		- [hover](https://github.com/zgabievi/bem/blob/master/Documentation.md#hover)
 		- [focus](https://github.com/zgabievi/bem/blob/master/Documentation.md#focus)
 		- [active](https://github.com/zgabievi/bem/blob/master/Documentation.md#active)
+		- [checked](https://github.com/zgabievi/bem/blob/master/Documentation.md#checked)
 		- [disabled](https://github.com/zgabievi/bem/blob/master/Documentation.md#disabled)
 	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#pseudo-elements)
 		- [first](https://github.com/zgabievi/bem/blob/master/Documentation.md#first)
@@ -270,6 +271,25 @@ a:active {
 	color: green;
 }
 ```
+
+---
+
+#### checked()
+
+```scss
+input {		
+	@include checked {
+		display: block;
+	}
+}
+```
+
+CSS Output:
+
+```css
+input:checked {
+	display: block;
+}
 
 ---
 
