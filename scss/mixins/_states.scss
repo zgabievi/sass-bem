@@ -21,3 +21,9 @@
 		@content;
 	}
 }
+
+@mixin disabled {
+	&[disabled] {
+		@content;
+	}
+}

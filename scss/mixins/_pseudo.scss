@@ -21,3 +21,15 @@
 		@content;
 	}
 }
+
+@mixin before {
+	&:before {
+		@content;
+	}
+}
+
+@mixin after {
+	&:after {
+		@content;
+	}
+}

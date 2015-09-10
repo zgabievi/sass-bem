@@ -14,11 +14,14 @@
 		- [hover](https://github.com/zgabievi/bem/blob/master/Documentation.md#hover)
 		- [focus](https://github.com/zgabievi/bem/blob/master/Documentation.md#focus)
 		- [active](https://github.com/zgabievi/bem/blob/master/Documentation.md#active)
+		- [disabled](https://github.com/zgabievi/bem/blob/master/Documentation.md#disabled)
 	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#pseudo-elements)
 		- [first](https://github.com/zgabievi/bem/blob/master/Documentation.md#first)
 		- [last](https://github.com/zgabievi/bem/blob/master/Documentation.md#last)
 		- [even](https://github.com/zgabievi/bem/blob/master/Documentation.md#even)
 		- [odd](https://github.com/zgabievi/bem/blob/master/Documentation.md#odd)
+		- [before](https://github.com/zgabievi/bem/blob/master/Documentation.md#before)
+		- [after](https://github.com/zgabievi/bem/blob/master/Documentation.md#after)
 + [Functions](https://github.com/zgabievi/bem/blob/master/Documentation.md#functions)
 	- [bem-index()](https://github.com/zgabievi/bem/blob/master/Documentation.md#bem-index)
 	- [get-block()](https://github.com/zgabievi/bem/blob/master/Documentation.md#get-block)
@@ -270,6 +273,24 @@ a:active {
 
 ---
 
+#### disabled()
+
+```scss
+button {		
+	@include disabled {
+		opacity: 0.8;
+	}
+}
+```
+
+CSS Output:
+
+```css
+button[disabled] {
+	opacity: 0.8;
+}
+```
+
 ### Pseudo Elements
 
 #### first()
@@ -347,6 +368,46 @@ CSS Output:
 ```css
 a:nth-child(odd) {
 	color: aqua;
+}
+```
+
+---
+
+#### before()
+
+```scss
+a {
+	@include before {
+		color: orange;
+	}
+}
+```
+
+CSS Output:
+
+```css
+a:before {
+	color: orange;
+}
+```
+
+---
+
+#### after()
+
+```scss
+a {
+	@include after {
+		color: sky;
+	}
+}
+```
+
+CSS Output:
+
+```css
+a:after {
+	color: sky;
 }
 ```
 
