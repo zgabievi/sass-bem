@@ -1,4 +1,3 @@
 @function get-block($element) {
-	$block: str-slice($element, 2, bem-index($element) - 1);
-	@return str-slice($block, 1, bem-index($block) - 1);
+	@return str-slice($element, 2, bem-index($element) - 1);
 }
