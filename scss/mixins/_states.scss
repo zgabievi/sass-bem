@@ -39,3 +39,9 @@
 		@content;
 	}
 }
+
+@mixin contenteditable {
+	&[contenteditable="true"] {
+		@content;
+	}
+}

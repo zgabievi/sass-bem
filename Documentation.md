@@ -17,6 +17,7 @@
 		- [checked](https://github.com/zgabievi/bem/blob/master/Documentation.md#checked)
 		- [disabled](https://github.com/zgabievi/bem/blob/master/Documentation.md#disabled)
 		- [readonly](https://github.com/zgabievi/bem/blob/master/Documentation.md#readonly)
+		- [contenteditable](https://github.com/zgabievi/bem/blob/master/Documentation.md#contenteditable)
 	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#pseudo-elements)
 		- [first](https://github.com/zgabievi/bem/blob/master/Documentation.md#first)
 		- [last](https://github.com/zgabievi/bem/blob/master/Documentation.md#last)
@@ -330,6 +331,26 @@ CSS Output:
 ```css
 input[readonly] {
 	border-color: #cecece;
+}
+```
+
+---
+
+#### contenteditable()
+
+```scss
+.box {		
+	@include contenteditable {
+		border-color: orange;
+	}
+}
+```
+
+CSS Output:
+
+```css
+.box[contenteditable="true"] {
+	border-color: orange;
 }
 ```
 
