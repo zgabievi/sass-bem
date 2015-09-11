@@ -16,6 +16,7 @@
 		- [active](https://github.com/zgabievi/bem/blob/master/Documentation.md#active)
 		- [checked](https://github.com/zgabievi/bem/blob/master/Documentation.md#checked)
 		- [disabled](https://github.com/zgabievi/bem/blob/master/Documentation.md#disabled)
+		- [readonly](https://github.com/zgabievi/bem/blob/master/Documentation.md#readonly)
 	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#pseudo-elements)
 		- [first](https://github.com/zgabievi/bem/blob/master/Documentation.md#first)
 		- [last](https://github.com/zgabievi/bem/blob/master/Documentation.md#last)
@@ -290,6 +291,7 @@ CSS Output:
 input:checked {
 	display: block;
 }
+```
 
 ---
 
@@ -308,6 +310,26 @@ CSS Output:
 ```css
 button[disabled] {
 	opacity: 0.8;
+}
+```
+
+---
+
+#### readonly()
+
+```scss
+input {		
+	@include readonly {
+		border-color: #cecece;
+	}
+}
+```
+
+CSS Output:
+
+```css
+input[readonly] {
+	border-color: #cecece;
 }
 ```
 
