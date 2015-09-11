@@ -33,3 +33,9 @@
 		@content;
 	}
 }
+
+@mixin readonly {
+	&[readonly] {
+		@content;
+	}
+}
