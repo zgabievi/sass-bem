@@ -1,13 +1,14 @@
 @function bem-index($string) {
-	$index: 0;
+	$e_index: null;
+	$m_index: null;
 
 	@if (str-index($string, '__') != null) {
-		$index: str-index($string, '__');
+		$e_index: str-index($string, '__');
 	}
 
-	@if(str-index($string, '--') != null) {
-		$index: str-index($string, '--');
+	@if (str-index($string, '--') != null) {
+		$m_index: str-index($string, '--');
 	}
 
-	@return $index;
+	@return math-min($e_index, $m_index, 0);
 }

@@ -31,6 +31,7 @@
 	- [is-block()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-block)
 	- [is-element()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-element)
 	- [is-modifier()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-modifier)
+	- [math-min()](https://github.com/zgabievi/bem/blob/master/Documentation.md#math-min)
 
 ## Mixins
 
@@ -514,4 +515,14 @@ is-element('.form'); // @returns false
 is-element('.list__item'); // @returns false
 is-element('.navbar--inverse'); // @returns true
 is-element('.form'); // @returns false
+```
+
+#### math-min()
+
+```scss
+math-min(7, 15, 0); // @returns 7
+math-min(10, 10, 0); // @returns 10
+math-min(7, null, 0); // @returns 7
+math-min(null, 5, 0); // @returns 5
+math-min(null, null, 0); // @returns 0
 ```
