@@ -1,6 +1,6 @@
 # BEM
-[![Version](https://img.shields.io/bower/v/bem.svg)](https://github.com/zgabievi/bem)
-[![License](https://img.shields.io/bower/l/bootstrap.svg)](http://opensource.org/licenses/MIT)
+[![Release](https://img.shields.io/github/release/zgabievi/bem.svg?style=flat-square)](https://github.com/zgabievi/bem)
+[![License](https://img.shields.io/github/license/zgabievi/bem.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 Collection of BEM Mixins &amp; Helpers
 
