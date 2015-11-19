@@ -31,7 +31,7 @@ for `sass` syntax:
 @import /bower_components/bem/scss/bem
 ```
 
-## Configuration
+### Configuration
 In your `style.scss`, after you import `bem`, you can configure separators
 ```scss
 $bem: (
