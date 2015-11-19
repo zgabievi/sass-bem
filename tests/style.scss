@@ -98,6 +98,26 @@
 		}
 	}
 
+	//@include test('at [mixin]') {
+	//	@include assert('Relates selector at modifier') {
+	//		@include input {
+	//			@include b(list) {
+	//				@include e(item) {
+	//					@include at(inline) {
+	//						display: inline-block;
+	//					}
+	//				}
+	//			}
+	//		}
+	//
+	//		@include expect {
+	//			.list--inline .list__item {
+	//				display: inline-block;
+	//			}
+	//		}
+	//	}
+	//}
+
 	@include test('duo [mixin]') {
 		@include assert('Relates same classed neighbour elements') {
 			@include input {
@@ -117,6 +137,46 @@
 			}
 		}
 	}
+
+	//@include test('with [mixin]') {
+	//	@include assert('Relates any neighbour elements') {
+	//		@include input {
+	//			@include b(list) {
+	//				@include e(item) {
+	//					@include with(element) {
+	//						margin-left: 5px;
+	//					}
+	//				}
+	//			}
+	//		}
+	//
+	//		@include expect {
+	//			.list__item + .list__element {
+	//				margin-left: 5px;
+	//			}
+	//		}
+	//	}
+	//}
+
+	//@include test('while [mixin]') {
+	//	@include assert('Creates one selector with several modifier classes') {
+	//		@include input {
+	//			@include b(list) {
+	//				@include m(inline) {
+	//					@include while(short) {
+	//						display: inline;;
+	//					}
+	//				}
+	//			}
+	//		}
+	//
+	//		@include expect {
+	//			.list--inline.list--short {
+	//				display: inline;
+	//			}
+	//		}
+	//	}
+	//}
 
 	@include test('is [mixin]') {
 		@include assert('Addes state to selector') {
