@@ -1,5 +1,5 @@
 {
-	"name": "bem",
+	"name": "sass-bem",
 	"version": "0.2.0",
 	"description": "Collection of BEM Mixins & Helpers",
 	"main": "gulpfile.js",
