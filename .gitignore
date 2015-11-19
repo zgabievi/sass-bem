@@ -1,6 +1,5 @@
 .idea
 .sass-cache
 node_modules
-test
 gulpfile.js
 config.json
