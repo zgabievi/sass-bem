@@ -2,8 +2,8 @@
 	$e_index: null
 	$m_index: null
 
-	@if str-index($string, "__") != null
-		$e_index: str-index($string, "__")
-	@if str-index($string, "--") != null
-		$m_index: str-index($string, "--")
+	@if str-index($string, #{map-get($bem, 'element')}) != null
+		$e_index: str-index($string, #{map-get($bem, 'element')})
+	@if str-index($string, #{map-get($bem, 'modifier')}) != null
+		$m_index: str-index($string, #{map-get($bem, 'modifier')})
 	@return math-min($e_index, $m_index, 0)

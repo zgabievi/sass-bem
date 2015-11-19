@@ -1,11 +1,11 @@
 =at($modifier)
 	$block: get-block(#{&})
-	.#{$block}--#{$modifier} &
+	.#{$block}#{map-get($bem, 'modifier')}#{$modifier} &
 		@content
 
 =with($element)
 	$block: get-block(#{&})
-	& + .#{$block}__#{$element}
+	& + .#{$block}#{map-get($bem, 'element')}#{$element}
 		@content
 
 =duo
@@ -16,5 +16,5 @@
 
 =while($modifier)
 	$block: get-block(#{&})
-	&.#{$block}--#{$modifier}
+	&.#{$block}#{map-get($bem, 'modifier')}#{$modifier}
 		@content

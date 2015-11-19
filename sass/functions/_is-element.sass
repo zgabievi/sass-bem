@@ -1,2 +1,2 @@
 @function is-element($selector)
-	@return str-index($selector, "__") != null
+	@return str-index($selector, #{map-get($bem, 'element')}) != null

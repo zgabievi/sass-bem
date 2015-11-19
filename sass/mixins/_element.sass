@@ -1,10 +1,10 @@
 =element($element)
 	@if (is-block(#{&}))
-		&__#{$element}
+		&#{map-get($bem, 'element')}#{$element}
 			@content
 	@else
 		$block: get-block(#{&})
-		& .#{$block}__#{$element}
+		& .#{$block}#{map-get($bem, 'element')}#{$element}
 			@content
 
 =e($element)

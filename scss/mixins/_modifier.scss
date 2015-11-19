@@ -1,5 +1,5 @@
 @mixin modifier($modifier) {
-	&--#{$modifier} {
+	&#{map-get($bem, 'modifier')}#{$modifier} {
 		@content;
 	}
 }

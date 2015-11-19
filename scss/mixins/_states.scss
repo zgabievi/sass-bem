@@ -1,5 +1,5 @@
 @mixin is($state) {
-	&.is-#{$state} {
+	&.is#{map-get($bem, 'state')}#{$state} {
 		@content;
 	}
 }
