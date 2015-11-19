@@ -10,10 +10,16 @@ Collection of BEM Mixins &amp; Helpers
 + [License](https://github.com/zgabievi/bem/blob/master/README.md#license)
 
 ## Installation
-### Install With [Bower](http://bower.io/):
+### Install With [Bower](http://bower.io/search/?q=bem):
 ```
 $ bower install bem --save
 ```
+
+### Install With [NPM](https://www.npmjs.com/package/sass-bem):
+```
+$ npm install sass-bem --save
+```
+
 ### Install Manually
 - [Download Package Archive](https://github.com/zgabievi/bem/archive/master.zip)
 - Place `/scss/` or `/sass/` directory to your project.
