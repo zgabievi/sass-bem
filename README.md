@@ -1,6 +1,5 @@
 # BEM
-[![Version](https://img.shields.io/bower/v/bem.svg?style=flat-square)](https://github.com/zgabievi/bem)
-[![Version](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
+[![Release](https://img.shields.io/github/release/qubyte/rubidium.svg?style=flat-square)](https://github.com/zgabievi/bem)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 Collection of BEM Mixins &amp; Helpers
