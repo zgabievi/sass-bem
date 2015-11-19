@@ -1,0 +1,57 @@
+@import "../scss/bem";
+
+// .list
+@include b(list) {
+	margin-left: 0.5em;
+
+	// .list__item
+	@include e(item) {
+		padding-bottom: 0.5em;
+
+		// .list__item + .list__item
+		@include duo {
+			margin-left: 10px;
+		}
+
+		// .list--small .list__item
+		@include at(small) {
+			padding-bottom: 0.2em;
+		}
+
+		// .list__item .list__link
+		@include e(link) {
+			background-color: #cecece;
+			padding: 0.2em;
+
+			// .list__item .list__link + .list__link
+			@include duo {
+				margin-left: 5px;
+			}
+
+			// .list--small .list__item .list__link
+			@include at(small) {
+				padding: 0.1em;
+			}
+
+			// .list__link:before
+			@include before {
+				background-color: red;
+
+				// .list--small .list__link:before
+				@include at(small) {
+					background-color: orange;
+				}
+			}
+
+			// .list__link .list__icon
+			@include e(icon) {
+				font-size: 12px;
+			}
+		}
+
+		// list__item--end
+		@include m(end) {
+			padding-bottom: 0;
+		}
+	}
+}

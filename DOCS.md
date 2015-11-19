@@ -1,37 +1,38 @@
-# Documentation
+# DOCS
 
-+ [Mixins](https://github.com/zgabievi/bem/blob/master/Documentation.md#mixins)
-	- [Block](https://github.com/zgabievi/bem/blob/master/Documentation.md#block-mixin)
-	- [Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#element-mixin)
-	- [Modifier](https://github.com/zgabievi/bem/blob/master/Documentation.md#modifier-mixin)
-	- [Relations](https://github.com/zgabievi/bem/blob/master/Documentation.md#relations)
-		- [at](https://github.com/zgabievi/bem/blob/master/Documentation.md#at)
-		- [duo](https://github.com/zgabievi/bem/blob/master/Documentation.md#duo)
-		- [with](https://github.com/zgabievi/bem/blob/master/Documentation.md#with)
-		- [while](https://github.com/zgabievi/bem/blob/master/Documentation.md#while)
-	- [States](https://github.com/zgabievi/bem/blob/master/Documentation.md#states)
-		- [is](https://github.com/zgabievi/bem/blob/master/Documentation.md#is)
-		- [hover](https://github.com/zgabievi/bem/blob/master/Documentation.md#hover)
-		- [focus](https://github.com/zgabievi/bem/blob/master/Documentation.md#focus)
-		- [active](https://github.com/zgabievi/bem/blob/master/Documentation.md#active)
-		- [checked](https://github.com/zgabievi/bem/blob/master/Documentation.md#checked)
-		- [disabled](https://github.com/zgabievi/bem/blob/master/Documentation.md#disabled)
-		- [readonly](https://github.com/zgabievi/bem/blob/master/Documentation.md#readonly)
-		- [contenteditable](https://github.com/zgabievi/bem/blob/master/Documentation.md#contenteditable)
-	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/Documentation.md#pseudo-elements)
-		- [first](https://github.com/zgabievi/bem/blob/master/Documentation.md#first)
-		- [last](https://github.com/zgabievi/bem/blob/master/Documentation.md#last)
-		- [even](https://github.com/zgabievi/bem/blob/master/Documentation.md#even)
-		- [odd](https://github.com/zgabievi/bem/blob/master/Documentation.md#odd)
-		- [before](https://github.com/zgabievi/bem/blob/master/Documentation.md#before)
-		- [after](https://github.com/zgabievi/bem/blob/master/Documentation.md#after)
-+ [Functions](https://github.com/zgabievi/bem/blob/master/Documentation.md#functions)
-	- [bem-index()](https://github.com/zgabievi/bem/blob/master/Documentation.md#bem-index)
-	- [get-block()](https://github.com/zgabievi/bem/blob/master/Documentation.md#get-block)
-	- [is-block()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-block)
-	- [is-element()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-element)
-	- [is-modifier()](https://github.com/zgabievi/bem/blob/master/Documentation.md#is-modifier)
-	- [math-min()](https://github.com/zgabievi/bem/blob/master/Documentation.md#math-min)
++ [Mixins](https://github.com/zgabievi/bem/blob/master/DOCS.md#mixins)
+	- [Block](https://github.com/zgabievi/bem/blob/master/DOCS.md#block-mixin)
+	- [Element](https://github.com/zgabievi/bem/blob/master/DOCS.md#element-mixin)
+	- [Modifier](https://github.com/zgabievi/bem/blob/master/DOCS.md#modifier-mixin)
+	- [Relations](https://github.com/zgabievi/bem/blob/master/DOCS.md#relations)
+		- [at](https://github.com/zgabievi/bem/blob/master/DOCS.md#at)
+		- [duo](https://github.com/zgabievi/bem/blob/master/DOCS.md#duo)
+		- [with](https://github.com/zgabievi/bem/blob/master/DOCS.md#with)
+		- [while](https://github.com/zgabievi/bem/blob/master/DOCS.md#while)
+	- [States](https://github.com/zgabievi/bem/blob/master/DOCS.md#states)
+		- [is](https://github.com/zgabievi/bem/blob/master/DOCS.md#is)
+		- [hover](https://github.com/zgabievi/bem/blob/master/DOCS.md#hover)
+		- [focus](https://github.com/zgabievi/bem/blob/master/DOCS.md#focus)
+		- [active](https://github.com/zgabievi/bem/blob/master/DOCS.md#active)
+		- [checked](https://github.com/zgabievi/bem/blob/master/DOCS.md#checked)
+		- [disabled](https://github.com/zgabievi/bem/blob/master/DOCS.md#disabled)
+		- [readonly](https://github.com/zgabievi/bem/blob/master/DOCS.md#readonly)
+		- [contenteditable](https://github.com/zgabievi/bem/blob/master/DOCS.md#contenteditable)
+	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/DOCS.md#pseudo-elements)
+		- [first](https://github.com/zgabievi/bem/blob/master/DOCS.md#first)
+		- [last](https://github.com/zgabievi/bem/blob/master/DOCS.md#last)
+		- [even](https://github.com/zgabievi/bem/blob/master/DOCS.md#even)
+		- [odd](https://github.com/zgabievi/bem/blob/master/DOCS.md#odd)
+		- [before](https://github.com/zgabievi/bem/blob/master/DOCS.md#before)
+		- [after](https://github.com/zgabievi/bem/blob/master/DOCS.md#after)
++ [Functions](https://github.com/zgabievi/bem/blob/master/DOCS.md#functions)
+	- [bem-index()](https://github.com/zgabievi/bem/blob/master/DOCS.md#bem-index)
+	- [get-block()](https://github.com/zgabievi/bem/blob/master/DOCS.md#get-block)
+	- [is-block()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-block)
+	- [is-element()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-element)
+	- [is-modifier()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-modifier)
+	- [math-min()](https://github.com/zgabievi/bem/blob/master/DOCS.md#math-min)
+	- [explode()](https://github.com/zgabievi/bem/blob/master/DOCS.md#explode)
 
 ## Mixins
 
@@ -525,4 +526,10 @@ math-min(10, 10, 0); // @returns 10
 math-min(7, null, 0); // @returns 7
 math-min(null, 5, 0); // @returns 5
 math-min(null, null, 0); // @returns 0
+```
+
+#### explode()
+
+```scss
+explode('one-two-three', '-'); // @returns (one two three)
 ```

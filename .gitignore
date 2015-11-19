@@ -1,3 +1,7 @@
 .idea
 .sass-cache
-*.map
+node_modules
+test
+gulpfile.js
+config.json
+package.json

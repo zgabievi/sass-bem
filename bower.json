@@ -1,10 +1,10 @@
 {
 	"name": "bem",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"main": "_bem.scss",
 	"description": "Collection of BEM Mixins & Helpers",
 	"authors": [
-		"Zura Gabievi <zura.gabievi@gmail.com>"
+		"zgabievi <zura.gabievi@gmail.com>"
 	],
 	"license": "MIT",
 	"ignore": [

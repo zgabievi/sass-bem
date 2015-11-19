@@ -15,7 +15,10 @@
 }
 
 @mixin duo {
-	& + & {
+	$list: explode(#{&}, ' ');
+	$last: nth($list, length($list));
+
+	& + #{$last} {
 		@content;
 	}
 }
