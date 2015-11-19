@@ -47,6 +47,7 @@ for `sass` syntax:
 	- [is-element()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-element)
 	- [is-modifier()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-modifier)
 	- [math-min()](https://github.com/zgabievi/bem/blob/master/DOCS.md#math-min)
+	- [explode()](https://github.com/zgabievi/bem/blob/master/DOCS.md#explode)
 
 ## License
 The BEM package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
