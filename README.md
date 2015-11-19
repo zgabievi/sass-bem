@@ -47,7 +47,7 @@ $bem: (
 );
 ```
 
-## DOCS
+## WiKi
 
 + [**Mixins**](https://github.com/zgabievi/bem/wiki/Mixins) - Collection of BEM Mixins
 	- [Block](https://github.com/zgabievi/bem/wiki/Mixins#block-mixin) - Creates block type selector
