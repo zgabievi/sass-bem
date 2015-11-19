@@ -1,0 +1,27 @@
+{
+	"name": "bem",
+	"version": "0.2.0",
+	"description": "Collection of BEM Mixins & Helpers",
+	"main": "gulpfile.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zgabievi/bem.git"
+	},
+	"keywords": [
+		"bem",
+		"sass",
+		"scss",
+		"mixins",
+		"helpers"
+	],
+	"author": "zgabievi <zura.gabievi@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/zgabievi/bem/issues"
+	},
+	"homepage": "https://github.com/zgabievi/bem#readme",
+	"devDependencies": {
+		"gulp": "^3.9.0",
+		"gulp-sass": "^2.1.0"
+	}
+}
