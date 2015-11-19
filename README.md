@@ -49,21 +49,21 @@ $bem: (
 
 ## DOCS
 
-+ [Mixins](https://github.com/zgabievi/bem/blob/master/DOCS.md#mixins)
-	- [Block](https://github.com/zgabievi/bem/blob/master/DOCS.md#block-mixin)
-	- [Element](https://github.com/zgabievi/bem/blob/master/DOCS.md#element-mixin)
-	- [Modifier](https://github.com/zgabievi/bem/blob/master/DOCS.md#modifier-mixin)
-	- [Relations](https://github.com/zgabievi/bem/blob/master/DOCS.md#relations)
-	- [States](https://github.com/zgabievi/bem/blob/master/DOCS.md#states)
-	- [Pseudo Element](https://github.com/zgabievi/bem/blob/master/DOCS.md#pseudo-elements)
-+ [Functions](https://github.com/zgabievi/bem/blob/master/DOCS.md#functions)
-	- [bem-index()](https://github.com/zgabievi/bem/blob/master/DOCS.md#bem-index)
-	- [get-block()](https://github.com/zgabievi/bem/blob/master/DOCS.md#get-block)
-	- [is-block()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-block)
-	- [is-element()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-element)
-	- [is-modifier()](https://github.com/zgabievi/bem/blob/master/DOCS.md#is-modifier)
-	- [math-min()](https://github.com/zgabievi/bem/blob/master/DOCS.md#math-min)
-	- [explode()](https://github.com/zgabievi/bem/blob/master/DOCS.md#explode)
++ [**Mixins**](https://github.com/zgabievi/bem/wiki/Mixins) - Collection of BEM Mixins
+	- [Block](https://github.com/zgabievi/bem/wiki/Mixins#block-mixin) - Creates block type selector
+	- [Element](https://github.com/zgabievi/bem/wiki/Mixins#element-mixin) - Creates element type selector
+	- [Modifier](https://github.com/zgabievi/bem/wiki/Mixins#modifier-mixin) - Creates modifier type selector
+	- [Relations](https://github.com/zgabievi/bem/wiki/Mixins#relations) - Relationship Mixins
+	- [States](https://github.com/zgabievi/bem/wiki/Mixins#states) - Element State Mixins
+	- [Pseudo Element](https://github.com/zgabievi/bem/wiki/Mixins#pseudo-elements) - Pseudo Class Mixins
++ [**Functions**](https://github.com/zgabievi/bem/wiki/Functions) - Collection of helper functions
+	- [bem-index()](https://github.com/zgabievi/bem/wiki/Functions#bem-index) - Returns first index of bem separator
+	- [get-block()](https://github.com/zgabievi/bem/wiki/Functions#get-block) - Returns bem block from string
+	- [is-block()](https://github.com/zgabievi/bem/wiki/Functions#is-block) - Checks if given string is block
+	- [is-element()](https://github.com/zgabievi/bem/wiki/Functions#is-element) - Checks if given string is element
+	- [is-modifier()](https://github.com/zgabievi/bem/wiki/Functions#is-modifier) - Checks if given string is modifier
+	- [math-min()](https://github.com/zgabievi/bem/wiki/Functions#math-min) - Returns smallest number from 2 numbers, or default
+	- [explode()](https://github.com/zgabievi/bem/wiki/Functions#explode) - Returns list from string
 
 ## License
 The BEM package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
