@@ -1,6 +1,0 @@
-{
-	"scss": {
-		"src": "./test/**/*.scss",
-		"dest": "./test/"
-	}
-}
