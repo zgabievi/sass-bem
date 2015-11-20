@@ -2,7 +2,7 @@
 [![Release](https://img.shields.io/github/release/zgabievi/bem.svg?style=flat-square)](https://github.com/zgabievi/bem)
 [![License](https://img.shields.io/github/license/zgabievi/bem.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
-:package: Collection of BEM Mixins &amp; Helpers
+Collection of BEM Mixins &amp; Helpers
 
 + [Installation](https://github.com/zgabievi/bem/blob/master/README.md#installation)
 + [Usage](https://github.com/zgabievi/bem/blob/master/README.md#usage)
@@ -27,18 +27,18 @@ $ npm install sass-bem --save
 ## Usage
 Insert following code in top of your file:
 
-:clipboard: for `scss` syntax:
+for `scss` syntax:
 ```scss
 @import "/bower_components/bem/scss/bem";
 ```
 
-:clipboard: for `sass` syntax:
+for `sass` syntax:
 ```sass
 @import /bower_components/bem/scss/bem
 ```
 
 ### Configuration
-:fire: In your `style.scss`, after you import `bem`, you can configure separators
+In your `style.scss`, after you import `bem`, you can configure separators
 ```scss
 $bem: (
 	'element': '__',
