@@ -1,6 +1,6 @@
 # BEM
-[![Release](https://img.shields.io/github/release/zgabievi/bem.svg?style=flat-square)](https://github.com/zgabievi/bem)
-[![License](https://img.shields.io/github/license/zgabievi/bem.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Bower](https://img.shields.io/bower/v/bootstrap.svg?style=flat-square)](http://bower.io/search/?q=bem)
+[![NPM](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
 Collection of BEM Mixins &amp; Helpers
 
@@ -10,7 +10,7 @@ Collection of BEM Mixins &amp; Helpers
 + [License](#license)
 
 ## Installation
-### Install With [![Bower](https://img.shields.io/github/release/zgabievi/bem.svg?style=flat-square)](http://bower.io/search/?q=bem)
+### Install With [Bower](http://bower.io/search/?q=bem)
 ```
 $ bower install bem --save
 ```
