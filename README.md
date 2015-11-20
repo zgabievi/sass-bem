@@ -5,7 +5,7 @@
 Collection of BEM Mixins &amp; Helpers
 
 + [Installation](https://github.com/zgabievi/bem/blob/master/README.md#installation)
-+ [Usage](https://github.com/zgabievi/bem/blob/master/README.md#usage)
++ [Usage](#usage)
 + [Documentation](https://github.com/zgabievi/bem/blob/master/README.md#docs)
 + [License](https://github.com/zgabievi/bem/blob/master/README.md#license)
 
