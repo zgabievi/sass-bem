@@ -10,7 +10,7 @@ Collection of BEM Mixins &amp; Helpers
 + [License](#license)
 
 ## Installation
-### Install With [Bower](http://bower.io/search/?q=bem):
+### Install With [![Bower](https://img.shields.io/github/release/zgabievi/bem.svg?style=flat-square)](http://bower.io/search/?q=bem)
 ```
 $ bower install bem --save
 ```
