@@ -4,10 +4,10 @@
 
 Collection of BEM Mixins &amp; Helpers
 
-+ [Installation](https://github.com/zgabievi/bem/blob/master/README.md#installation)
++ [Installation](#installation)
 + [Usage](#usage)
-+ [Documentation](https://github.com/zgabievi/bem/blob/master/README.md#docs)
-+ [License](https://github.com/zgabievi/bem/blob/master/README.md#license)
++ [Documentation](#docs)
++ [License](#license)
 
 ## Installation
 ### Install With [Bower](http://bower.io/search/?q=bem):
