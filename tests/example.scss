@@ -8,4 +8,14 @@
 	@include m(first second third fourth) {
 		color: orange;
 	}
+
+	@include e(item) {
+		@include is(active) {
+			color: red;
+
+			@include e(inner) {
+				color: green;
+			}
+		}
+	}
 }
