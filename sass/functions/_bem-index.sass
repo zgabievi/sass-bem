@@ -6,4 +6,6 @@
 		$e_index: str-index($string, #{map-get($bem, 'element')})
 	@if str-index($string, #{map-get($bem, 'modifier')}) != null
 		$m_index: str-index($string, #{map-get($bem, 'modifier')})
+	@if str-index($string, #{'.is'}#{map-get($bem, 'state')}) != null
+		$m_index: str-index($string, #{'.is'}#{map-get($bem, 'state')})
 	@return math-min($e_index, $m_index, 0)

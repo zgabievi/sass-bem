@@ -1,0 +1,2 @@
+@function has-state($selector)
+	@return str-index($selector, #{'.is'}#{map-get($bem, 'state')}) != null
