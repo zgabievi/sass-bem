@@ -1,10 +1,6 @@
-.block__first, .block__second, .block__third, .block__fourth {
-  color: orange; }
-.block--first, .block--second, .block--third, .block--fourth {
-  color: orange; }
-.block__item.is-active {
+.block.is-active {
   color: red; }
-  .block__item.is-active .block__inner {
+  .block.is-active .block__inner {
     color: green; }
 
 /*# sourceMappingURL=example.css.map */
