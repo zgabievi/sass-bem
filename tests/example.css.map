@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AA2BU,4DAAa;ECvBrB,KAAK,EAAE,MAAM;ACQL,4DAAa;EDJrB,KAAK,EAAE,MAAM",
+"sources": ["../scss/mixins/_element.scss","example.scss","../scss/mixins/_modifier.scss"],
+"names": [],
+"file": "example.css"
+}

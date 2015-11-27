@@ -1,0 +1,11 @@
+@import "../scss/bem";
+
+@include b(block) {
+	@include e(first second third fourth) {
+		color: orange;
+	}
+
+	@include m(first second third fourth) {
+		color: orange;
+	}
+}
