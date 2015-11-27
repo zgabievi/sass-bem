@@ -1,6 +1,6 @@
 # BEM
-[![Bower](https://img.shields.io/bower/v/bootstrap.svg?style=flat-square)](http://bower.io/search/?q=bem)
-[![NPM](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
+[![Bower](https://img.shields.io/bower/v/zgabievi/bem.svg?style=flat-square)](http://bower.io/search/?q=bem)
+[![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
 Collection of BEM Mixins &amp; Helpers
 
