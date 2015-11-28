@@ -6,7 +6,7 @@ Collection of BEM Mixins &amp; Helpers
 
 + [Installation](#installation)
 + [Usage](#usage)
-+ [Documentation](https://github.com/zgabievi/bem/wiki)
++ [Documentation](#wiki)
 + [License](#license)
 
 ## Installation
