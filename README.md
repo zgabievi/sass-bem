@@ -67,3 +67,8 @@ $bem: (
 
 ## License
 The BEM package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## TODO
+
+- [ ] Change pseudo childs to types
+- [ ] Add has and js states
