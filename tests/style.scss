@@ -136,6 +136,42 @@
 		}
 	}
 
+	@include test('has [mixin]') {
+		@include assert('Addes state to selector') {
+			@include input {
+				a {
+					@include has(child) {
+						font-weight: bold;
+					}
+				}
+			}
+
+			@include expect {
+				a.has-child {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	@include test('js [mixin]') {
+		@include assert('Addes state to selector') {
+			@include input {
+				div {
+					@include js(target) {
+						font-weight: bold;
+					}
+				}
+			}
+
+			@include expect {
+				div.js-target {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
 	@include test('hover [mixin]') {
 		@include assert('Addes hover state to selector') {
 			@include input {
@@ -273,7 +309,7 @@
 			}
 
 			@include expect {
-				a:first-child {
+				a:first-of-type {
 					color: orange;
 				}
 			}
@@ -291,7 +327,7 @@
 			}
 
 			@include expect {
-				a:last-child {
+				a:last-of-type {
 					color: blue;
 				}
 			}

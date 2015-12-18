@@ -1,11 +1,11 @@
 @mixin first {
-	&:first-child {
+	&:first-of-type {
 		@content;
 	}
 }
 
 @mixin last {
-	&:last-child {
+	&:last-of-type {
 		@content;
 	}
 }

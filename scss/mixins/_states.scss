@@ -4,6 +4,18 @@
 	}
 }
 
+@mixin has($state) {
+	&.has#{map-get($bem, 'state')}#{$state} {
+		@content;
+	}
+}
+
+@mixin js($state) {
+	&.js#{map-get($bem, 'state')}#{$state} {
+		@content;
+	}
+}
+
 @mixin hover {
 	&:hover {
 		@content;
@@ -42,6 +54,12 @@
 
 @mixin contenteditable {
 	&[contenteditable="true"] {
+		@content;
+	}
+}
+
+@mixin editable {
+	@include contenteditable {
 		@content;
 	}
 }
