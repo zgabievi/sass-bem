@@ -1,18 +1,18 @@
 {
-	"name": "bem",
-	"version": "1.0.0",
-	"main": "_bem.scss",
-	"description": "Collection of BEM Mixins & Helpers",
-	"authors": [
-		"zgabievi <zura.gabievi@gmail.com>"
-	],
-	"license": "MIT",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"package.json",
-		"test",
-		"tests"
-	]
+  "name": "bem",
+  "version": "1.0.1",
+  "main": "_bem.scss",
+  "description": "Collection of BEM Mixins & Helpers",
+  "authors": [
+    "zgabievi <zura.gabievi@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "test",
+    "tests"
+  ]
 }
