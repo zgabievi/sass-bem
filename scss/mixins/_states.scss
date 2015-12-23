@@ -47,13 +47,13 @@
 }
 
 @mixin readonly {
-	&[readonly] {
+	#{&}[readonly] {
 		@content;
 	}
 }
 
 @mixin contenteditable {
-	&[contenteditable="true"] {
+	#{&}[contenteditable="true"] {
 		@content;
 	}
 }

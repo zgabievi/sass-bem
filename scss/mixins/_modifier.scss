@@ -1,14 +1,16 @@
 @mixin modifier($modifier) {
-	$selector: &#{map-get($bem, 'modifier')}#{$modifier};
+	$selector: #{&}#{map-get($bem, 'modifier')}#{$modifier};
 
 	@if (type-of($modifier) == 'list') {
 		$selector: ();
 
 		@each $value in $modifier {
-			$current: &#{map-get($bem, 'modifier')}#{$value};
+			$current: #{&}#{map-get($bem, 'modifier')}#{$value};
 			$selector: append($selector, $current, comma);
 		}
 	}
+
+	@debug $selector;
 
 	@at-root #{$selector} {
 		@content;

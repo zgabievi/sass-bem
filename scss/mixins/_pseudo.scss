@@ -1,35 +1,35 @@
 @mixin first {
-	&:first-of-type {
+	#{&}:first-of-type {
 		@content;
 	}
 }
 
 @mixin last {
-	&:last-of-type {
+	#{&}:last-of-type {
 		@content;
 	}
 }
 
 @mixin even {
-	&:nth-child(even) {
+	#{&}:nth-child(even) {
 		@content;
 	}
 }
 
 @mixin odd {
-	&:nth-child(odd) {
+	#{&}:nth-child(odd) {
 		@content;
 	}
 }
 
 @mixin before {
-	&:before {
+	#{&}:before {
 		@content;
 	}
 }
 
 @mixin after {
-	&:after {
+	#{&}:after {
 		@content;
 	}
 }
