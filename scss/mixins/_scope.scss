@@ -1,0 +1,20 @@
+$bem-scope-namespace: s !default;
+
+/**
+ * Signify that a class is responsible for adding a 
+ * Theme to a view. It lets us know that UI Components’ 
+ * current cosmetic appearance may be due 
+ * to the presence of a theme.
+ */
+@mixin scope($scope) {
+	.#{$bem-scope-namespace}-#{$scope} {
+		@content;
+	}
+}
+
+// Shorthand
+@mixin s($scope) {
+	@include scope($scope) {
+		@content;
+	}
+}

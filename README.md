@@ -6,7 +6,8 @@ Collection of BEM Mixins &amp; Helpers
 
 + [Installation](#installation)
 + [Usage](#usage)
-+ [Documentation](#wiki)
++ [Example](#example)
++ [Wiki](#wiki)
 + [License](#license)
 
 ## Installation
@@ -47,6 +48,153 @@ $bem: (
 );
 ```
 
+## Example
+
+####style.scss
+
+```scss
+@import "bower_components/bem/scss/bem";
+
+@include b('block') {
+	display: block;
+
+	@include e('element1') {
+		display: element1;
+
+		@include m('modifier1') {
+			display: modifier1;
+		}
+
+		@include is('state') {
+			display: is-state;
+		}
+
+		@include has('state') {
+			display: has-state;
+		}
+
+		@include js('state') {
+			display: js-state;
+		}
+	}
+
+	@include m('modifier2') {
+		display: modifier2;
+
+		@include while('modifier1') {
+			display: modifier2-1;
+		}
+	}
+
+	@include e('element2') {
+		display: element2;
+
+		@include duo {
+			display: element2-2;
+		}
+
+		@include with('element1') {
+			display: element2-1;
+		}
+
+		@include at('modifier2') {
+			display: modifier2;
+		}
+	}
+}
+
+@include o('object') {
+	display: object;
+}
+
+@include c('component') {
+	display: component;
+}
+
+@include u('utility') {
+	display: utility;
+}
+
+@include t('theme') {
+	display: theme;
+}
+
+@include s('scope') {
+	display: scope;
+}
+
+@include _('hack') {
+	display: hack;
+}
+
+@include qa('test') {
+	display: test;
+}
+```
+
+####style.css
+
+```css
+@charset "UTF-8";
+
+.block {
+  display: block; }
+
+  .block__element1 {
+    display: element1; }
+
+    .block__element1--modifier1 {
+      display: modifier1; }
+
+    .block__element1.is-state {
+      display: is-state; }
+
+    .block__element1.has-state {
+      display: has-state; }
+
+    .block__element1.js-state {
+      display: js-state; }
+
+  .block--modifier2 {
+    display: modifier2; }
+
+    .block--modifier2.block--modifier1 {
+      display: modifier2-1; }
+
+  .block__element2 {
+    display: element2; }
+
+    .block__element2 + .block__element2 {
+      display: element2-2; }
+
+    .block__element2 + .block__element1 {
+      display: element2-1; }
+      
+    .block--modifier2 .block__element2 {
+      display: modifier2; }
+
+.o-object {
+  display: object; }
+
+.c-component {
+  display: component; }
+
+.u-utility {
+  display: utility; }
+
+.t-theme {
+  display: theme; }
+
+.s-scope {
+  display: scope; }
+
+._hack {
+  display: hack; }
+
+.qa-test {
+  display: test; }
+```
+
 ## WiKi
 
 + [**Mixins**](https://github.com/zgabievi/bem/wiki/Mixins) - Collection of BEM Mixins
@@ -64,6 +212,7 @@ $bem: (
 	- [is-modifier()](https://github.com/zgabievi/bem/wiki/Functions#is-modifier) - Checks if given string is modifier
 	- [math-min()](https://github.com/zgabievi/bem/wiki/Functions#math-min) - Returns smallest number from 2 numbers, or default
 	- [explode()](https://github.com/zgabievi/bem/wiki/Functions#explode) - Returns list from string
++ [**OOCSS**](https://github.com/zgabievi/bem/wiki/OOCSS) - Object-Oriented CSS Classes
 
 ## License
 The BEM package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

@@ -1,0 +1,22 @@
+$bem-test-namespace: qa !default;
+
+/**
+ * Signify that a QA or Test Engineering team 
+ * is running an automated UI test which needs 
+ * to find or bind onto these parts of the DOM. 
+ * Like the JavaScript namespace, this basically 
+ * just reserves hooks in the 
+ * DOM for non-CSS purposes.
+ */
+@mixin test($test) {
+	.#{$bem-test-namespace}-#{$test} {
+		@content;
+	}
+}
+
+// Shorthand
+@mixin qa($test) {
+	@include test($test) {
+		@content;
+	}
+}

@@ -1,0 +1,23 @@
+$bem-component-namespace: c !default;
+
+/**
+ * Signify that something is a Component. This 
+ * is a concrete, implementation-specific piece 
+ * of UI. All of the changes you make to its 
+ * styles should be detectable in the context
+ * you’re currently looking at. Modifying 
+ * these styles should be safe and have 
+ * no side effects.
+ */
+@mixin component($component) {
+	.#{$bem-component-namespace}-#{$component} {
+		@content;
+	}
+}
+
+// Shorthand
+@mixin c($component) {
+	@include component($component) {
+		@content;
+	}
+}

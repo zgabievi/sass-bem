@@ -21,3 +21,13 @@ $bem: (
 @import "mixins/relations";
 @import "mixins/states";
 @import "mixins/pseudo";
+
+// oocss
+@import "mixins/object";
+@import "mixins/component";
+@import "mixins/utility";
+@import "mixins/theme";
+@import "mixins/scope";
+@import "mixins/state";
+@import "mixins/hack";
+@import "mixins/test";

@@ -1,21 +1,3 @@
-@mixin is($state) {
-	&.is#{map-get($bem, 'state')}#{$state} {
-		@content;
-	}
-}
-
-@mixin has($state) {
-	&.has#{map-get($bem, 'state')}#{$state} {
-		@content;
-	}
-}
-
-@mixin js($state) {
-	&.js#{map-get($bem, 'state')}#{$state} {
-		@content;
-	}
-}
-
 @mixin hover {
 	&:hover {
 		@content;
