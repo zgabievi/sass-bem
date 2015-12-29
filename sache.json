@@ -1,0 +1,11 @@
+{
+  "name": "bem",
+  "description": "Collection of BEM Mixins & Helpers",
+  "tags": [
+    "bem",
+    "sass",
+    "scss",
+    "mixins",
+    "helpers"
+  ]
+}
