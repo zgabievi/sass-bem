@@ -8,6 +8,10 @@ $bem-theme-namespace: t !default;
  */
 @mixin theme($theme) {
 	.#{$bem-theme-namespace}-#{$theme} {
+		@if $bem-debug == true {
+			outline: 5px solid #60316e;
+		}
+
 		@content;
 	}
 }

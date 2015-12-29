@@ -10,6 +10,10 @@ $bem-object-namespace: o !default;
  */
 @mixin object($object) {
 	.#{$bem-object-namespace}-#{$object} {
+		@if $bem-debug == true {
+			outline: 5px solid #9bcb3c;
+		}
+
 		@content;
 	}
 }

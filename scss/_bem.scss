@@ -2,7 +2,9 @@ $bem: (
 	'element': '__',
 	'modifier': '--',
 	'state': '-'
-) !global;
+);
+
+$bem-debug: true;
 
 // functions
 @import "functions/bem-index";

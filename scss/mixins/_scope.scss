@@ -8,6 +8,10 @@ $bem-scope-namespace: s !default;
  */
 @mixin scope($scope) {
 	.#{$bem-scope-namespace}-#{$scope} {
+		@if $bem-debug == true {
+			outline: 5px solid #a2453d;
+		}
+
 		@content;
 	}
 }

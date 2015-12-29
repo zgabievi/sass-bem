@@ -18,26 +18,30 @@ $bem-state-namespace: is !default;
  * JavaScript, leave these well alone.
  */
 @mixin state($state, $namespace: $bem-state-namespace) {
-	.#{$namespace}-#{$state} {
+	&.#{$namespace}-#{$state} {
+		@if $bem-debug == true {
+			outline: 5px solid #66a96b;
+		}
+
 		@content;
 	}
 }
 
 // Shorthands
 @mixin is($state) {
-	&.is-#{$state} {
+	@include state($state, 'is') {
 		@content;
 	}
 }
 
 @mixin has($state) {
-	&.has-#{$state} {
+	@include state($state, 'has') {
 		@content;
 	}
 }
 
 @mixin js($state) {
-	&.js-#{$state} {
+	@include state($state, 'js') {
 		@content;
 	}
 }

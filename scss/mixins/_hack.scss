@@ -12,6 +12,10 @@ $bem-hack-namespace: _ !default;
  */
 @mixin hack($hack) {
 	.#{$bem-hack-namespace}#{$hack} {
+		@if $bem-debug == true {
+			outline: 5px solid #f33535;
+		}
+
 		@content;
 	}
 }

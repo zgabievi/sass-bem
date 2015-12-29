@@ -48,6 +48,12 @@ $bem: (
 );
 ```
 
+Diable debugging using:
+
+```scss
+$bem-debug: false;
+```
+
 ## Example
 
 ####style.scss

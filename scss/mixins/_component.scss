@@ -11,6 +11,10 @@ $bem-component-namespace: c !default;
  */
 @mixin component($component) {
 	.#{$bem-component-namespace}-#{$component} {
+		@if $bem-debug == true {
+			outline: 5px solid #00b8a9;
+		}
+
 		@content;
 	}
 }
