@@ -23,28 +23,22 @@ $ npm install sass-bem --save
 
 ### Install Manually
 - [Download Package Archive](https://github.com/zgabievi/bem/archive/master.zip)
-- Place `/scss/` or `/sass/` directory to your project.
+- Place `/scss/` directory to your project.
 
 ## Usage
 Insert following code in top of your file:
 
-for `scss` syntax:
 ```scss
 @import "/bower_components/bem/scss/bem";
-```
-
-for `sass` syntax:
-```sass
-@import /bower_components/bem/scss/bem
 ```
 
 ### Configuration
 In your `style.scss`, after you import `bem`, you can configure separators
 ```scss
 $bem: (
-	'element': '__',
-	'modifier': '--',
-	'state': '-'
+	element: '__',
+	modifier: '--',
+	state: '-'
 );
 ```
 
