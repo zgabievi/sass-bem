@@ -42,7 +42,7 @@ $bem: (
 );
 ```
 
-Diable debugging using:
+Disable debugging using:
 
 ```scss
 $bem-debug: false;
