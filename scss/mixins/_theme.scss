@@ -5,6 +5,8 @@ $bem-theme-namespace: t !default;
  * Theme to a view. It lets us know that UI Components’ 
  * current cosmetic appearance may be due 
  * to the presence of a theme.
+ *
+ * Format: .t-theme {}
  */
 @mixin theme($theme) {
 	.#{$bem-theme-namespace}-#{$theme} {

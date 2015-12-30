@@ -1,10 +1,10 @@
 $bem: (
-	'element': '__',
-	'modifier': '--',
-	'state': '-'
+	element: '__',
+	modifier: '--',
+	state: '-'
 );
 
-$bem-debug: true;
+$bem-debug: true !default;
 
 // functions
 @import "functions/bem-index";

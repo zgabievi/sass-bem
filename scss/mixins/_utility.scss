@@ -8,6 +8,8 @@ $bem-utility-namespace: u !default;
  * tied to any specific piece of UI. You will 
  * probably recognise this namespace from 
  * libraries and methodologies like SUIT.
+ *
+ * Format: .u-utility {}
  */
 @mixin utility($utility) {
 	.#{$bem-utility-namespace}-#{$utility} {

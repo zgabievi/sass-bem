@@ -7,6 +7,8 @@ $bem-object-namespace: o !default;
  * these types of class could potentially have knock-on 
  * effects in a lot of other unrelated places. 
  * Tread carefully.
+ *
+ * Format: .o-object[<element>|<modifier>] {}
  */
 @mixin object($object) {
 	.#{$bem-object-namespace}-#{$object} {

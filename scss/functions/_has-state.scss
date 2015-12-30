@@ -1,3 +1,7 @@
 @function has-state($selector) {
-	@return str-index($selector, #{'.is'}#{map-get($bem, 'state')}) != null;
+    $separator_is: unquote('#{".is"}#{map-get($bem, state)}');
+    $separator_js: unquote('#{"js"}#{map-get($bem, state)}');
+    $separator_has: unquote('#{"has"}#{map-get($bem, state)}');
+
+	@return str-index($selector, $separator_is) != null and str-index($selector, $separator_js) != null and str-index($selector, $separator_has) != null;
 }

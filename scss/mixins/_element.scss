@@ -1,10 +1,11 @@
 @mixin element($element) {
 	$selector: '';
-
-	@if (is-block(#{&})) {
+    $parent: unquote("#{&}");
+    
+	@if (is-block($parent)) {
 		$selector: '#{&}#{map-get($bem, 'element')}#{$element}';
 	} @else {
-		$block: get-block(#{&});
+		$block: get-block($parent);
 		$selector: '#{&} .#{$block}#{map-get($bem, 'element')}#{$element}';
 	}
 
@@ -14,10 +15,10 @@
 		@each $value in $element {
 			$current: '';
 
-			@if (is-block(#{&})) {
+			@if (is-block($parent)) {
 				$current: '#{&}#{map-get($bem, 'element')}#{$value}';
 			} @else {
-				$block: get-block(#{&});
+				$block: get-block($parent);
 				$current: '#{&} .#{$block}#{map-get($bem, 'element')}#{$value}';
 			}
 
