@@ -1,0 +1,42 @@
+@mixin element($element) {
+	$selector: '';
+    $parent: unquote("#{&}");
+    
+	@if (is-block($parent)) {
+		$selector: '#{&}#{map-get($bem, 'element')}#{$element}';
+	} @else {
+		$block: get-block($parent);
+		$selector: '#{&} .#{$block}#{map-get($bem, 'element')}#{$element}';
+	}
+
+	@if (type-of($element) == 'list') {
+		$selector: ();
+
+		@each $value in $element {
+			$current: '';
+
+			@if (is-block($parent)) {
+				$current: '#{&}#{map-get($bem, 'element')}#{$value}';
+			} @else {
+				$block: get-block($parent);
+				$current: '#{&} .#{$block}#{map-get($bem, 'element')}#{$value}';
+			}
+
+			$selector: append($selector, $current, comma);
+		}
+	}
+
+	@at-root #{$selector} {
+		@if $bem-debug == true {
+			outline: 5px solid #635270;
+		}
+
+		@content;
+	}
+}
+
+@mixin e($element) {
+	@include element($element) {
+		@content;
+	}
+}

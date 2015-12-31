@@ -1,0 +1,410 @@
+@import "../scss/bem";
+@import "../node_modules/sass-true/sass/true";
+
+@include test-module('BEM') {
+	// Functions
+	@include test('bem-index [function]') {
+		@include assert-equal(bem-index('.list__item'), 6, 'Returns first index of bem separator');
+		@include assert-equal(bem-index('.list--inline'), 6, 'Returns first index of bem separator');
+		@include assert-equal(bem-index('.list'), 0, 'Returns first index of bem separator');
+	}
+
+	@include test('get-block [function]') {
+		@include assert-equal(get-block('.list__item'), 'list', 'Returns bem block from string');
+		@include assert-equal(get-block('.list--inline'), 'list', 'Returns bem block from string');
+		@include assert-equal(get-block('.list'), 'list', 'Returns bem block from string');
+	}
+
+	@include test('is-block [function]') {
+		@include assert-equal(is-block('.list__item'), false, 'Checks if given string is block');
+		@include assert-equal(is-block('.list--inline'), false, 'Checks if given string is block');
+		@include assert-equal(is-block('.list'), true, 'Checks if given string is block');
+	}
+
+	@include test('is-element [function]') {
+		@include assert-equal(is-element('.list__item'), true, 'Checks if given string is element');
+		@include assert-equal(is-element('.list--inline'), false, 'Checks if given string is element');
+		@include assert-equal(is-element('.list'), false, 'Checks if given string is element');
+	}
+
+	@include test('is-modifier [function]') {
+		@include assert-equal(is-modifier('.list__item'), false, 'Checks if given string is modifier');
+		@include assert-equal(is-modifier('.list--inline'), true, 'Checks if given string is modifier');
+		@include assert-equal(is-modifier('.list'), false, 'Checks if given string is modifier');
+	}
+
+	@include test('math-min [function]') {
+		@include assert-equal(math-min(7, 15, 0), 7, 'Returns smallest number from 2 numbers, or default');
+		@include assert-equal(math-min(10, 10, 0), 10, 'Returns smallest number from 2 numbers, or default');
+		@include assert-equal(math-min(7, null, 0), 7, 'Returns smallest number from 2 numbers, or default');
+		@include assert-equal(math-min(null, 5, 0), 5, 'Returns smallest number from 2 numbers, or default');
+		@include assert-equal(math-min(null, null, 0), 0, 'Returns smallest number from 2 numbers, or default');
+	}
+
+	@include test('explode [function]') {
+		@include assert-equal(explode('one-two-three', '-'), 'one' 'two' 'three', 'Returns list from string');
+	}
+
+	// Mixins
+	@include test('block [mixin]') {
+		@include assert('Creates block type selector') {
+			@include input {
+				@include b(list) {
+					background-color: orange;
+				}
+			}
+
+			@include expect {
+				.list {
+					background-color: orange;
+				}
+			}
+		}
+	}
+
+	@include test('element [mixin]') {
+		@include assert('Creates element type selector') {
+			@include input {
+				@include b(list) {
+					@include e(item) {
+						background-color: red;
+					}
+				}
+			}
+
+			@include expect {
+				.list__item {
+					background-color: red;
+				}
+			}
+		}
+	}
+
+	@include test('modifier [mixin]') {
+		@include assert('Creates modifier type selector') {
+			@include input {
+				@include b(list) {
+					@include m(inline) {
+						background-color: green;
+					}
+				}
+			}
+
+			@include expect {
+				.list--inline {
+					background-color: green;
+				}
+			}
+		}
+	}
+
+	@include test('duo [mixin]') {
+		@include assert('Relates same classed neighbour elements') {
+			@include input {
+				@include b(list) {
+					@include e(item) {
+						@include duo {
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+
+			@include expect {
+				.list__item + .list__item {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	@include test('is [mixin]') {
+		@include assert('Addes state to selector') {
+			@include input {
+				a {
+					@include is(active) {
+						font-weight: bold;
+					}
+				}
+			}
+
+			@include expect {
+				a.is-active {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	@include test('has [mixin]') {
+		@include assert('Addes state to selector') {
+			@include input {
+				a {
+					@include has(child) {
+						font-weight: bold;
+					}
+				}
+			}
+
+			@include expect {
+				a.has-child {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	@include test('js [mixin]') {
+		@include assert('Addes state to selector') {
+			@include input {
+				div {
+					@include js(target) {
+						font-weight: bold;
+					}
+				}
+			}
+
+			@include expect {
+				div.js-target {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	@include test('hover [mixin]') {
+		@include assert('Addes hover state to selector') {
+			@include input {
+				a {
+					@include hover {
+						color: red;
+					}
+				}
+			}
+
+			@include expect {
+				a:hover {
+					color: red;
+				}
+			}
+		}
+	}
+
+	@include test('focus [mixin]') {
+		@include assert('Addes focus state to selector') {
+			@include input {
+				a {
+					@include focus {
+						color: blue;
+					}
+				}
+			}
+
+			@include expect {
+				a:focus {
+					color: blue;
+				}
+			}
+		}
+	}
+
+	@include test('active [mixin]') {
+		@include assert('Addes active state to selector') {
+			@include input {
+				a {
+					@include active {
+						color: green;
+					}
+				}
+			}
+
+			@include expect {
+				a:active {
+					color: green;
+				}
+			}
+		}
+	}
+
+	@include test('checked [mixin]') {
+		@include assert('Addes checked state to selector') {
+			@include input {
+				input  {
+					@include checked {
+						display: block;
+					}
+				}
+			}
+
+			@include expect {
+				input:checked {
+					display: block;
+				}
+			}
+		}
+	}
+
+	@include test('disabled [mixin]') {
+		@include assert('Addes disabled state to selector') {
+			@include input {
+				button  {
+					@include disabled {
+						opacity: 0.8;
+					}
+				}
+			}
+
+			@include expect {
+				button[disabled] {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+
+	@include test('readonly [mixin]') {
+		@include assert('Addes readonly state to selector') {
+			@include input {
+				input  {
+					@include readonly {
+						cursor: default;
+					}
+				}
+			}
+
+			@include expect {
+				input[readonly] {
+					cursor: default;
+				}
+			}
+		}
+	}
+
+	@include test('contenteditable [mixin]') {
+		@include assert('Addes contenteditable state to selector') {
+			@include input {
+				.box  {
+					@include contenteditable {
+						border-color: orange;
+					}
+				}
+			}
+
+			@include expect {
+				.box[contenteditable="true"] {
+					border-color: orange;
+				}
+			}
+		}
+	}
+
+	@include test('first [mixin]') {
+		@include assert('Takes pseudo element of selector') {
+			@include input {
+				a {
+					@include first {
+						color: orange;
+					}
+				}
+			}
+
+			@include expect {
+				a:first-of-type {
+					color: orange;
+				}
+			}
+		}
+	}
+
+	@include test('last [mixin]') {
+		@include assert('Takes pseudo element of selector') {
+			@include input {
+				a {
+					@include last {
+						color: blue;
+					}
+				}
+			}
+
+			@include expect {
+				a:last-of-type {
+					color: blue;
+				}
+			}
+		}
+	}
+
+	@include test('even [mixin]') {
+		@include assert('Takes pseudo element of selector') {
+			@include input {
+				a {
+					@include even {
+						color: green;
+					}
+				}
+			}
+
+			@include expect {
+				a:nth-child(even) {
+					color: green;
+				}
+			}
+		}
+	}
+
+	@include test('odd [mixin]') {
+		@include assert('Takes pseudo element of selector') {
+			@include input {
+				a {
+					@include odd {
+						color: aqua;
+					}
+				}
+			}
+
+			@include expect {
+				a:nth-child(odd) {
+					color: aqua;
+				}
+			}
+		}
+	}
+
+	@include test('before [mixin]') {
+		@include assert('Creates pseudo element of selector') {
+			@include input {
+				a {
+					@include before {
+						color: orange;
+					}
+				}
+			}
+
+			@include expect {
+				a:before {
+					color: orange;
+				}
+			}
+		}
+	}
+
+	@include test('after [mixin]') {
+		@include assert('Creates pseudo element of selector') {
+			@include input {
+				a {
+					@include after {
+						color: red;
+					}
+				}
+			}
+
+			@include expect {
+				a:after {
+					color: red;
+				}
+			}
+		}
+	}
+}
+
+@include report;

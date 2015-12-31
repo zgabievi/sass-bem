@@ -1,0 +1,47 @@
+@mixin hover {
+	&:hover {
+		@content;
+	}
+}
+
+@mixin focus {
+	&:focus {
+		@content;
+	}
+}
+
+@mixin active {
+	&:active {
+		@content;
+	}
+}
+
+@mixin checked {
+	&:checked {
+		@content;
+	}
+}
+
+@mixin disabled {
+	&[disabled] {
+		@content;
+	}
+}
+
+@mixin readonly {
+	&[readonly] {
+		@content;
+	}
+}
+
+@mixin contenteditable {
+	&[contenteditable="true"] {
+		@content;
+	}
+}
+
+@mixin editable {
+	@include contenteditable {
+		@content;
+	}
+}

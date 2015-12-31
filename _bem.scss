@@ -1,0 +1,35 @@
+$bem: (
+	element: '__',
+	modifier: '--',
+	state: '-'
+);
+
+$bem-debug: true !default;
+
+// functions
+@import "functions/bem-index";
+@import "functions/get-block";
+@import "functions/has-state";
+@import "functions/is-modifier";
+@import "functions/is-element";
+@import "functions/is-block";
+@import "functions/math-min";
+@import "functions/explode";
+
+// mixins
+@import "mixins/block";
+@import "mixins/element";
+@import "mixins/modifier";
+@import "mixins/relations";
+@import "mixins/states";
+@import "mixins/pseudo";
+
+// oocss
+@import "mixins/object";
+@import "mixins/component";
+@import "mixins/utility";
+@import "mixins/theme";
+@import "mixins/scope";
+@import "mixins/state";
+@import "mixins/hack";
+@import "mixins/test";
