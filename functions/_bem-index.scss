@@ -1,0 +1,26 @@
+@function bem-index($string) {
+	$e_index: null;
+	$m_index: null;
+
+	@if (str-index($string, unquote("#{map-get($bem, element)}")) != null) {
+		$e_index: str-index($string, unquote("#{map-get($bem, element)}"));
+	}
+
+	@if (str-index($string, unquote("#{map-get($bem, modifier)}")) != null) {
+		$m_index: str-index($string, unquote("#{map-get($bem, modifier)}"));
+	}
+
+	@if (str-index($string, unquote('#{".is"}#{map-get($bem, state)}')) != null) {
+		$m_index: str-index($string, unquote('#{".is"}#{map-get($bem, state)}'));
+	}
+    
+	@if (str-index($string, unquote('#{".js"}#{map-get($bem, state)}')) != null) {
+		$m_index: str-index($string, unquote('#{".js"}#{map-get($bem, state)}'));
+	}
+   
+	@if (str-index($string, unquote('#{".has"}#{map-get($bem, state)}')) != null) {
+		$m_index: str-index($string, unquote('#{".has"}#{map-get($bem, state)}'));
+	}
+
+	@return math-min($e_index, $m_index, 0);
+}

@@ -16,6 +16,8 @@ $bem-state-namespace: is !default;
  * binds onto it to provide that behaviour. 
  * If you’re not a developer working with 
  * JavaScript, leave these well alone.
+ *
+ * Format: .[is|has|js]-state {}
  */
 @mixin state($state, $namespace: $bem-state-namespace) {
 	&.#{$namespace}-#{$state} {

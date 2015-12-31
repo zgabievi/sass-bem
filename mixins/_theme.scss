@@ -1,15 +1,17 @@
-$bem-scope-namespace: s !default;
+$bem-theme-namespace: t !default;
 
 /**
  * Signify that a class is responsible for adding a 
  * Theme to a view. It lets us know that UI Components’ 
  * current cosmetic appearance may be due 
  * to the presence of a theme.
+ *
+ * Format: .t-theme {}
  */
-@mixin scope($scope) {
-	.#{$bem-scope-namespace}-#{$scope} {
+@mixin theme($theme) {
+	.#{$bem-theme-namespace}-#{$theme} {
 		@if $bem-debug == true {
-			outline: 5px solid #a2453d;
+			outline: 5px solid #60316e;
 		}
 
 		@content;
@@ -17,8 +19,8 @@ $bem-scope-namespace: s !default;
 }
 
 // Shorthand
-@mixin s($scope) {
-	@include scope($scope) {
+@mixin t($theme) {
+	@include theme($theme) {
 		@content;
 	}
 }

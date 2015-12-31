@@ -1,5 +1,5 @@
 @mixin at($modifier) {
-	$block: get-block(#{&});
+	$block: get-block(unquote("#{&}"));
 
 	.#{$block}#{map-get($bem, 'modifier')}#{$modifier} & {
 		@content;
@@ -7,7 +7,7 @@
 }
 
 @mixin with($element) {
-	$block: get-block(#{&});
+	$block: get-block(unquote("#{&}"));
 
 	& + .#{$block}#{map-get($bem, 'element')}#{$element} {
 		@content;
@@ -15,7 +15,7 @@
 }
 
 @mixin duo {
-	$list: explode(#{&}, ' ');
+	$list: explode(unquote("#{&}"), ' ');
 	$last: nth($list, length($list));
 
 	& + #{$last} {
@@ -24,7 +24,7 @@
 }
 
 @mixin while($modifier) {
-	$block: get-block(#{&});
+	$block: get-block(unquote("#{&}"));
 
 	&.#{$block}#{map-get($bem, 'modifier')}#{$modifier} {
 		@content;

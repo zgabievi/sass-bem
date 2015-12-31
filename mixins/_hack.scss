@@ -9,9 +9,17 @@ $bem-hack-namespace: _ !default;
  * need to let others know that this class 
  * is less than ideal, and hopefully temporary 
  * (i.e. do not bind onto this).
+ *
+ * Format: ._<namespace>hack {}
  */
-@mixin hack($hack) {
-	.#{$bem-hack-namespace}#{$hack} {
+@mixin hack($hack, $namespace: null) {
+    $selector: #{$bem-hack-namespace}#{$hack};
+    
+    @if $namespace != null {
+        $selector: #{$bem-hack-namespace}#{$namespace}-#{$hack};
+    }
+    
+	.#{$selector} {
 		@if $bem-debug == true {
 			outline: 5px solid #f33535;
 		}
@@ -21,8 +29,8 @@ $bem-hack-namespace: _ !default;
 }
 
 // Shorthand
-@mixin _($hack) {
-	@include hack($hack) {
+@mixin _($hack, $namespace: null) {
+	@include hack($hack, $namespace: null) {
 		@content;
 	}
 }

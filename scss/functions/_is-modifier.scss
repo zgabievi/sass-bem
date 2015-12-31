@@ -1,3 +1,0 @@
-@function is-modifier($selector) {
-	@return str-index($selector, #{map-get($bem, 'modifier')}) != null;
-}

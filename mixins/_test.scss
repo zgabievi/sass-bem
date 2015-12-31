@@ -7,6 +7,8 @@ $bem-test-namespace: qa !default;
  * Like the JavaScript namespace, this basically 
  * just reserves hooks in the 
  * DOM for non-CSS purposes.
+ *
+ * Format: .qa-node {}
  */
 @mixin test($test) {
 	.#{$bem-test-namespace}-#{$test} {

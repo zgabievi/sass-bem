@@ -1,3 +1,6 @@
+/**
+ * Format: .block[<element>|<modifier>] {}
+ */
 @mixin block($block) {
 	.#{$block} {
 		@if $bem-debug == true {
