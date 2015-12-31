@@ -1,5 +1,5 @@
 # BEM
-[![Bower](https://img.shields.io/bower/v/zgabievi/bem.svg?style=flat-square)](http://bower.io/search/?q=bem)
+[![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
 Collection of BEM Mixins &amp; Helpers
@@ -11,7 +11,7 @@ Collection of BEM Mixins &amp; Helpers
 + [License](#license)
 
 ## Installation
-### Install With [Bower](http://bower.io/search/?q=bem)
+### Install With [Bower](http://bower.io/search/?q=sass-bem)
 ```
 $ bower install bem --save
 ```
@@ -22,20 +22,14 @@ $ npm install sass-bem --save
 ```
 
 ### Install Manually
-- [Download Package Archive](https://github.com/zgabievi/bem/archive/master.zip)
+- [Download Package Archive](https://github.com/zgabievi/sass-bem/archive/master.zip)
 - Place `/scss/` or `/sass/` directory to your project.
 
 ## Usage
 Insert following code in top of your file:
 
-for `scss` syntax:
 ```scss
-@import "/bower_components/bem/scss/bem";
-```
-
-for `sass` syntax:
-```sass
-@import /bower_components/bem/scss/bem
+@import "/bower_components/sass-bem/bem";
 ```
 
 ### Configuration
