@@ -1,6 +1,6 @@
 {
   "name": "sass-bem",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Collection of BEM Mixins & Helpers",
   "main": "_bem.scss",
   "repository": {
@@ -20,10 +20,6 @@
     "url": "https://github.com/zgabievi/sass-bem/issues"
   },
   "homepage": "https://github.com/zgabievi/sass-bem#readme",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-sass": "^2.1.0"
-  },
   "ignore": [
     "**/.*",
     "node_modules",
