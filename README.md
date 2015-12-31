@@ -13,7 +13,7 @@ Collection of BEM Mixins &amp; Helpers
 ## Installation
 ### Install With [Bower](http://bower.io/search/?q=sass-bem)
 ```
-$ bower install bem --save
+$ bower install sass-bem --save
 ```
 
 ### Install With [NPM](https://www.npmjs.com/package/sass-bem):
@@ -23,7 +23,7 @@ $ npm install sass-bem --save
 
 ### Install Manually
 - [Download Package Archive](https://github.com/zgabievi/sass-bem/archive/master.zip)
-- Place `/scss/` or `/sass/` directory to your project.
+- Extract archive to your project.
 
 ## Usage
 Insert following code in top of your file:
