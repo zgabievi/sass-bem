@@ -42,10 +42,10 @@ $bem: (
 );
 ```
 
-Disable debugging using:
+Enable debugging using:
 
 ```scss
-$bem-debug: false;
+$bem-debug: true;
 ```
 
 ## Example
