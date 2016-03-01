@@ -217,4 +217,4 @@ $bem-debug: true;
 + [**OOCSS**](https://github.com/zgabievi/sass-bem/wiki/OOCSS) - Object-Oriented CSS Classes
 
 ## License
-The BEM package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The sass-bem package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
