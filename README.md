@@ -206,6 +206,7 @@ $bem-debug: true;
 	- [Relations](https://github.com/zgabievi/sass-bem/wiki/Mixins#relations) - Relationship Mixins
 	- [States](https://github.com/zgabievi/sass-bem/wiki/Mixins#states) - Element State Mixins
 	- [Pseudo Element](https://github.com/zgabievi/sass-bem/wiki/Mixins#pseudo-elements) - Pseudo Class Mixins
+	- [Parse](https://github.com/zgabievi/sass-bem/wiki/Mixins#parse) - Parse multi-selector Mixin
 + [**Functions**](https://github.com/zgabievi/sass-bem/wiki/Functions) - Collection of helper functions
 	- [bem-index()](https://github.com/zgabievi/sass-bem/wiki/Functions#bem-index) - Returns first index of bem separator
 	- [get-block()](https://github.com/zgabievi/sass-bem/wiki/Functions#get-block) - Returns bem block from string
