@@ -1,5 +1,3 @@
-$bem-component-namespace: c !default;
-
 /**
  * Signify that something is a Component. This 
  * is a concrete, implementation-specific piece 
@@ -12,7 +10,7 @@ $bem-component-namespace: c !default;
  * Format: .c-component[<element>|<modifier>] {}
  */
 @mixin component($component) {
-	.#{$bem-component-namespace}-#{$component} {
+	.#{unquote(component-selector($component))} {
 		@if $bem-debug == true {
 			outline: 5px solid #00b8a9;
 		}

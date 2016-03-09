@@ -1,0 +1,22 @@
+//
+@function modifier-selector($modifier) {
+	$selector: #{&}#{map-get($bem, 'modifier')}#{$modifier};
+
+	//
+	@if (type-of($modifier) == 'list') {
+		$selector: ();
+
+		//
+		@each $value in $modifier {
+			$current: #{&}#{map-get($bem, 'modifier')}#{$value};
+			$selector: append($selector, $current, comma);
+		}
+	}
+
+	@return $selector;
+}
+
+//
+@function m-selector($modifier) {
+	@return modifier-selector($modifier);
+}

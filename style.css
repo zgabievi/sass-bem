@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/**
+ * Format: .block[<element>|<modifier>] {}
+ */
+/**
+ * Signify that something is an Object, and that it may 
+ * be used in any number of unrelated contexts to the one 
+ * you can currently see it in. Making modifications to 
+ * these types of class could potentially have knock-on 
+ * effects in a lot of other unrelated places. 
+ * Tread carefully.
+ *
+ * Format: .o-object[<element>|<modifier>] {}
+ */
+/**
+ * Signify that something is a Component. This 
+ * is a concrete, implementation-specific piece 
+ * of UI. All of the changes you make to its 
+ * styles should be detectable in the context
+ * youΓÇÖre currently looking at. Modifying 
+ * these styles should be safe and have 
+ * no side effects.
+ *
+ * Format: .c-component[<element>|<modifier>] {}
+ */
+/**
+ * Signify that this class is a Utility class. 
+ * It has a very specific role (often providing 
+ * only one declaration) and should not be bound 
+ * onto or changed. It can be reused and is not 
+ * tied to any specific piece of UI. You will 
+ * probably recognise this namespace from 
+ * libraries and methodologies like SUIT.
+ *
+ * Format: .u-utility {}
+ */
+/**
+ * Signify that a class is responsible for adding a 
+ * Theme to a view. It lets us know that UI ComponentsΓÇÖ 
+ * current cosmetic appearance may be due 
+ * to the presence of a theme.
+ *
+ * Format: .t-theme {}
+ */
+/**
+ * Signify that a class is responsible for adding a 
+ * Theme to a view. It lets us know that UI ComponentsΓÇÖ 
+ * current cosmetic appearance may be due 
+ * to the presence of a theme.
+ *
+ * Format: .s-scope {}
+ */
+/**
+ * Signify that the piece of UI in question 
+ * is currently styled a certain way because 
+ * of a state or condition. This stateful 
+ * namespace is gorgeous, and comes from SMACSS. 
+ * It tells us that the DOM currently has a 
+ * temporary, optional, or short-lived style 
+ * applied to it due to a certain state being invoked.
+ *
+ * -----
+ *
+ * Signify that this piece of the DOM has some 
+ * behaviour acting upon it, and that JavaScript 
+ * binds onto it to provide that behaviour. 
+ * If youΓÇÖre not a developer working with 
+ * JavaScript, leave these well alone.
+ *
+ * Format: .[is|has|js]-state {}
+ */
+/**
+ * Signify that this class is the worst of 
+ * the worstΓÇöa hack! Sometimes, although 
+ * incredibly rarely, we need to add a 
+ * class in our markup in order to force 
+ * something to work. If we do this, we 
+ * need to let others know that this class 
+ * is less than ideal, and hopefully temporary 
+ * (i.e. do not bind onto this).
+ *
+ * Format: ._<namespace>hack {}
+ */
+/**
+ * Signify that a QA or Test Engineering team 
+ * is running an automated UI test which needs 
+ * to find or bind onto these parts of the DOM. 
+ * Like the JavaScript namespace, this basically 
+ * just reserves hooks in the 
+ * DOM for non-CSS purposes.
+ *
+ * Format: .qa-node {}
+ */
+.block {
+  display: block; }
+  .block__element1 {
+    display: element1; }
+    .block__element1--modifier1 {
+      display: modifier1; }
+    .block__element1.is-state {
+      display: is-state; }
+    .block__element1.has-state {
+      display: has-state; }
+    .block__element1.js-state {
+      display: js-state; }
+  .block--modifier2 {
+    display: modifier2; }
+    .block--modifier2.block--modifier1 {
+      display: modifier2-1; }
+  .block__element2 {
+    display: element2; }
+    .block__element2 + .block__element2 {
+      display: element2-2; }
+    .block__element2 + .block__element1 {
+      display: element2-1; }
+    .block--modifier2 .block__element2 {
+      display: modifier2; }
+
+.o-object {
+  display: object; }
+
+.c-component {
+  display: component; }
+
+.u-utility {
+  display: utility; }
+
+.t-theme {
+  display: theme; }
+
+.s-scope {
+  display: scope; }
+
+._hack {
+  display: hack; }
+
+.qa-test {
+  display: test; }
+
+.block {
+  display: block;
+  display: inline-block; }
+  .block:hover, .block--hover {
+    display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */

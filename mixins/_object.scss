@@ -1,5 +1,3 @@
-$bem-object-namespace: o !default;
-
 /**
  * Signify that something is an Object, and that it may 
  * be used in any number of unrelated contexts to the one 
@@ -11,7 +9,7 @@ $bem-object-namespace: o !default;
  * Format: .o-object[<element>|<modifier>] {}
  */
 @mixin object($object) {
-	.#{$bem-object-namespace}-#{$object} {
+	.#{unquote(object-selector($object))} {
 		@if $bem-debug == true {
 			outline: 5px solid #9bcb3c;
 		}

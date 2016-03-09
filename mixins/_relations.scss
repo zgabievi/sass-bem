@@ -1,32 +1,23 @@
 @mixin at($modifier) {
-	$block: get-block(unquote("#{&}"));
-
-	.#{$block}#{map-get($bem, 'modifier')}#{$modifier} & {
+	#{unquote(at-selector($modifier))} {
 		@content;
 	}
 }
 
 @mixin with($element) {
-	$block: get-block(unquote("#{&}"));
-
-	& + .#{$block}#{map-get($bem, 'element')}#{$element} {
+	#{unquote(with-selector($element))} {
 		@content;
 	}
 }
 
 @mixin duo {
-	$list: explode(unquote("#{&}"), ' ');
-	$last: nth($list, length($list));
-
-	& + #{$last} {
+	#{unquote(duo-selector())} {
 		@content;
 	}
 }
 
 @mixin while($modifier) {
-	$block: get-block(unquote("#{&}"));
-
-	&.#{$block}#{map-get($bem, 'modifier')}#{$modifier} {
+	#{unquote(while-selector($modifier))} {
 		@content;
 	}
 }

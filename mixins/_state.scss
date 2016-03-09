@@ -1,5 +1,3 @@
-$bem-state-namespace: is !default;
-
 /**
  * Signify that the piece of UI in question 
  * is currently styled a certain way because 
@@ -19,13 +17,17 @@ $bem-state-namespace: is !default;
  *
  * Format: .[is|has|js]-state {}
  */
-@mixin state($state, $namespace: $bem-state-namespace) {
-	&.#{$namespace}-#{$state} {
-		@if $bem-debug == true {
-			outline: 5px solid #66a96b;
-		}
+@mixin state($state, $namespace: null) {
+	@debug state-selector($state, $namespace);
 
-		@content;
+	@at-root {
+		#{state-selector($state, $namespace)} {
+			@if $bem-debug == true {
+				outline: 5px solid #66a96b;
+			}
+
+			@content;
+		}
 	}
 }
 

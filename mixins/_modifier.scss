@@ -1,21 +1,12 @@
 @mixin modifier($modifier) {
-	$selector: #{&}#{map-get($bem, 'modifier')}#{$modifier};
+	@at-root {
+		#{unquote(modifier-selector($modifier))} {
+			@if $bem-debug == true {
+				outline: 5px solid #C98B70;
+			}
 
-	@if (type-of($modifier) == 'list') {
-		$selector: ();
-
-		@each $value in $modifier {
-			$current: #{&}#{map-get($bem, 'modifier')}#{$value};
-			$selector: append($selector, $current, comma);
+			@content;
 		}
-	}
-
-	@at-root #{$selector} {
-		@if $bem-debug == true {
-			outline: 5px solid #C98B70;
-		}
-
-		@content;
 	}
 }
 

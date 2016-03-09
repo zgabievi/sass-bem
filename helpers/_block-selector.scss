@@ -1,0 +1,9 @@
+//
+@function block-selector($block) {
+	@return $block;
+}
+
+//
+@function b-selector($block) {
+	@return block-selector($block);
+}

@@ -1,0 +1,30 @@
+$bem-state-namespace: is !default;
+
+//
+@function state-selector($state, $namespace: null) {
+	$parent: unquote("#{&}");
+
+	//
+	$selector: #{$parent}#{'.'}#{$bem-state-namespace}#{$state};
+
+	@if $namespace != null {
+		$selector: #{$parent}#{'.'}#{$namespace}-#{$state};
+	}
+
+	@return $selector;
+}
+
+//
+@function is-selector($state) {
+	@return state-selector($state, 'is');
+}
+
+//
+@function has-selector($state) {
+	@return state-selector($state, 'has');
+}
+
+//
+@function js-selector($state) {
+	@return state-selector($state, 'js');
+}

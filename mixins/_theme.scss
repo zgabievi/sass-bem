@@ -1,5 +1,3 @@
-$bem-theme-namespace: t !default;
-
 /**
  * Signify that a class is responsible for adding a 
  * Theme to a view. It lets us know that UI Components’ 
@@ -9,7 +7,7 @@ $bem-theme-namespace: t !default;
  * Format: .t-theme {}
  */
 @mixin theme($theme) {
-	.#{$bem-theme-namespace}-#{$theme} {
+	.#{unquote(theme-selector($theme))} {
 		@if $bem-debug == true {
 			outline: 5px solid #60316e;
 		}

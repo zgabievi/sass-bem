@@ -1,3 +1,4 @@
+//
 @function is-modifier($selector) {
     $separator: "#{map-get($bem, modifier)}";
 	@return str-index($selector, $separator) != null;

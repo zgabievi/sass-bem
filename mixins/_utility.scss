@@ -1,5 +1,3 @@
-$bem-utility-namespace: u !default;
-
 /**
  * Signify that this class is a Utility class. 
  * It has a very specific role (often providing 
@@ -12,7 +10,7 @@ $bem-utility-namespace: u !default;
  * Format: .u-utility {}
  */
 @mixin utility($utility) {
-	.#{$bem-utility-namespace}-#{$utility} {
+	.#{unquote(utility-selector($utility))} {
 		@if $bem-debug == true {
 			outline: 5px solid #635270;
 		}

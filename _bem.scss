@@ -15,6 +15,21 @@ $bem-debug: false !default;
 @import "functions/is-block";
 @import "functions/math-min";
 @import "functions/explode";
+@import "functions/to-string";
+
+// selectors
+@import "helpers/block-selector";
+@import "helpers/element-selector";
+@import "helpers/modifier-selector";
+@import "helpers/relations-selector";
+@import "helpers/object-selector";
+@import "helpers/component-selector";
+@import "helpers/utility-selector";
+@import "helpers/theme-selector";
+@import "helpers/scope-selector";
+@import "helpers/state-selector";
+@import "helpers/hack-selector";
+@import "helpers/test-selector";
 
 // mixins
 @import "mixins/block";
@@ -23,6 +38,7 @@ $bem-debug: false !default;
 @import "mixins/relations";
 @import "mixins/states";
 @import "mixins/pseudo";
+@import "mixins/parse";
 
 // oocss
 @import "mixins/object";

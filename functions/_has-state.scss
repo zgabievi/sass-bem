@@ -1,3 +1,4 @@
+//
 @function has-state($selector) {
     $separator_is: unquote('#{".is"}#{map-get($bem, state)}');
     $separator_js: unquote('#{"js"}#{map-get($bem, state)}');

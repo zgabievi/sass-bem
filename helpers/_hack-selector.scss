@@ -1,0 +1,17 @@
+$bem-hack-namespace: _ !default;
+
+//
+@function hack-selector($hack, $namespace: null) {
+	$selector: #{$bem-hack-namespace}#{$hack};
+
+	@if $namespace != null {
+		$selector: #{$bem-hack-namespace}#{$namespace}-#{$hack};
+	}
+
+	@return $selector;
+}
+
+//
+@function _-selector($hack) {
+	@return hack-selector($hack, '_');
+}

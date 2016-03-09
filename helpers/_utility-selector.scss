@@ -1,0 +1,11 @@
+$bem-utility-namespace: u !default;
+
+//
+@function utility-selector($utility) {
+	@return unquote("#{$bem-utility-namespace}-#{$utility}");
+}
+
+//
+@function u-selector($utility) {
+	@return utility-selector($utility);
+}

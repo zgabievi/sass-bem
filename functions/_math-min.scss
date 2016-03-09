@@ -1,13 +1,19 @@
+//
 @function math-min($a, $b, $default) {
 	$min: $default;
 
+	//
 	@if ($a == null) {
+
+		//
 		@if ($b != null) {
 			$min: $b;
 		}
 	} @else if ($b == null) {
 		$min: $a;
 	} @else {
+
+		//
 		@if ($a <= $b) {
 			$min: $a;
 		} @else {

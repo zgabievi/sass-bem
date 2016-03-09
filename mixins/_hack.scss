@@ -1,5 +1,3 @@
-$bem-hack-namespace: _ !default;
-
 /**
  * Signify that this class is the worst of 
  * the worst—a hack! Sometimes, although 
@@ -13,13 +11,7 @@ $bem-hack-namespace: _ !default;
  * Format: ._<namespace>hack {}
  */
 @mixin hack($hack, $namespace: null) {
-    $selector: #{$bem-hack-namespace}#{$hack};
-    
-    @if $namespace != null {
-        $selector: #{$bem-hack-namespace}#{$namespace}-#{$hack};
-    }
-    
-	.#{$selector} {
+	.#{unquote(hack-selector($hack, $namespace))} {
 		@if $bem-debug == true {
 			outline: 5px solid #f33535;
 		}

@@ -1,5 +1,3 @@
-$bem-test-namespace: qa !default;
-
 /**
  * Signify that a QA or Test Engineering team 
  * is running an automated UI test which needs 
@@ -11,7 +9,7 @@ $bem-test-namespace: qa !default;
  * Format: .qa-node {}
  */
 @mixin test($test) {
-	.#{$bem-test-namespace}-#{$test} {
+	.#{unquote(test-selector($test))} {
 		@if $bem-debug == true {
 			outline: 5px solid #f8e796;
 		}
