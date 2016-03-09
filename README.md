@@ -103,6 +103,10 @@ $bem-debug: true;
 			display: modifier2;
 		}
 	}
+	
+	@include parse('hover', 'm:hover') {
+		display: inline-block;
+	}
 }
 
 @include o('object') {
@@ -174,6 +178,9 @@ $bem-debug: true;
       
     .block--modifier2 .block__element2 {
       display: modifier2; }
+      
+    .block:hover, .block--hover {
+      display: inline-block; }
 
 .o-object {
   display: object; }
