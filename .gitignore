@@ -3,6 +3,6 @@
 node_modules
 gulpfile.js
 config.json
-style.scss
-style.css
+/style.scss
+/style.css
 *.map
