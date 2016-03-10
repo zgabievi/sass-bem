@@ -11,7 +11,7 @@
  * Format: ._<namespace>hack {}
  */
 @mixin hack($hack, $namespace: null) {
-	.#{unquote(hack-selector($hack, $namespace))} {
+	.#{hack-selector($hack, $namespace)} {
 		@if $bem-debug == true {
 			outline: 5px solid #f33535;
 		}

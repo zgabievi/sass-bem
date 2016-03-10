@@ -5,10 +5,10 @@
 
 	//
 	@if (is-block($parent)) {
-		$selector: '#{&}#{map-get($bem, 'element')}#{$element}';
+		$selector: unquote("&#{map-get($bem, 'element')}#{$element}");
 	} @else {
 		$block: get-block($parent);
-		$selector: '#{&} .#{$block}#{map-get($bem, 'element')}#{$element}';
+		$selector: unquote("& .#{$block}#{map-get($bem, 'element')}#{$element}");
 	}
 
 	//
@@ -21,10 +21,10 @@
 
 			//
 			@if (is-block($parent)) {
-				$current: '#{&}#{map-get($bem, 'element')}#{$value}';
+				$current: unquote("&#{map-get($bem, 'element')}#{$value}");
 			} @else {
 				$block: get-block($parent);
-				$current: '#{&} .#{$block}#{map-get($bem, 'element')}#{$value}';
+				$current: unquote("& .#{$block}#{map-get($bem, 'element')}#{$value}");
 			}
 
 			//

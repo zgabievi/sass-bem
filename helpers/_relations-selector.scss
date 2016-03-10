@@ -2,14 +2,14 @@
 @function at-selector($modifier) {
 	$block: get-block(unquote("#{&}"));
 
-	@return #{unquote('.')}#{$block}#{map-get($bem, 'modifier')}#{$modifier}#{unquote(' &')};
+	@return unquote(".#{$block}#{map-get($bem, 'modifier')}#{$modifier} &");
 }
 
 //
 @function with-selector($element) {
 	$block: get-block(unquote("#{&}"));
 
-	@return #{unquote('& + .')}#{$block}#{map-get($bem, 'element')}#{$element};
+	@return unquote("& + .#{$block}#{map-get($bem, 'element')}#{$element}");
 }
 
 //
@@ -17,12 +17,12 @@
 	$list: explode(unquote("#{&}"), ' ');
 	$last: nth($list, length($list));
 
-	@return #{unquote('& + ')}#{$last};
+	@return unquote("& + #{$last}");
 }
 
 //
 @function while-selector($modifier) {
 	$block: get-block(unquote("#{&}"));
 
-	@return #{unquote('&.')}#{$block}#{map-get($bem, 'modifier')}#{$modifier};
+	@return unquote("&.#{$block}#{map-get($bem, 'modifier')}#{$modifier}");
 }

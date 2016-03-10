@@ -1,23 +1,23 @@
 @mixin at($modifier) {
-	#{unquote(at-selector($modifier))} {
+	#{at-selector($modifier)} {
 		@content;
 	}
 }
 
 @mixin with($element) {
-	#{unquote(with-selector($element))} {
+	#{with-selector($element)} {
 		@content;
 	}
 }
 
 @mixin duo {
-	#{unquote(duo-selector())} {
+	#{duo-selector()} {
 		@content;
 	}
 }
 
 @mixin while($modifier) {
-	#{unquote(while-selector($modifier))} {
+	#{while-selector($modifier)} {
 		@content;
 	}
 }

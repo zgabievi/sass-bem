@@ -8,12 +8,12 @@
 
 		//
 		@if type-of($e) == list {
-			$result: $result#{to-string($e, $glue, true)};
+			$result: unquote("#{$result}#{to-string($e, $glue, true)}");
 		}
 
 			//
 		@else {
-			$result: if($i != length($list) or $is-nested, $result#{$e}#{$glue}, $result#{$e});
+			$result: if($i != length($list) or $is-nested, unquote("#{$result}#{$e}#{$glue}"), unquote("#{$result}#{$e}"));
 		}
 	}
 

@@ -2,10 +2,10 @@ $bem-hack-namespace: _ !default;
 
 //
 @function hack-selector($hack, $namespace: null) {
-	$selector: #{$bem-hack-namespace}#{$hack};
+	$selector: unquote("#{$bem-hack-namespace}#{$hack}");
 
 	@if $namespace != null {
-		$selector: #{$bem-hack-namespace}#{$namespace}-#{$hack};
+		$selector: unquote("#{$bem-hack-namespace}#{$namespace}-#{$hack}");
 	}
 
 	@return $selector;

@@ -1,6 +1,6 @@
 @mixin modifier($modifier) {
 	@at-root {
-		#{unquote(modifier-selector($modifier))} {
+		#{modifier-selector($modifier)} {
 			@if $bem-debug == true {
 				outline: 5px solid #C98B70;
 			}

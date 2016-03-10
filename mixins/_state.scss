@@ -18,8 +18,6 @@
  * Format: .[is|has|js]-state {}
  */
 @mixin state($state, $namespace: null) {
-	@debug state-selector($state, $namespace);
-
 	@at-root {
 		#{state-selector($state, $namespace)} {
 			@if $bem-debug == true {

@@ -1,20 +1,23 @@
 //
 @mixin parse($selectors...) {
-	@content;
-
-	//
 	$parent: unquote("#{&}");
 	$collection: ();
 
+	//
 	@each $selector in $selectors {
 		$parts: explode($selector, ':');
 
 		//
 		@if (str-length(nth($parts, 1)) == 0) {
-			$selector: #{$parent}#{':'}#{nth($parts, 2)};
+			$selector: unquote("#{$parent}:#{nth($parts, 2)}");
 		}
 
-			//
+		//
+		@else if(length($parts) == 1) {
+			$selector: unquote("#{$parent}:#{nth($parts, 1)}");
+		}
+
+		//
 		@else {
 
 			//

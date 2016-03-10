@@ -7,7 +7,7 @@
  * Format: .s-scope {}
  */
 @mixin scope($scope) {
-	.#{unquote(scope-selector($scope))} {
+	.#{scope-selector($scope)} {
 		@if $bem-debug == true {
 			outline: 5px solid #a2453d;
 		}

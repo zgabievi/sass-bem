@@ -2,13 +2,11 @@ $bem-state-namespace: is !default;
 
 //
 @function state-selector($state, $namespace: null) {
-	$parent: unquote("#{&}");
+	$selector: unquote("&.#{$bem-state-namespace}#{$state}");
 
 	//
-	$selector: #{$parent}#{'.'}#{$bem-state-namespace}#{$state};
-
 	@if $namespace != null {
-		$selector: #{$parent}#{'.'}#{$namespace}-#{$state};
+		$selector: unquote("&.#{$namespace}-#{$state}");
 	}
 
 	@return $selector;

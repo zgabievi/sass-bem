@@ -10,7 +10,7 @@
  * Format: .u-utility {}
  */
 @mixin utility($utility) {
-	.#{unquote(utility-selector($utility))} {
+	.#{utility-selector($utility)} {
 		@if $bem-debug == true {
 			outline: 5px solid #635270;
 		}

@@ -1,6 +1,6 @@
 @mixin element($element) {
 	@at-root {
-		#{unquote(element-selector($element))} {
+		#{element-selector($element)} {
 			@if $bem-debug == true {
 				outline: 5px solid #635270;
 			}

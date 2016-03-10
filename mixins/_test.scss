@@ -9,7 +9,7 @@
  * Format: .qa-node {}
  */
 @mixin test($test) {
-	.#{unquote(test-selector($test))} {
+	.#{test-selector($test)} {
 		@if $bem-debug == true {
 			outline: 5px solid #f8e796;
 		}

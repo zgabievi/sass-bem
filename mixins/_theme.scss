@@ -7,7 +7,7 @@
  * Format: .t-theme {}
  */
 @mixin theme($theme) {
-	.#{unquote(theme-selector($theme))} {
+	.#{theme-selector($theme)} {
 		@if $bem-debug == true {
 			outline: 5px solid #60316e;
 		}

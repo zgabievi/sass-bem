@@ -2,7 +2,7 @@
  * Format: .block[<element>|<modifier>] {}
  */
 @mixin block($block) {
-	.#{unquote(block-selector($block))} {
+	.#{block-selector($block)} {
 		@if $bem-debug == true {
 			outline: 5px solid #363863;
 		}

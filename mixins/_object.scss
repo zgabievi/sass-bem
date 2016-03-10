@@ -9,7 +9,7 @@
  * Format: .o-object[<element>|<modifier>] {}
  */
 @mixin object($object) {
-	.#{unquote(object-selector($object))} {
+	.#{object-selector($object)} {
 		@if $bem-debug == true {
 			outline: 5px solid #9bcb3c;
 		}

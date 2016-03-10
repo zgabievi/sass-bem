@@ -1,6 +1,6 @@
 //
 @function modifier-selector($modifier) {
-	$selector: #{&}#{map-get($bem, 'modifier')}#{$modifier};
+	$selector: unquote("&#{map-get($bem, "modifier")}#{$modifier}");
 
 	//
 	@if (type-of($modifier) == 'list') {
@@ -8,7 +8,7 @@
 
 		//
 		@each $value in $modifier {
-			$current: #{&}#{map-get($bem, 'modifier')}#{$value};
+			$current: unquote("&#{map-get($bem, 'modifier')}#{$value}");
 			$selector: append($selector, $current, comma);
 		}
 	}
