@@ -1,0 +1,8 @@
+.idea
+.sass-cache
+node_modules
+gulpfile.js
+config.json
+style.scss
+style.css
+*.map

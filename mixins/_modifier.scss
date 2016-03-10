@@ -1,0 +1,17 @@
+@mixin modifier($modifier) {
+	@at-root {
+		#{modifier-selector($modifier)} {
+			@if $bem-debug == true {
+				outline: 5px solid #C98B70;
+			}
+
+			@content;
+		}
+	}
+}
+
+@mixin m($modifier) {
+	@include modifier($modifier) {
+		@content;
+	}
+}

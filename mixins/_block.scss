@@ -1,0 +1,18 @@
+/**
+ * Format: .block[<element>|<modifier>] {}
+ */
+@mixin block($block) {
+	#{block-selector($block)} {
+		@if $bem-debug == true {
+			outline: 5px solid #363863;
+		}
+
+		@content;
+	}
+}
+
+@mixin b($block) {
+	@include block($block) {
+		@content;
+	}
+}

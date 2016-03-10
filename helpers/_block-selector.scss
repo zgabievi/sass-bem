@@ -1,0 +1,9 @@
+//
+@function block-selector($block) {
+	@return unquote(".#{$block}");
+}
+
+//
+@function b-selector($block) {
+	@return block-selector($block);
+}

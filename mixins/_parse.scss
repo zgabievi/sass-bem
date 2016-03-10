@@ -1,0 +1,45 @@
+//
+@mixin parse($selectors...) {
+	$parent: unquote("#{&}");
+	$collection: ();
+
+	//
+	@each $selector in $selectors {
+		$parts: explode($selector, ':');
+
+		//
+		@if (str-length(nth($parts, 1)) == 0) {
+			$selector: unquote("#{$parent}:#{nth($parts, 2)}");
+		}
+
+		//
+		@else if(length($parts) == 1) {
+			$selector: unquote("#{$parent}#{nth($parts, 1)}");
+		}
+
+		//
+		@else {
+
+			//
+			@if mixin-exists(nth($parts, 1)) {
+				$function: unquote("#{nth($parts, 1)}-selector");
+				$selector: call($function, nth($parts, 2));
+			}
+
+				//
+			@else {
+				@error "Mixin #{nth($parts, 1)} doesn't exists!";
+			}
+		}
+
+		//
+		$collection: append($collection, $selector);
+	}
+
+	//
+	@at-root {
+		#{to-string($collection, ', ')} {
+			@content;
+		}
+	}
+}

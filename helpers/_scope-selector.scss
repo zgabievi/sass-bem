@@ -1,0 +1,11 @@
+$bem-scope-namespace: s !default;
+
+//
+@function scope-selector($scope) {
+	@return unquote(".#{$bem-scope-namespace}-#{$scope}");
+}
+
+//
+@function s-selector($scope) {
+	@return scope-selector($scope);
+}

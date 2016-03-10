@@ -1,0 +1,11 @@
+$bem-theme-namespace: t !default;
+
+//
+@function theme-selector($theme) {
+	@return unquote(".#{$bem-theme-namespace}-#{$theme}");
+}
+
+//
+@function t-selector($theme) {
+	@return theme-selector($theme);
+}

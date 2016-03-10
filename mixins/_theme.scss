@@ -1,0 +1,24 @@
+/**
+ * Signify that a class is responsible for adding a 
+ * Theme to a view. It lets us know that UI Components’ 
+ * current cosmetic appearance may be due 
+ * to the presence of a theme.
+ *
+ * Format: .t-theme {}
+ */
+@mixin theme($theme) {
+	#{theme-selector($theme)} {
+		@if $bem-debug == true {
+			outline: 5px solid #60316e;
+		}
+
+		@content;
+	}
+}
+
+// Shorthand
+@mixin t($theme) {
+	@include theme($theme) {
+		@content;
+	}
+}

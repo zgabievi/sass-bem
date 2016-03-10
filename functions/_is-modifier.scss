@@ -1,0 +1,5 @@
+//
+@function is-modifier($selector) {
+    $separator: unquote("#{map-get($bem, modifier)}");
+	@return str-index($selector, $separator) != null;
+}

@@ -1,0 +1,5 @@
+//
+@function is-element($selector) {
+    $separator: unquote("#{map-get($bem, element)}");
+	@return str-index($selector, $separator) != null;
+}

@@ -1,0 +1,28 @@
+/**
+ * Signify that this class is the worst of 
+ * the worst—a hack! Sometimes, although 
+ * incredibly rarely, we need to add a 
+ * class in our markup in order to force 
+ * something to work. If we do this, we 
+ * need to let others know that this class 
+ * is less than ideal, and hopefully temporary 
+ * (i.e. do not bind onto this).
+ *
+ * Format: ._<namespace>hack {}
+ */
+@mixin hack($hack, $namespace: null) {
+	#{hack-selector($hack, $namespace)} {
+		@if $bem-debug == true {
+			outline: 5px solid #f33535;
+		}
+
+		@content;
+	}
+}
+
+// Shorthand
+@mixin _($hack, $namespace: null) {
+	@include hack($hack, $namespace: null) {
+		@content;
+	}
+}

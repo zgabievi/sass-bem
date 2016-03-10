@@ -1,0 +1,28 @@
+//
+@function at-selector($modifier) {
+	$block: get-block(unquote("#{&}"));
+
+	@return unquote(".#{$block}#{map-get($bem, 'modifier')}#{$modifier} &");
+}
+
+//
+@function with-selector($element) {
+	$block: get-block(unquote("#{&}"));
+
+	@return unquote("& + .#{$block}#{map-get($bem, 'element')}#{$element}");
+}
+
+//
+@function duo-selector() {
+	$list: explode(unquote("#{&}"), ' ');
+	$last: nth($list, length($list));
+
+	@return unquote("& + #{$last}");
+}
+
+//
+@function while-selector($modifier) {
+	$block: get-block(unquote("#{&}"));
+
+	@return unquote("&.#{$block}#{map-get($bem, 'modifier')}#{$modifier}");
+}

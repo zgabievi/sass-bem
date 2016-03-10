@@ -1,0 +1,11 @@
+$bem-component-namespace: c !default;
+
+//
+@function component-selector($component) {
+	@return unquote(".#{$bem-component-namespace}-#{$component}");
+}
+
+//
+@function c-selector($component) {
+	@return component-selector($component);
+}

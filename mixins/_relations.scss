@@ -1,0 +1,23 @@
+@mixin at($modifier) {
+	#{at-selector($modifier)} {
+		@content;
+	}
+}
+
+@mixin with($element) {
+	#{with-selector($element)} {
+		@content;
+	}
+}
+
+@mixin duo {
+	#{duo-selector()} {
+		@content;
+	}
+}
+
+@mixin while($modifier) {
+	#{while-selector($modifier)} {
+		@content;
+	}
+}

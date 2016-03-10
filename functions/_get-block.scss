@@ -1,0 +1,4 @@
+//
+@function get-block($element) {
+	@return str-slice($element, 2, bem-index($element) - 1);
+}

@@ -1,0 +1,11 @@
+$bem-object-namespace: o !default;
+
+//
+@function object-selector($object) {
+	@return unquote(".#{$bem-object-namespace}-#{$object}");
+}
+
+//
+@function o-selector($object) {
+	@return object-selector($object);
+}

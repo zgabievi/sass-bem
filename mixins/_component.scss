@@ -1,0 +1,27 @@
+/**
+ * Signify that something is a Component. This 
+ * is a concrete, implementation-specific piece 
+ * of UI. All of the changes you make to its 
+ * styles should be detectable in the context
+ * you’re currently looking at. Modifying 
+ * these styles should be safe and have 
+ * no side effects.
+ *
+ * Format: .c-component[<element>|<modifier>] {}
+ */
+@mixin component($component) {
+	#{component-selector($component)} {
+		@if $bem-debug == true {
+			outline: 5px solid #00b8a9;
+		}
+
+		@content;
+	}
+}
+
+// Shorthand
+@mixin c($component) {
+	@include component($component) {
+		@content;
+	}
+}

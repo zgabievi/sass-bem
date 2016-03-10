@@ -1,0 +1,11 @@
+$bem-test-namespace: qa !default;
+
+//
+@function test-selector($test) {
+	@return unquote(".#{$bem-test-namespace}-#{$test}");
+}
+
+//
+@function qa-selector($test) {
+	@return test-selector($test);
+}
