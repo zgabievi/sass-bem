@@ -14,7 +14,16 @@
 
 		//
 		@else if(length($parts) == 1) {
-			$selector: unquote("#{$parent}#{nth($parts, 1)}");
+
+			//
+			@if (nth($parts, 1) == '&') {
+				$selector: $parent;
+			}
+
+			//
+			@else {
+				$selector: unquote("#{$parent}#{nth($parts, 1)}");
+			}
 		}
 
 		//
