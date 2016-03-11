@@ -104,7 +104,7 @@ $bem-debug: true;
 		}
 	}
 	
-	@include parse('hover', 'm:hover') {
+	@include parse(':hover', 'm:hover') {
 		display: inline-block;
 	}
 }
