@@ -28,27 +28,8 @@ $ npm install sass-bem --save
 - Extract archive to your project.
 
 ## Usage
-Insert following code in top of your file:
 
-```scss
-@import "/bower_components/sass-bem/bem";
-```
-
-### Configuration
-In your `style.scss`, after you import `bem`, you can configure separators
-```scss
-$bem: (
-	element: '__',
-	modifier: '--',
-	state: '-'
-);
-```
-
-Enable debugging using:
-
-```scss
-$bem-debug: true;
-```
+If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/) or read [Wiki](#wiki) documentation
 
 ## Example
 
