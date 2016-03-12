@@ -1,16 +1,34 @@
-/**
- * Signify that this class is a Utility class. 
- * It has a very specific role (often providing 
- * only one declaration) and should not be bound 
- * onto or changed. It can be reused and is not 
- * tied to any specific piece of UI. You will 
- * probably recognise this namespace from 
- * libraries and methodologies like SUIT.
- *
- * Format: .u-utility {}
- */
-@mixin utility($utility) {
-	#{utility-selector($utility)} {
+@charset "UTF-8";
+
+/// Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI. You will probably recognise this namespace from libraries and methodologies like SUIT.
+///
+/// @param {String} $utility - Name of utility that will come after ".u-"
+/// @param {String} $namespace [null] - Utility element namespace.
+///
+/// @example scss - Usage
+///     @include utility('uppercase') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .u-uppercase {
+///         color: black;
+///     }
+///
+/// @example scss - Usage
+///     @include u('uppercase') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .u-uppercase {
+///         color: black;
+///     }
+///
+/// @requires {function} utility-selector
+
+@mixin utility($utility, $namespace: $bem-utility-namespace) {
+	#{utility-selector($utility, $namespace)} {
 		@if $bem-debug == true {
 			outline: 5px solid #635270;
 		}
@@ -19,9 +37,10 @@
 	}
 }
 
-// Shorthand
-@mixin u($utility) {
-	@include utility($utility) {
+/// @alias utility
+
+@mixin u($utility, $namespace: $bem-utility-namespace) {
+	@include utility($utility, $namespace) {
 		@content;
 	}
 }

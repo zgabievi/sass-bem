@@ -1,8 +1,38 @@
+@charset "UTF-8";
+
+/// Pseudo selector with end of first-of-type.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include first {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:first-of-type {
+///         color: black;
+///     }
+
 @mixin first {
 	&:first-of-type {
 		@content;
 	}
 }
+
+/// Pseudo selector with end of last-of-type.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include last {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:last-of-type {
+///         color: black;
+///     }
 
 @mixin last {
 	&:last-of-type {
@@ -10,11 +40,39 @@
 	}
 }
 
+/// Pseudo selector with end of nth-child(even).
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include even {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:nth-child(even) {
+///         color: black;
+///     }
+
 @mixin even {
 	&:nth-child(even) {
 		@content;
 	}
 }
+
+/// Pseudo selector with end of nth-child(odd).
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include odd {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:nth-child(odd) {
+///         color: black;
+///     }
 
 @mixin odd {
 	&:nth-child(odd) {
@@ -22,11 +80,39 @@
 	}
 }
 
+/// Pseudo selector with end of before.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include before {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:before {
+///         color: black;
+///     }
+
 @mixin before {
 	&:before {
 		@content;
 	}
 }
+
+/// Pseudo selector with end of after.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include after {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:after {
+///         color: black;
+///     }
 
 @mixin after {
 	&:after {

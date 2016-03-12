@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/// Implode list to get string.
+///
+/// @access private
+///
+/// @param {List} $list - List which will be imploded
+/// @param {String} $glue [''] - Separator which will glue list
+/// @param {Bool} $is-nested - List is nested or not
+///
+/// @returns {String} - Imploded list
+
+@function implode($list, $glue: '', $is-nested: false) {
+	$result: null;
+
+	//
+	@for $i from 1 through length($list) {
+		$e: nth($list, $i);
+
+		//
+		@if type-of($e) == list {
+			$result: unquote("#{$result}#{implode($e, $glue, true)}");
+		}
+
+			//
+		@else {
+			$result: if($i != length($list) or $is-nested, unquote("#{$result}#{$e}#{$glue}"), unquote("#{$result}#{$e}"));
+		}
+	}
+
+	@return $result;
+}

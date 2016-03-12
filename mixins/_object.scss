@@ -1,15 +1,34 @@
-/**
- * Signify that something is an Object, and that it may 
- * be used in any number of unrelated contexts to the one 
- * you can currently see it in. Making modifications to 
- * these types of class could potentially have knock-on 
- * effects in a lot of other unrelated places. 
- * Tread carefully.
- *
- * Format: .o-object[<element>|<modifier>] {}
- */
-@mixin object($object) {
-	#{object-selector($object)} {
+@charset "UTF-8";
+
+/// Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.
+///
+/// @param {String} $object - Name of object that will come after ".o-"
+/// @param {String} $namespace [null] - Object element namespace.
+///
+/// @example scss - Usage
+///     @include object('button') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .o-button {
+///         color: black;
+///     }
+///
+/// @example scss - Usage
+///     @include o('button') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .o-button {
+///         color: black;
+///     }
+///
+/// @requires {function} object-selector
+
+@mixin object($object, $namespace: $bem-object-namespace) {
+	#{object-selector($object, $namespace)} {
 		@if $bem-debug == true {
 			outline: 5px solid #9bcb3c;
 		}
@@ -18,9 +37,10 @@
 	}
 }
 
-// Shorthand
-@mixin o($object) {
-	@include object($object) {
+/// @alias object
+
+@mixin o($object, $namespace: $bem-object-namespace) {
+	@include object($object, $namespace) {
 		@content;
 	}
 }

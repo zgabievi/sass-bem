@@ -1,3 +1,35 @@
+@charset "UTF-8";
+
+/// Modifier selector, that is generated from parent block
+///
+/// @param {String} $modifier - Name of modifier that will come after ".{block}--"
+///
+/// @example scss - Usage
+///     @include block('list') {
+///         @include modifier('inline') {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list--inline {
+///         color: black;
+///     }
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include m('inline') {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list--inline {
+///         color: black;
+///     }
+///
+/// @requires {function} modifier-selector
+
 @mixin modifier($modifier) {
 	@at-root {
 		#{modifier-selector($modifier)} {
@@ -9,6 +41,8 @@
 		}
 	}
 }
+
+/// @alias modifier
 
 @mixin m($modifier) {
 	@include modifier($modifier) {

@@ -1,22 +1,24 @@
-/**
- * Signify that the piece of UI in question 
- * is currently styled a certain way because 
- * of a state or condition. This stateful 
- * namespace is gorgeous, and comes from SMACSS. 
- * It tells us that the DOM currently has a 
- * temporary, optional, or short-lived style 
- * applied to it due to a certain state being invoked.
- *
- * -----
- *
- * Signify that this piece of the DOM has some 
- * behaviour acting upon it, and that JavaScript 
- * binds onto it to provide that behaviour. 
- * If you’re not a developer working with 
- * JavaScript, leave these well alone.
- *
- * Format: .[is|has|js]-state {}
- */
+@charset "UTF-8";
+
+/// Signify that the piece of UI in question is currently styled a certain way because of a state or condition. This stateful namespace is gorgeous, and comes from SMACSS. It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.
+///
+/// @param {String} $state - Name of state that will come after ".[is|has|js]-"
+/// @param {String} $namespace [null] - State element namespace.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include state('active', 'is') {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list.is-active {
+///         color: black;
+///     }
+///
+/// @requires {function} state-selector
+
 @mixin state($state, $namespace: null) {
 	@at-root {
 		#{state-selector($state, $namespace)} {
@@ -29,18 +31,25 @@
 	}
 }
 
-// Shorthands
+/// @alias state
+
 @mixin is($state) {
 	@include state($state, 'is') {
 		@content;
 	}
 }
 
+/// @alias state
+
 @mixin has($state) {
 	@include state($state, 'has') {
 		@content;
 	}
 }
+
+/// Signify that this piece of the DOM has some behaviour acting upon it, and that JavaScript binds onto it to provide that behaviour. If you’re not a developer working with JavaScript, leave these well alone.
+///
+/// @alias state
 
 @mixin js($state) {
 	@include state($state, 'js') {

@@ -1,4 +1,17 @@
-//
+@charset "UTF-8";
+
+/// Check if selector is block.
+///
+/// @access private
+///
+/// @param {String} $selector - Selector, which we will check for block
+///
+/// @requires is-element
+/// @requires is-modifier
+/// @requires has-state
+///
+/// @returns {Bool}
+
 @function is-block($selector) {
 	@return (not is-element($selector) and not is-modifier($selector) and not has-state($selector));
 }

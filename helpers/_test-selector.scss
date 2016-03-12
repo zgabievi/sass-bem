@@ -1,11 +1,22 @@
-$bem-test-namespace: qa !default;
+@charset "UTF-8";
 
-//
-@function test-selector($test) {
-	@return unquote(".#{$bem-test-namespace}-#{$test}");
+/// Selector of test.
+///
+/// @access private
+///
+/// @param {String} $test - Name of test that will come after ".qa-"
+/// @param {String} $namespace - Namespace of test.
+///
+/// @returns {String} - .qa-{test}
+///
+/// @see {mixin} test
+
+@function test-selector($test, $namespace) {
+	@return unquote(".#{$namespace}-#{$test}");
 }
 
-//
+/// @alias test-selector
+
 @function qa-selector($test) {
 	@return test-selector($test);
 }

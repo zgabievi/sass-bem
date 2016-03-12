@@ -1,9 +1,21 @@
-//
+@charset "UTF-8";
+
+/// Selector of block.
+///
+/// @access private
+///
+/// @param {String} $block - Name of block that will come after "."
+///
+/// @returns {String} - .{block}
+///
+/// @see {mixin} block
+
 @function block-selector($block) {
 	@return unquote(".#{$block}");
 }
 
-//
+/// @alias block-selector
+
 @function b-selector($block) {
 	@return block-selector($block);
 }

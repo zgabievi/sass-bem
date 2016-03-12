@@ -1,8 +1,36 @@
+/// Pseudo selector with end of hover.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include hover {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:hover {
+///         color: black;
+///     }
+
 @mixin hover {
 	&:hover {
 		@content;
 	}
 }
+
+/// Pseudo selector with end of focus.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include focus {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:focus {
+///         color: black;
+///     }
 
 @mixin focus {
 	&:focus {
@@ -10,11 +38,39 @@
 	}
 }
 
+/// Pseudo selector with end of active.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include active {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:active {
+///         color: black;
+///     }
+
 @mixin active {
 	&:active {
 		@content;
 	}
 }
+
+/// Pseudo selector with end of checked.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include checked {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:checked {
+///         color: black;
+///     }
 
 @mixin checked {
 	&:checked {
@@ -22,11 +78,39 @@
 	}
 }
 
+/// Selector with state of disabled.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include disabled {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list[disabled] {
+///         color: black;
+///     }
+
 @mixin disabled {
 	&[disabled] {
 		@content;
 	}
 }
+
+/// Selector with state of readonly.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include readonly {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list[readonly] {
+///         color: black;
+///     }
 
 @mixin readonly {
 	&[readonly] {
@@ -34,11 +118,27 @@
 	}
 }
 
+/// Selector with state of contenteditable.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include contenteditable {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list[contenteditable="true"] {
+///         color: black;
+///     }
+
 @mixin contenteditable {
 	&[contenteditable="true"] {
 		@content;
 	}
 }
+
+/// @alias contenteditable
 
 @mixin editable {
 	@include contenteditable {

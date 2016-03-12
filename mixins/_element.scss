@@ -1,3 +1,35 @@
+@charset "UTF-8";
+
+/// Element selector, that is generated from parent block
+///
+/// @param {String} $element - Name of element that will come after ".{block}__"
+///
+/// @example scss - Usage
+///     @include block('list') {
+///         @include element('item') {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list__item {
+///         color: black;
+///     }
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include e('item') {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list__item {
+///         color: black;
+///     }
+///
+/// @requires {function} element-selector
+
 @mixin element($element) {
 	@at-root {
 		#{element-selector($element)} {
@@ -9,6 +41,8 @@
 		}
 	}
 }
+
+/// @alias element
 
 @mixin e($element) {
 	@include element($element) {

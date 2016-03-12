@@ -1,13 +1,34 @@
-/**
- * Signify that a class is responsible for adding a 
- * Theme to a view. It lets us know that UI Components’ 
- * current cosmetic appearance may be due 
- * to the presence of a theme.
- *
- * Format: .t-theme {}
- */
-@mixin theme($theme) {
-	#{theme-selector($theme)} {
+@charset "UTF-8";
+
+/// Signify that a class is responsible for adding a Theme to a view. It lets us know that UI Components’ current cosmetic appearance may be due to the presence of a theme.
+///
+/// @param {String} $theme - Name of theme that will come after ".t-"
+/// @param {String} $namespace [null] - Theme element namespace.
+///
+/// @example scss - Usage
+///     @include theme('dark') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .t-dark {
+///         color: black;
+///     }
+///
+/// @example scss - Usage
+///     @include t('dark') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .t-dark {
+///         color: black;
+///     }
+///
+/// @requires {function} test-selector
+
+@mixin theme($theme, $namespace: $bem-theme-namespace) {
+	#{theme-selector($theme, $namespace)} {
 		@if $bem-debug == true {
 			outline: 5px solid #60316e;
 		}
@@ -16,9 +37,10 @@
 	}
 }
 
-// Shorthand
-@mixin t($theme) {
-	@include theme($theme) {
+/// @alias theme
+
+@mixin t($theme, $namespace: $bem-theme-namespace) {
+	@include theme($theme, $namespace) {
 		@content;
 	}
 }

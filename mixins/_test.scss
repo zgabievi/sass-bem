@@ -1,15 +1,34 @@
-/**
- * Signify that a QA or Test Engineering team 
- * is running an automated UI test which needs 
- * to find or bind onto these parts of the DOM. 
- * Like the JavaScript namespace, this basically 
- * just reserves hooks in the 
- * DOM for non-CSS purposes.
- *
- * Format: .qa-node {}
- */
-@mixin test($test) {
-	#{test-selector($test)} {
+@charset "UTF-8";
+
+/// Signify that a QA or Test Engineering team is running an automated UI test which needs to find or bind onto these parts of the DOM. Like the JavaScript namespace, this basically just reserves hooks in the DOM for non-CSS purposes.
+///
+/// @param {String} $test - Name of state that will come after ".[is|has|js]-"
+/// @param {String} $namespace [null] - State element namespace.
+///
+/// @example scss - Usage
+///     @include test('list') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .list.is-active {
+///         color: black;
+///     }
+///
+/// @example scss - Usage
+///     @include qa('list') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     .list.is-active {
+///         color: black;
+///     }
+///
+/// @requires {function} test-selector
+
+@mixin test($test, $namespace: $bem-test-namespace) {
+	#{test-selector($test, $namespace)} {
 		@if $bem-debug == true {
 			outline: 5px solid #f8e796;
 		}
@@ -18,9 +37,10 @@
 	}
 }
 
-// Shorthand
-@mixin qa($test) {
-	@include test($test) {
+/// @alias test
+
+@mixin qa($test, $namespace: $bem-test-namespace) {
+	@include test($test, $namespace) {
 		@content;
 	}
 }

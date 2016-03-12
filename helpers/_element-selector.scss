@@ -1,14 +1,29 @@
-//
+@charset "UTF-8";
+
+/// Selector of element.
+///
+/// @access private
+///
+/// @param {String} $element - Name of element that will come after ".{block}__"
+///
+/// @requires get-block
+/// @requires is-block
+/// @requires $bem-element-separator
+///
+/// @returns {String} - .{block}__{element}
+///
+/// @see {mixin} element
+
 @function element-selector($element) {
 	$selector: '';
 	$parent: unquote("#{&}");
 
 	//
 	@if (is-block($parent)) {
-		$selector: unquote("&#{map-get($bem, 'element')}#{$element}");
+		$selector: unquote("&#{$bem-element-separator}#{$element}");
 	} @else {
 		$block: get-block($parent);
-		$selector: unquote("& .#{$block}#{map-get($bem, 'element')}#{$element}");
+		$selector: unquote("& .#{$block}#{$bem-element-separator}#{$element}");
 	}
 
 	//
@@ -21,10 +36,10 @@
 
 			//
 			@if (is-block($parent)) {
-				$current: unquote("&#{map-get($bem, 'element')}#{$value}");
+				$current: unquote("&#{$bem-element-separator}#{$value}");
 			} @else {
 				$block: get-block($parent);
-				$current: unquote("& .#{$block}#{map-get($bem, 'element')}#{$value}");
+				$current: unquote("& .#{$block}#{$bem-element-separator}#{$value}");
 			}
 
 			//
@@ -35,7 +50,8 @@
 	@return $selector;
 }
 
-//
+/// @alias element-selector
+
 @function e-selector($element) {
 	@return element-selector($element);
 }

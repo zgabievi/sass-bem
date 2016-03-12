@@ -1,4 +1,24 @@
-//
+@charset "UTF-8";
+
+/// Parse multiple mixins, pseudo elements and other states.
+///
+/// @param {String | List} $selectors - List or String of arguments, to generate selector.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include parse('&', 'm:inline', ':hover', '[disabled]') {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list, .list--inline, .list:hover, .list[disabled] {
+///         color: black;
+///     }
+///
+/// @requires {function} explode
+/// @requires {function} implode
+
 @mixin parse($selectors...) {
 	$parent: unquote("#{&}");
 	$collection: ();
@@ -47,7 +67,7 @@
 
 	//
 	@at-root {
-		#{to-string($collection, ', ')} {
+		#{implode($collection, ', ')} {
 			@content;
 		}
 	}

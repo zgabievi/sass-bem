@@ -1,8 +1,18 @@
-$bem-state-namespace: is !default;
+@charset "UTF-8";
 
-//
+/// Selector of state.
+///
+/// @access private
+///
+/// @param {String} $state - Name of state that will come after ".[is|has|js]-"
+/// @param {String} $namespace [null] - Namespace of state. [is|has|js]
+///
+/// @returns {String} - .[is|has|js]-{state}
+///
+/// @see {mixin} state
+
 @function state-selector($state, $namespace: null) {
-	$selector: unquote("&.#{$bem-state-namespace}#{$state}");
+	$selector: unquote("&.#{$state}");
 
 	//
 	@if $namespace != null {
@@ -12,17 +22,20 @@ $bem-state-namespace: is !default;
 	@return $selector;
 }
 
-//
+/// @alias state-selector
+
 @function is-selector($state) {
 	@return state-selector($state, 'is');
 }
 
-//
+/// @alias state-selector
+
 @function has-selector($state) {
 	@return state-selector($state, 'has');
 }
 
-//
+/// @alias state-selector
+
 @function js-selector($state) {
 	@return state-selector($state, 'js');
 }

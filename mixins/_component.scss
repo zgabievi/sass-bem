@@ -1,16 +1,34 @@
-/**
- * Signify that something is a Component. This 
- * is a concrete, implementation-specific piece 
- * of UI. All of the changes you make to its 
- * styles should be detectable in the context
- * you’re currently looking at. Modifying 
- * these styles should be safe and have 
- * no side effects.
- *
- * Format: .c-component[<element>|<modifier>] {}
- */
-@mixin component($component) {
-	#{component-selector($component)} {
+@charset "UTF-8";
+
+/// Signify that something is a Component. This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.
+/// 
+/// @param {String} $component - Name of component that will come after ".c-"
+/// @param {String} $namespace [null] - Component element namespace.
+///
+/// @example scss - Usage
+///     @include component('list') {
+///         color: black;
+///     }
+/// 	
+/// @example css - Output
+///     .c-list {
+///         color: black;
+///      }
+///
+/// @example scss - Usage
+///      @include c('list') {
+///         color: black;
+///     }
+/// 	
+/// @example css - Output
+///     .c-list {
+///         color: black;
+///     }
+///
+/// @requires {function} component-selector
+
+@mixin component($component, $namespace: $bem-component-namespace) {
+	#{component-selector($component, $namespace)} {
 		@if $bem-debug == true {
 			outline: 5px solid #00b8a9;
 		}
@@ -19,9 +37,10 @@
 	}
 }
 
-// Shorthand
-@mixin c($component) {
-	@include component($component) {
+/// @alias component
+
+@mixin c($component, $namespace: $bem-component-namespace) {
+	@include component($component, $namespace) {
 		@content;
 	}
 }

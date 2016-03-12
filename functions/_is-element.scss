@@ -1,5 +1,16 @@
-//
+@charset "UTF-8";
+
+/// Check if selector is element.
+///
+/// @access private
+///
+/// @param {String} $selector - Selector, which we will check for element
+///
+/// @requires $bem-element-separator
+///
+/// @returns {Bool}
+
 @function is-element($selector) {
-    $separator: unquote("#{map-get($bem, element)}");
+    $separator: unquote("#{$bem-element-separator}");
 	@return str-index($selector, $separator) != null;
 }

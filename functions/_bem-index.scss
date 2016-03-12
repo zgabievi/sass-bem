@@ -1,31 +1,44 @@
-//
+@charset "UTF-8";
+
+/// Get index of separator.
+///
+/// @access private
+///
+/// @param {String} $string - Name of selector, where we should find separator
+///
+/// @requires math-min
+/// @requires $bem-element-separator
+/// @requires $bem-modifier-separator
+///
+/// @returns {Number} - Index of separators
+
 @function bem-index($string) {
 	$e_index: null;
 	$m_index: null;
 
 	//
-	@if (str-index($string, unquote("#{map-get($bem, element)}")) != null) {
-		$e_index: str-index($string, unquote("#{map-get($bem, element)}"));
+	@if (str-index($string, unquote("#{$bem-element-separator}")) != null) {
+		$e_index: str-index($string, unquote("#{$bem-element-separator}"));
 	}
 
 	//
-	@if (str-index($string, unquote("#{map-get($bem, modifier)}")) != null) {
-		$m_index: str-index($string, unquote("#{map-get($bem, modifier)}"));
+	@if (str-index($string, unquote("#{$bem-modifier-separator}")) != null) {
+		$m_index: str-index($string, unquote("#{$bem-modifier-separator}"));
 	}
 
 	//
-	@if (str-index($string, unquote(".is#{map-get($bem, state)}")) != null) {
-		$m_index: str-index($string, unquote(".is#{map-get($bem, state)}"));
+	@if (str-index($string, unquote(".is#{$bem-modifier-separator}")) != null) {
+		$m_index: str-index($string, unquote(".is#{$bem-state-separator}"));
 	}
 
 	//
-	@if (str-index($string, unquote(".js#{map-get($bem, state)}")) != null) {
-		$m_index: str-index($string, unquote(".js#{map-get($bem, state)}"));
+	@if (str-index($string, unquote(".js#{$bem-modifier-separator}")) != null) {
+		$m_index: str-index($string, unquote(".js#{$bem-state-separator}"));
 	}
 
 	//
-	@if (str-index($string, unquote(".has#{map-get($bem, state)}")) != null) {
-		$m_index: str-index($string, unquote(".has#{map-get($bem, state)}"));
+	@if (str-index($string, unquote(".has#{$bem-modifier-separator}")) != null) {
+		$m_index: str-index($string, unquote(".has#{$bem-state-separator}"));
 	}
 
 	//

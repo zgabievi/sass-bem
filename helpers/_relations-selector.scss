@@ -1,18 +1,47 @@
-//
+@charset "UTF-8";
+
+/// Selector of at relationship.
+///
+/// @param {String} $modifier - Name of modifier that will come after ".{block}--"
+///
+/// @requires get-block
+/// @requires $bem-modifier-separator
+///
+/// @returns {String} - .{block}--{modifier}
+///
+/// @see {mixin} at
+
 @function at-selector($modifier) {
 	$block: get-block(unquote("#{&}"));
 
-	@return unquote(".#{$block}#{map-get($bem, 'modifier')}#{$modifier} &");
+	@return unquote(".#{$block}#{$bem-modifier-separator}#{$modifier} &");
 }
 
-//
+/// Selector of with relationship.
+///
+/// @param {String} $element - Name of element that will come after ".{block}__"
+///
+/// @requires get-block
+/// @requires $bem-element-separator
+///
+/// @returns {String} - & + .{block}__{element}
+///
+/// @see {mixin} with
+
 @function with-selector($element) {
 	$block: get-block(unquote("#{&}"));
 
-	@return unquote("& + .#{$block}#{map-get($bem, 'element')}#{$element}");
+	@return unquote("& + .#{$block}#{$bem-element-separator}#{$element}");
 }
 
-//
+/// Selector of duo relationship.
+///
+/// @requires explode
+///
+/// @returns {String} - & + &
+///
+/// @see {mixin} duo
+
 @function duo-selector() {
 	$list: explode(unquote("#{&}"), ' ');
 	$last: nth($list, length($list));
@@ -20,9 +49,19 @@
 	@return unquote("& + #{$last}");
 }
 
-//
+/// Selector of while relationship.
+///
+/// @param {String} $modifier - Name of modifier that will come after ".{block}--"
+///
+/// @requires get-block
+/// @requires $bem-element-separator
+///
+/// @returns {String} - .{block}--{modifier}
+///
+/// @see {mixin} while
+
 @function while-selector($modifier) {
 	$block: get-block(unquote("#{&}"));
 
-	@return unquote("&.#{$block}#{map-get($bem, 'modifier')}#{$modifier}");
+	@return unquote("&.#{$block}#{$bem-modifier-separator}#{$modifier}");
 }

@@ -1,11 +1,22 @@
-$bem-scope-namespace: s !default;
+@charset "UTF-8";
 
-//
-@function scope-selector($scope) {
-	@return unquote(".#{$bem-scope-namespace}-#{$scope}");
+/// Selector of scope.
+///
+/// @access private
+///
+/// @param {String} $scope - Name of scope that will come after ".s-"
+/// @param {String} $namespace - Namespace of scope.
+///
+/// @returns {String} - .s-{scope}
+///
+/// @see {mixin} scope
+
+@function scope-selector($scope, $namespace) {
+	@return unquote(".#{$namespace}-#{$scope}");
 }
 
-//
+/// @alias scope-selector
+
 @function s-selector($scope) {
 	@return scope-selector($scope);
 }

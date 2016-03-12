@@ -1,6 +1,19 @@
-//
+@charset "UTF-8";
+
+/// Selector of modifier.
+///
+/// @access private
+///
+/// @param {String} $modifier - Name of modifier that will come after ".{block}--"
+///
+/// @requires $bem-modifier-separator
+///
+/// @returns {String} - .{block}--{modifier}
+///
+/// @see {mixin} modifier
+
 @function modifier-selector($modifier) {
-	$selector: unquote("&#{map-get($bem, "modifier")}#{$modifier}");
+	$selector: unquote("&#{$bem-modifier-separator}#{$modifier}");
 
 	//
 	@if (type-of($modifier) == 'list') {
@@ -8,7 +21,7 @@
 
 		//
 		@each $value in $modifier {
-			$current: unquote("&#{map-get($bem, 'modifier')}#{$value}");
+			$current: unquote("&#{$bem-modifier-separator}#{$value}");
 			$selector: append($selector, $current, comma);
 		}
 	}
@@ -16,7 +29,8 @@
 	@return $selector;
 }
 
-//
+/// @alias modifier-selector
+
 @function m-selector($modifier) {
 	@return modifier-selector($modifier);
 }

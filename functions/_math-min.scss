@@ -1,4 +1,15 @@
-//
+@charset "UTF-8";
+
+/// Get minimum number from two of them, or get default.
+///
+/// @access private
+///
+/// @param {String} $a - First number to be checked
+/// @param {String} $n - Second number to be checked
+/// @param {String} $default - Default number to be returned if min wasn't found
+///
+/// @returns {Number} - Minimum number from two of them
+
 @function math-min($a, $b, $default) {
 	$min: $default;
 

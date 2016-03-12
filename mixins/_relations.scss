@@ -1,8 +1,50 @@
+@charset "UTF-8";
+
+/// Relationship of parent element with current modifier
+///
+/// @param {String} $modifier - Name of modifier that will make parent element child.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include e('item') {
+///             @include m('inline') {
+///                 color: black;
+///             }
+///         }
+///     }
+///
+/// @example css - Output
+///     .list--inline .list__item {
+///         color: black;
+///     }
+///
+/// @requires {function} at-selector
+
 @mixin at($modifier) {
 	#{at-selector($modifier)} {
 		@content;
 	}
 }
+
+/// Element with another element separated by plus sign
+///
+/// @param {String} $element - Name of element that will be styled with parent element.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include e('item') {
+///             @include with('title') {
+///                 color: black;
+///             }
+///         }
+///     }
+///
+/// @example css - Output
+///     .list__item .list__title {
+///         color: black;
+///     }
+///
+/// @requires {function} with-selector
 
 @mixin with($element) {
 	#{with-selector($element)} {
@@ -10,11 +52,49 @@
 	}
 }
 
+/// Element with same element separated by plus sign
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include e('item') {
+///             @include duo {
+///                 color: black;
+///             }
+///         }
+///     }
+///
+/// @example css - Output
+///     .list__item + .list__item {
+///         color: black;
+///     }
+///
+/// @requires {function} duo-selector
+
 @mixin duo {
 	#{duo-selector()} {
 		@content;
 	}
 }
+
+/// While two selectors are on same element
+///
+/// @param {String} $modifier - Name of modifier that will follow parent modifier.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include m('inline') {
+///             @include while('ordered') {
+///                 color: black;
+///             }
+///         }
+///     }
+///
+/// @example css - Output
+///     .list--inline.list--ordered {
+///         color: black;
+///     }
+///
+/// @requires {function} while-selector
 
 @mixin while($modifier) {
 	#{while-selector($modifier)} {

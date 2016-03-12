@@ -1,11 +1,22 @@
-$bem-theme-namespace: t !default;
+@charset "UTF-8";
 
-//
-@function theme-selector($theme) {
-	@return unquote(".#{$bem-theme-namespace}-#{$theme}");
+/// Selector of theme.
+///
+/// @access private
+///
+/// @param {String} $theme - Name of theme that will come after ".t-"
+/// @param {String} $namespace - Namespace of theme.
+///
+/// @returns {String} - .t-{theme}
+///
+/// @see {mixin} theme
+
+@function theme-selector($theme, $namespace) {
+	@return unquote(".#{$namespace}-#{$theme}");
 }
 
-//
+/// @alias theme-selector
+
 @function t-selector($theme) {
 	@return theme-selector($theme);
 }

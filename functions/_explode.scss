@@ -1,4 +1,14 @@
-//
+@charset "UTF-8";
+
+/// Explode string to get list of strings.
+///
+/// @access private
+///
+/// @param {String} $string - String which should be exploded
+/// @param {String} $separator - Separator which will explode string to pieces
+///
+/// @returns {List} - List of exploded string
+
 @function explode($string, $separator) {
 	$list: ();
 	$length: str-length($string);

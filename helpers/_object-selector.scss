@@ -1,11 +1,22 @@
-$bem-object-namespace: o !default;
+@charset "UTF-8";
 
-//
-@function object-selector($object) {
-	@return unquote(".#{$bem-object-namespace}-#{$object}");
+/// Selector of object.
+///
+/// @access private
+///
+/// @param {String} $object - Name of object that will come after ".o-"
+/// @param {String} $namespace - Namespace of object.
+///
+/// @returns {String} - .o-{object}
+///
+/// @see {mixin} object
+
+@function object-selector($object, $namespace) {
+	@return unquote(".#{$namespace}-#{$object}");
 }
 
-//
+/// @alias object-selector
+
 @function o-selector($object) {
 	@return object-selector($object);
 }
