@@ -13,7 +13,7 @@ Collection of [BEM](https://en.bem.info/) Mixins &amp; Helpers for [sass](http:/
 + [Wiki](#wiki)
 + [License](#license)
 
-## :package: Installation
+## Installation
 ### Install With [Bower](http://bower.io/search/?q=sass-bem)
 ```
 $ bower install sass-bem --save
@@ -28,13 +28,13 @@ $ npm install sass-bem --save
 - [Download Package Archive](https://github.com/zgabievi/sass-bem/archive/master.zip)
 - Extract archive to your project.
 
-## :memo: Usage
+## Usage
 
-If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/) or read [Wiki](#wiki) documentation
+> If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/) or read [Wiki](#wiki) documentation
 
-## :dart: Example
+## Example
 
-####style.scss
+#### style.scss
 
 ```scss
 @import "bower_components/sass-bem/bem";
@@ -120,11 +120,9 @@ If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](ht
 }
 ```
 
-####style.css
+#### style.css
 
 ```css
-@charset "UTF-8";
-
 .block {
   display: block; }
 
@@ -186,7 +184,9 @@ If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](ht
   display: test; }
 ```
 
-## :book: WiKi
+## WiKi
+
+> We would recomend you to read full documentation in our website: [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/);
 
 + [**Mixins**](https://github.com/zgabievi/sass-bem/wiki/Mixins) - Collection of BEM Mixins
 	- [Block](https://github.com/zgabievi/sass-bem/wiki/Mixins#block-mixin) - Creates block type selector
@@ -206,5 +206,5 @@ If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](ht
 	- [explode()](https://github.com/zgabievi/sass-bem/wiki/Functions#explode) - Returns list from string
 + [**OOCSS**](https://github.com/zgabievi/sass-bem/wiki/OOCSS) - Object-Oriented CSS Classes
 
-## :page_facing_up: License
+## License
 The sass-bem package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
