@@ -1,10 +1,11 @@
 # sass-bem
+
 [![sass-bem](http://s24.postimg.org/bxl0j4bbl/sass_bem.png)](https://github.com/zgabievi/sass-bem/)
 
 [![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
-Collection of BEM Mixins &amp; Helpers
+Collection of [BEM](https://en.bem.info/) Mixins &amp; Helpers for [sass](http://sass-lang.com/)
 
 + [Installation](#installation)
 + [Usage](#usage)
@@ -12,7 +13,7 @@ Collection of BEM Mixins &amp; Helpers
 + [Wiki](#wiki)
 + [License](#license)
 
-## Installation
+## :package: Installation
 ### Install With [Bower](http://bower.io/search/?q=sass-bem)
 ```
 $ bower install sass-bem --save
@@ -27,11 +28,11 @@ $ npm install sass-bem --save
 - [Download Package Archive](https://github.com/zgabievi/sass-bem/archive/master.zip)
 - Extract archive to your project.
 
-## Usage
+## :memo: Usage
 
 If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/) or read [Wiki](#wiki) documentation
 
-## Example
+## :dart: Example
 
 ####style.scss
 
@@ -185,7 +186,7 @@ If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](ht
   display: test; }
 ```
 
-## WiKi
+## :book: WiKi
 
 + [**Mixins**](https://github.com/zgabievi/sass-bem/wiki/Mixins) - Collection of BEM Mixins
 	- [Block](https://github.com/zgabievi/sass-bem/wiki/Mixins#block-mixin) - Creates block type selector
@@ -205,5 +206,5 @@ If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](ht
 	- [explode()](https://github.com/zgabievi/sass-bem/wiki/Functions#explode) - Returns list from string
 + [**OOCSS**](https://github.com/zgabievi/sass-bem/wiki/OOCSS) - Object-Oriented CSS Classes
 
-## License
+## :page_facing_up: License
 The sass-bem package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
