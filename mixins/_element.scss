@@ -2,7 +2,7 @@
 
 /// Element selector, that is generated from parent block
 ///
-/// @param {String} $element - Name of element that will come after ".{block}__"
+/// @param {String} $element - Name of element that will come after ".[block]__"
 ///
 /// @example scss - Usage
 ///     @include block('list') {
@@ -11,16 +11,16 @@
 ///         }
 ///     }
 ///
-/// @example css - Output
-///     .list__item {
-///         color: black;
-///     }
-///
 /// @example scss - Usage
 ///     @include b('list') {
 ///         @include e('item') {
 ///             color: black;
 ///         }
+///     }
+///
+/// @example css - Output
+///     .list__item {
+///         color: black;
 ///     }
 ///
 /// @example css - Output

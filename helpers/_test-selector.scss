@@ -7,7 +7,7 @@
 /// @param {String} $test - Name of test that will come after ".qa-"
 /// @param {String} $namespace - Namespace of test.
 ///
-/// @returns {String} - .qa-{test}
+/// @returns {String} - .qa-[test]
 ///
 /// @see {mixin} test
 

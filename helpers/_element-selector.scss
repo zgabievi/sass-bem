@@ -4,13 +4,13 @@
 ///
 /// @access private
 ///
-/// @param {String} $element - Name of element that will come after ".{block}__"
+/// @param {String} $element - Name of element that will come after ".[block]__"
 ///
 /// @requires get-block
 /// @requires is-block
 /// @requires $bem-element-separator
 ///
-/// @returns {String} - .{block}__{element}
+/// @returns {String} - .[block]__[element]
 ///
 /// @see {mixin} element
 

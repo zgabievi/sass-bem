@@ -7,7 +7,7 @@
 /// @param {String} $hack - Name of hack that will come after "._"
 /// @param {String} $namespace - Namespace of hack.
 ///
-/// @returns {String} - ._{hack}
+/// @returns {String} - ._[hack]
 ///
 /// @see {mixin} hack
 

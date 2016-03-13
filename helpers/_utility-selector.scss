@@ -7,7 +7,7 @@
 /// @param {String} $utility - Name of utility that will come after ".u-"
 /// @param {String} $namespace - Namespace of utility.
 ///
-/// @returns {String} - .u-{utility}
+/// @returns {String} - .u-[utility]
 ///
 /// @see {mixin} utility
 

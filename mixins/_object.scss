@@ -10,13 +10,13 @@
 ///         color: black;
 ///     }
 ///
-/// @example css - Output
-///     .o-button {
+/// @example scss - Usage
+///     @include o('button') {
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
-///     @include o('button') {
+/// @example css - Output
+///     .o-button {
 ///         color: black;
 ///     }
 ///

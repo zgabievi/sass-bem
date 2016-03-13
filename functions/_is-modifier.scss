@@ -8,7 +8,7 @@
 ///
 /// @requires $bem-modifier-separator
 ///
-/// @returns {Bool}
+/// @returns {Boolean}
 
 @function is-modifier($selector) {
     $separator: unquote("#{$bem-modifier-separator}");

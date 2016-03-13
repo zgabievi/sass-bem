@@ -8,7 +8,7 @@
 ///
 /// @requires $bem-element-separator
 ///
-/// @returns {Bool}
+/// @returns {Boolean}
 
 @function is-element($selector) {
     $separator: unquote("#{$bem-element-separator}");

@@ -10,13 +10,13 @@
 ///         color: black;
 ///     }
 ///
-/// @example css - Output
-///     .list.is-active {
+/// @example scss - Usage
+///     @include qa('list') {
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
-///     @include qa('list') {
+/// @example css - Output
+///     .list.is-active {
 ///         color: black;
 ///     }
 ///

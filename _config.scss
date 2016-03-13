@@ -6,25 +6,25 @@
 ///
 /// @prop {boolean} debug [false] - Turn debug mode on/off. To get outlines on selectors.
 ///
-/// @prop {boolean} separator.element [__] - Element separator from parent block.
+/// @prop {string} separator.element [__] - Element separator from parent block.
 ///
-/// @prop {boolean} separator.modifier [--] - Modifier separator from parent block.
+/// @prop {string} separator.modifier [--] - Modifier separator from parent block.
 ///
-/// @prop {boolean} separator.state [-] - States separator from parent block.
+/// @prop {string} separator.state [-] - States separator from parent block.
 ///
-/// @prop {boolean} namespace.component [c] - Component selector namespace.
+/// @prop {string} namespace.component [c] - Component selector namespace.
 ///
-/// @prop {boolean} namespace.hack [_] - Hack selector namespace.
+/// @prop {string} namespace.hack [_] - Hack selector namespace.
 ///
-/// @prop {boolean} namespace.object [o] - Object selector namespace.
+/// @prop {string} namespace.object [o] - Object selector namespace.
 ///
-/// @prop {boolean} namespace.scope [s] - Scope selector namespace.
+/// @prop {string} namespace.scope [s] - Scope selector namespace.
 ///
-/// @prop {boolean} namespace.test [qa] - Test selector namespace.
+/// @prop {string} namespace.test [qa] - Test selector namespace.
 ///
-/// @prop {boolean} namespace.theme [t] - Theme selector namespace.
+/// @prop {string} namespace.theme [t] - Theme selector namespace.
 ///
-/// @prop {boolean} namespace.utility [u] - Utility selector namespace.
+/// @prop {string} namespace.utility [u] - Utility selector namespace.
 ///
 /// @access public
 
@@ -48,7 +48,7 @@ $bem: (
 
 /// Turn debug mode on/off. To get outlines on selectors.
 ///
-/// @type Bool
+/// @type Boolean
 
 $bem-debug: map-get($bem, 'debug') !default;
 

@@ -2,7 +2,7 @@
 
 /// Modifier selector, that is generated from parent block
 ///
-/// @param {String} $modifier - Name of modifier that will come after ".{block}--"
+/// @param {String} $modifier - Name of modifier that will come after ".[block]--"
 ///
 /// @example scss - Usage
 ///     @include block('list') {
@@ -11,16 +11,16 @@
 ///         }
 ///     }
 ///
-/// @example css - Output
-///     .list--inline {
-///         color: black;
-///     }
-///
 /// @example scss - Usage
 ///     @include b('list') {
 ///         @include m('inline') {
 ///             color: black;
 ///         }
+///     }
+///
+/// @example css - Output
+///     .list--inline {
+///         color: black;
 ///     }
 ///
 /// @example css - Output

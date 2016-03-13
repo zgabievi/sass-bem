@@ -10,13 +10,13 @@
 ///         color: black;
 ///     }
 ///
-/// @example css - Output
-///     .s-paper {
+/// @example scss - Usage
+///     @include s('paper') {
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
-///     @include s('paper') {
+/// @example css - Output
+///     .s-paper {
 ///         color: black;
 ///     }
 ///

@@ -8,7 +8,7 @@
 ///
 /// @requires $bem-state-separator
 ///
-/// @returns {Bool}
+/// @returns {Boolean}
 
 @function has-state($selector) {
     $separator_is: unquote(".is#{$bem-state-separator}");

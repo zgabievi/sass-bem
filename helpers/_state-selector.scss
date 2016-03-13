@@ -7,7 +7,7 @@
 /// @param {String} $state - Name of state that will come after ".[is|has|js]-"
 /// @param {String} $namespace [null] - Namespace of state. [is|has|js]
 ///
-/// @returns {String} - .[is|has|js]-{state}
+/// @returns {String} - .[is|has|js]-[state]
 ///
 /// @see {mixin} state
 

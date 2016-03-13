@@ -9,14 +9,14 @@
 ///     @include hack('clearfix') {
 ///         color: black;
 ///     }
-/// 	
-/// @example css - Output
-///     ._clearfix {
-///         color: black;
-///     }
 ///
 /// @example scss - Usage
 ///     @include _('clearfix') {
+///         color: black;
+///     }
+///
+/// @example css - Output
+///     ._clearfix {
 ///         color: black;
 ///     }
 /// 	
