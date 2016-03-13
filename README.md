@@ -1,10 +1,11 @@
 # sass-bem
+
 [![sass-bem](http://s24.postimg.org/bxl0j4bbl/sass_bem.png)](https://github.com/zgabievi/sass-bem/)
 
 [![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
-Collection of BEM Mixins &amp; Helpers
+Collection of [BEM](https://en.bem.info/) Mixins &amp; Helpers for [sass](http://sass-lang.com/)
 
 + [Installation](#installation)
 + [Usage](#usage)
@@ -29,11 +30,11 @@ $ npm install sass-bem --save
 
 ## Usage
 
-If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/) or read [Wiki](#wiki) documentation
+> If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/) or read [Wiki](#wiki) documentation
 
 ## Example
 
-####style.scss
+#### style.scss
 
 ```scss
 @import "bower_components/sass-bem/bem";
@@ -119,11 +120,9 @@ If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](ht
 }
 ```
 
-####style.css
+#### style.css
 
 ```css
-@charset "UTF-8";
-
 .block {
   display: block; }
 
@@ -186,6 +185,8 @@ If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](ht
 ```
 
 ## WiKi
+
+> We would recomend you to read full documentation in our website: [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/)
 
 + [**Mixins**](https://github.com/zgabievi/sass-bem/wiki/Mixins) - Collection of BEM Mixins
 	- [Block](https://github.com/zgabievi/sass-bem/wiki/Mixins#block-mixin) - Creates block type selector
