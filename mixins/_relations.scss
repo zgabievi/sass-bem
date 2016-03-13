@@ -17,8 +17,6 @@
 ///     .list--inline .list__item {
 ///         color: black;
 ///     }
-///
-/// @requires {function} at-selector
 
 @mixin at($modifier) {
 	#{at-selector($modifier)} {
@@ -43,8 +41,6 @@
 ///     .list__item .list__title {
 ///         color: black;
 ///     }
-///
-/// @requires {function} with-selector
 
 @mixin with($element) {
 	#{with-selector($element)} {
@@ -67,8 +63,6 @@
 ///     .list__item + .list__item {
 ///         color: black;
 ///     }
-///
-/// @requires {function} duo-selector
 
 @mixin duo {
 	#{duo-selector()} {
@@ -93,8 +87,6 @@
 ///     .list--inline.list--ordered {
 ///         color: black;
 ///     }
-///
-/// @requires {function} while-selector
 
 @mixin while($modifier) {
 	#{while-selector($modifier)} {

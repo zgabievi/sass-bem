@@ -10,7 +10,6 @@
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
 ///     @include u('uppercase') {
 ///         color: black;
 ///     }
@@ -20,12 +19,9 @@
 ///         color: black;
 ///     }
 ///
-/// @example css - Output
 ///     .u-uppercase {
 ///         color: black;
 ///     }
-///
-/// @requires {function} utility-selector
 
 @mixin utility($utility, $namespace: $bem-utility-namespace) {
 	#{utility-selector($utility, $namespace)} {

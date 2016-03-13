@@ -6,10 +6,6 @@
 ///
 /// @param {String} $string - Name of selector, where we should find separator
 ///
-/// @requires math-min
-/// @requires $bem-element-separator
-/// @requires $bem-modifier-separator
-///
 /// @returns {Number} - Index of separators
 
 @function bem-index($string) {

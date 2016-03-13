@@ -4,9 +4,6 @@
 ///
 /// @param {String} $modifier - Name of modifier that will come after ".[block]--"
 ///
-/// @requires get-block
-/// @requires $bem-modifier-separator
-///
 /// @returns {String} - .[block]--[modifier]
 ///
 /// @see {mixin} at
@@ -21,9 +18,6 @@
 ///
 /// @param {String} $element - Name of element that will come after ".[block]__"
 ///
-/// @requires get-block
-/// @requires $bem-element-separator
-///
 /// @returns {String} - & + .[block]__[element]
 ///
 /// @see {mixin} with
@@ -35,8 +29,6 @@
 }
 
 /// Selector of duo relationship.
-///
-/// @requires explode
 ///
 /// @returns {String} - & + &
 ///
@@ -52,9 +44,6 @@
 /// Selector of while relationship.
 ///
 /// @param {String} $modifier - Name of modifier that will come after ".[block]--"
-///
-/// @requires get-block
-/// @requires $bem-element-separator
 ///
 /// @returns {String} - .[block]--[modifier]
 ///

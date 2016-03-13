@@ -6,8 +6,6 @@
 ///
 /// @param {String} $modifier - Name of modifier that will come after ".[block]--"
 ///
-/// @requires $bem-modifier-separator
-///
 /// @returns {String} - .[block]--[modifier]
 ///
 /// @see {mixin} modifier

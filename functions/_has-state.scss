@@ -6,8 +6,6 @@
 ///
 /// @param {String} $selector - Selector, which we will check for state
 ///
-/// @requires $bem-state-separator
-///
 /// @returns {Boolean}
 
 @function has-state($selector) {

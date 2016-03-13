@@ -9,7 +9,6 @@
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
 ///     @include b('list') {
 ///         color: black;
 ///     }
@@ -19,12 +18,9 @@
 ///         color: black;
 ///     }
 ///
-/// @example css - Output
 ///     .list {
 ///         color: black;
 ///     }
-///
-/// @requires {function} block-selector
 
 @mixin block($block) {
 	#{block-selector($block)} {

@@ -6,8 +6,6 @@
 ///
 /// @param {String} $selector - Selector, which we will check for element
 ///
-/// @requires $bem-element-separator
-///
 /// @returns {Boolean}
 
 @function is-element($selector) {

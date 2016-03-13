@@ -6,10 +6,6 @@
 ///
 /// @param {String} $selector - Selector, which we will check for block
 ///
-/// @requires is-element
-/// @requires is-modifier
-/// @requires has-state
-///
 /// @returns {Boolean}
 
 @function is-block($selector) {

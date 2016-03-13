@@ -16,8 +16,6 @@
 ///     .list.is-active {
 ///         color: black;
 ///     }
-///
-/// @requires {function} state-selector
 
 @mixin state($state, $namespace: null) {
 	@at-root {

@@ -10,7 +10,6 @@
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
 ///     @include o('button') {
 ///         color: black;
 ///     }
@@ -20,12 +19,9 @@
 ///         color: black;
 ///     }
 ///
-/// @example css - Output
 ///     .o-button {
 ///         color: black;
 ///     }
-///
-/// @requires {function} object-selector
 
 @mixin object($object, $namespace: $bem-object-namespace) {
 	#{object-selector($object, $namespace)} {

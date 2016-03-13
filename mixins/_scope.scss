@@ -10,7 +10,6 @@
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
 ///     @include s('paper') {
 ///         color: black;
 ///     }
@@ -20,12 +19,9 @@
 ///         color: black;
 ///     }
 ///
-/// @example css - Output
 ///     .s-paper {
 ///         color: black;
 ///     }
-///
-/// @requires {function} scope-selector
 
 @mixin scope($scope, $namespace: $bem-scope-namespace) {
 	#{scope-selector($scope, $namespace)} {

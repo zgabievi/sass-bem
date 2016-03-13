@@ -6,8 +6,6 @@
 ///
 /// @param {String} $selector - Selector, from where we will take block
 ///
-/// @requires bem-index
-///
 /// @returns {String} - Block element
 
 @function get-block($selector) {

@@ -10,7 +10,6 @@
 ///         color: black;
 ///     }
 ///
-/// @example scss - Usage
 ///      @include c('list') {
 ///         color: black;
 ///     }
@@ -20,12 +19,9 @@
 ///         color: black;
 ///      }
 ///
-/// @example css - Output
 ///     .c-list {
 ///         color: black;
 ///     }
-///
-/// @requires {function} component-selector
 
 @mixin component($component, $namespace: $bem-component-namespace) {
 	#{component-selector($component, $namespace)} {

@@ -15,9 +15,6 @@
 ///     .list, .list--inline, .list:hover, .list[disabled] {
 ///         color: black;
 ///     }
-///
-/// @requires {function} explode
-/// @requires {function} implode
 
 @mixin parse($selectors...) {
 	$parent: unquote("#{&}");
