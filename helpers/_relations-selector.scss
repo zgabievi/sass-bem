@@ -11,7 +11,7 @@
 @function at-selector($modifier) {
 	$block: get-block(unquote("#{&}"));
 
-	@return unquote(".#{$block}#{$bem-modifier-separator}#{$modifier} &");
+	@return unquote(".#{$block}#{$bem-modifier-separator}#{$modifier} > &");
 }
 
 /// Selector of with relationship.
