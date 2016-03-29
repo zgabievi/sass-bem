@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/// Check if selector contains pseudo element.
+///
+/// @access private
+///
+/// @param {String} $selector - Selector, which we will check for pseudo
+///
+/// @returns {Boolean}
+
+@function has-pseudo($selector) {
+	@return str-index($selector, ":") != null;
+}
