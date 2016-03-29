@@ -24,7 +24,7 @@
 
 	//
 	@if (str-index($string, ".is") != null) {
-		$m_index: str-index($string, ".is"));
+		$m_index: str-index($string, ".is");
 	}
 
 	//
