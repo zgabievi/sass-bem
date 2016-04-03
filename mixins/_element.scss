@@ -3,6 +3,7 @@
 /// Element selector, that is generated from parent block
 ///
 /// @param {String} $element - Name of element that will come after ".[block]__"
+/// @param {Boolean} $nested - If element is nested with other element
 ///
 /// @example scss - Usage
 ///     @include block('list') {
@@ -26,9 +27,9 @@
 ///         color: black;
 ///     }
 
-@mixin element($element) {
+@mixin element($element, $nested: true) {
 	@at-root {
-		#{element-selector($element)} {
+		#{element-selector($element, $nested)} {
 			@if $bem-debug == true {
 				outline: 5px solid #635270;
 			}
@@ -40,8 +41,8 @@
 
 /// @alias element
 
-@mixin e($element) {
-	@include element($element) {
+@mixin e($element, $nested: true) {
+	@include element($element, $nested) {
 		@content;
 	}
 }
