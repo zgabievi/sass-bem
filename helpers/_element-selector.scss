@@ -5,41 +5,50 @@
 /// @access private
 ///
 /// @param {String} $element - Name of element that will come after ".[block]__"
+/// @param {Boolean} $nested - If element is nested with another element
 ///
 /// @returns {String} - .[block]__[element]
 ///
 /// @see {mixin} element
 
-@function element-selector($element) {
+@function element-selector($element, $nested: true) {
 	$selector: '';
 	$parent: unquote("#{&}");
-
+	
 	//
-	@if (is-block($parent)) {
+	@if ($nested == true) {
 		$selector: unquote("&#{$bem-element-separator}#{$element}");
-	} @else {
-		$block: get-block($parent);
-		$selector: unquote("& .#{$block}#{$bem-element-separator}#{$element}");
 	}
-
+	
 	//
-	@if (type-of($element) == 'list') {
-		$selector: ();
-
+	@else {
 		//
-		@each $value in $element {
-			$current: '';
-
+		@if (is-block($parent)) {
+			$selector: unquote("&#{$bem-element-separator}#{$element}");
+		} @else {
+			$block: get-block($parent);
+			$selector: unquote("& .#{$block}#{$bem-element-separator}#{$element}");
+		}
+	
+		//
+		@if (type-of($element) == 'list') {
+			$selector: ();
+	
 			//
-			@if (is-block($parent)) {
-				$current: unquote("&#{$bem-element-separator}#{$value}");
-			} @else {
-				$block: get-block($parent);
-				$current: unquote("& .#{$block}#{$bem-element-separator}#{$value}");
+			@each $value in $element {
+				$current: '';
+	
+				//
+				@if (is-block($parent)) {
+					$current: unquote("&#{$bem-element-separator}#{$value}");
+				} @else {
+					$block: get-block($parent);
+					$current: unquote("& .#{$block}#{$bem-element-separator}#{$value}");
+				}
+	
+				//
+				$selector: append($selector, $current, comma);
 			}
-
-			//
-			$selector: append($selector, $current, comma);
 		}
 	}
 
