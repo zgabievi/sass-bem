@@ -27,7 +27,7 @@
 ///         color: black;
 ///     }
 
-@mixin element($element, $nested: true) {
+@mixin element($element, $nested: false) {
 	@at-root {
 		#{element-selector($element, $nested)} {
 			@if $bem-debug == true {
@@ -41,7 +41,7 @@
 
 /// @alias element
 
-@mixin e($element, $nested: true) {
+@mixin e($element, $nested: false) {
 	@include element($element, $nested) {
 		@content;
 	}
