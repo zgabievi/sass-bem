@@ -11,7 +11,7 @@
 ///
 /// @see {mixin} element
 
-@function element-selector($element, $nested: true) {
+@function element-selector($element, $nested: false) {
 	$selector: '';
 	$parent: unquote("#{&}");
 	
