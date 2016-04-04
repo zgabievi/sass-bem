@@ -95,7 +95,7 @@
 ///     }
 
 @mixin before {
-	&:before {
+	&::before {
 		@content;
 	}
 }
@@ -115,7 +115,7 @@
 ///     }
 
 @mixin after {
-	&:after {
+	&::after {
 		@content;
 	}
 }
