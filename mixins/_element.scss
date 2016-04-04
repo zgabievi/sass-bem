@@ -46,3 +46,11 @@
 		@content;
 	}
 }
+
+/// @alias element
+
+@mixin ee($element) {
+	@include element($element, true) {
+		@content;
+	}
+}
