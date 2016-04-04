@@ -1,5 +1,6 @@
 .idea
 .sass-cache
+.sassdocrc
 
 node_modules
 sassdoc

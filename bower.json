@@ -1,6 +1,6 @@
 {
   "name": "sass-bem",
-  "version": "2.4.1",
+  "version": "2.4.5",
   "main": "_bem.scss",
   "description": "Collection of BEM Mixins & Helpers",
   "authors": [
