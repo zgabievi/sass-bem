@@ -5,7 +5,7 @@
 [![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
-Collection of [BEM](https://en.bem.info/) Mixins &amp; Helpers for [sass](http://sass-lang.com/)
+Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.info/) classes, with namespaces and more advanced features.
 
 + [Installation](#installation)
 + [What? Why? How?](#what-why-how)
@@ -29,7 +29,14 @@ $ npm install sass-bem --save
 
 ## What? Why? How?
 
-*Comming Soon!*
+I was inspired to create this package, after I read an article "[More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)" written by [Harry Roberts](https://twitter.com/csswizardry).
+
+Also I can't miss about [bem](https://en.bem.info/), methodology for creating amazing html & css classes. If you don't know about it, you really should read more and get informed about bem.
+
+**What about this package?**
+This is great tool, if you want to stay strict at writing code. If you want your code to be more readable and easy to maintenance. If you want to be advanced in writing sass, install this package and became pro.
+
+*To be continued*
 
 ## Wiki
 
