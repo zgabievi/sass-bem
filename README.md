@@ -46,6 +46,9 @@ Second one is very helpfull to write more code in less time. You can define shor
 **How to use package?**
 Simply `@import` *"bem"* at the very beggining of your *sass*/*scss* main file, configure some parameters at your will, and enjoy with great features.
 
+**Looking for configuration docs?**
+Visit your documentation website, and look at variables section. You will find [`$bem` map](http://zgabievi.me/sass-bem/#undefined-variable-bem), where you can see all parameters. Or scroll down to see how to change them separately.
+
 ## Wiki
 
 > We would recomend you to read full documentation in our website: [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/)
