@@ -39,9 +39,9 @@ This is great tool, if you want to stay strict at writing code. If you want your
 **Why do I love this package?**
 When I'm writing with **sass-bem** I'm always strict to use same structure each time. I'm in love with all of its features, but two of them are most amazing.
 
-First one is `parse`, also known as `p` mixin. You can pass list of mixins, selectors, pseudo elements and etc. You will get comma separated selectors in your *css* file. You can pass *"m:inline"*, this will call `m` mixin with parameter *"inline"*, so you will get `&--inline`. You can also use `&` at your will.
+- First one is `parse`, also known as `p` mixin. You can pass list of mixins, selectors, pseudo elements and etc. You will get comma separated selectors in your *css* file. You can pass *"m:inline"*, this will call `m` mixin with parameter *"inline"*, so you will get `&--inline`. You can also use `&` at your will.
 
-Second one is very helpfull to write more code in less time. You can define shortcodes to use in `parse` mixin. For example, you can define *"fha"* as list of `"focus", "hover", "active"`, and when you call `parse('fha')`, you will get pre-defined list parsed.
+- Second one is very helpfull to write more code in less time. You can define shortcodes to use in `parse` mixin. For example, you can define *"fha"* as list of `"focus", "hover", "active"`, and when you call `parse('fha')`, you will get pre-defined list parsed.
 
 **How to use package?**
 Simply `@import` *"bem"* at the very beggining of your *sass*/*scss* main file, configure some parameters at your will, and enjoy with great features.
