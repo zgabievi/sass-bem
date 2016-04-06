@@ -10,13 +10,13 @@
 
 // Functions
 @import "functions/bem-index";
-@import "functions/get-block";
-@import "functions/has-state";
-@import "functions/has-pseudo";
-@import "functions/str-replace";
 @import "functions/is-modifier";
 @import "functions/is-element";
+@import "functions/has-state";
+@import "functions/has-pseudo";
 @import "functions/is-block";
+@import "functions/get-block";
+@import "functions/str-replace";
 @import "functions/math-min";
 @import "functions/explode";
 @import "functions/implode";
