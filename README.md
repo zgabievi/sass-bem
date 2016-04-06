@@ -13,17 +13,14 @@ Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.
 + [License](#license)
 
 ## Installation
-### Install With [Bower](http://bower.io/search/?q=sass-bem)
+### Install with [bower](http://bower.io/search/?q=sass-bem) or [npm](https://www.npmjs.com/package/sass-bem)
 ```
 $ bower install sass-bem --save
-```
 
-### Install With [NPM](https://www.npmjs.com/package/sass-bem):
-```
 $ npm install sass-bem --save
 ```
 
-### Install Manually
+### or install manually
 - [Download Package Archive](https://github.com/zgabievi/sass-bem/archive/master.zip)
 - Extract archive to your project.
 
