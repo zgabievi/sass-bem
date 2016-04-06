@@ -13,12 +13,14 @@
 @import "functions/get-block";
 @import "functions/has-state";
 @import "functions/has-pseudo";
+@import "functions/str-replace";
 @import "functions/is-modifier";
 @import "functions/is-element";
 @import "functions/is-block";
 @import "functions/math-min";
 @import "functions/explode";
 @import "functions/implode";
+@import "functions/splice";
 
 // Helpers
 @import "helpers/block-selector";
@@ -31,6 +33,8 @@
 @import "helpers/theme-selector";
 @import "helpers/scope-selector";
 @import "helpers/state-selector";
+@import "helpers/pseudo-selector";
+@import "helpers/states-selector";
 @import "helpers/hack-selector";
 @import "helpers/test-selector";
 

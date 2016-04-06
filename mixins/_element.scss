@@ -3,7 +3,7 @@
 /// Element selector, that is generated from parent block
 ///
 /// @param {String} $element - Name of element that will come after ".[block]__"
-/// @param {Boolean} $nested - If element is nested with other element
+/// @param {Boolean} $nested [false] - If element is nested with other element
 ///
 /// @example scss - Usage
 ///     @include block('list') {

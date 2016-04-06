@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/// Replace string with another string.
+///
+/// @access private
+///
+/// @param {String} $string - String from which will be replaced
+/// @param {String} $search - String which will be removed
+/// @param {String} $replace [''] - String which will be placed
+///
+/// @returns {String}
+
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	//
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/// Unset item from list.
+///
+/// @access private
+///
+/// @param {List} $list - List from where will be removed
+/// @param {String} $value - What to be removed
+/// @param {Boolean} $recursive [false] - List is nested or not
+///
+/// @returns {List}
+
+@function splice($list, $value, $recursive: false) {
+	$result: ();
+
+	//
+	@for $i from 1 through length($list) {
+
+		//
+		@if type-of(nth($list, $i)) == list and $recursive {
+			$result: append($result, remove(nth($list, $i), $value, $recursive));
+		}
+
+		//
+		@else if nth($list, $i) != $value {
+			$result: append($result, nth($list, $i));
+		}
+	}
+
+	@return $result;
+}

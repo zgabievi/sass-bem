@@ -5,7 +5,7 @@
 /// @access private
 ///
 /// @param {String} $element - Name of element that will come after ".[block]__"
-/// @param {Boolean} $nested - If element is nested with another element
+/// @param {Boolean} $nested [false] - If element is nested with another element
 ///
 /// @returns {String} - .[block]__[element]
 ///
@@ -60,4 +60,10 @@
 
 @function e-selector($element) {
 	@return element-selector($element);
+}
+
+/// @alias element-selector
+
+@function ee-selector($element) {
+	@return element-selector($element, true);
 }

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/// Pseudo selector with end of hover.
+///
+/// @access private
+///
+/// @returns {String} - &:hover
+///
+/// @see {mixin} hover
+
+@function hover-selector() {
+	@return unquote("&:hover");
+}
+
+/// Pseudo selector with end of focus.
+///
+/// @access private
+///
+/// @returns {String} - &:focus
+///
+/// @see {mixin} focus
+
+@function focus-selector() {
+	@return unquote("&:focus");
+}
+
+/// Pseudo selector with end of active.
+///
+/// @access private
+///
+/// @returns {String} - &:active
+///
+/// @see {mixin} active
+
+@function active-selector() {
+	@return unquote("&:active");
+}
+
+/// Pseudo selector with end of checked.
+///
+/// @access private
+///
+/// @returns {String} - &:checked
+///
+/// @see {mixin} checked
+
+@function checked-selector() {
+	@return unquote("&:checked");
+}
+
+/// Selector with state of disabled.
+///
+/// @access private
+///
+/// @returns {String} - &[disabled]
+///
+/// @see {mixin} disabled
+
+@function disabled-selector() {
+	@return unquote("&[disabled]");
+}
+
+/// Selector with state of readonly.
+///
+/// @access private
+///
+/// @returns {String} - &[readonly]
+///
+/// @see {mixin} readonly
+
+@function readonly-selector() {
+	@return unquote("&[readonly]");
+}
+
+/// Selector with state of contenteditable.
+///
+/// @access private
+///
+/// @returns {String} - &[contenteditable='true']
+///
+/// @see {mixin} contenteditable
+
+@function contenteditable-selector() {
+	@return unquote("&[contenteditable='true']");
+}
+
+
+/// @alias contenteditable-selector
+
+@function editable-selector() {
+	@return contenteditable-selector();
+}

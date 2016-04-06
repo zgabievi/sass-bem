@@ -43,6 +43,9 @@ $bem: (
 		'test': "qa",
 		'theme': "t",
 		'utility': "u",
+	),
+	'shortcodes': (
+		'ab': ('before', 'after')
 	)
 ) !default;
 
@@ -111,3 +114,9 @@ $bem-theme-namespace: map-get(map-get($bem, 'namespace'), 'theme') !default;
 /// @type String
 
 $bem-utility-namespace: map-get(map-get($bem, 'namespace'), 'utility') !default;
+
+/// Shortcodes list for parsing.
+///
+/// @type List
+
+$bem-shortcodes: map-get($bem, 'shortcodes') !default;

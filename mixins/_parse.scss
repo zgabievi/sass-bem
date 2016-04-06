@@ -22,39 +22,81 @@
 
 	//
 	@each $selector in $selectors {
-		$parts: explode($selector, ':');
 
 		//
+		@if (map-get($bem-shortcodes, $selector)) {
+			$selectors: splice($selectors, $selector);
+
+			//
+			@each $mixin in map-get($bem-shortcodes, $selector) {
+				$selectors: append($selectors, $mixin);
+			}
+		}
+	}
+
+	//
+	@each $selector in $selectors {
+
+		//
+		$parts: explode($selector, ':');
+
+		// something like ":hover"
 		@if (str-length(nth($parts, 1)) == 0) {
+
+			//
 			$selector: unquote("#{$parent}:#{nth($parts, 2)}");
 		}
 
-		//
+		// something like "before" or "&"
 		@else if(length($parts) == 1) {
+			$item: nth($parts, 1);
 
 			//
-			@if (nth($parts, 1) == '&') {
-				$selector: $parent;
+			@if (str-index(quote($item), quote('&'))) {
+				$selector: unquote("#{str-replace(quote($item), quote('&'), quote($parent))}");
 			}
 
 			//
 			@else {
-				$selector: unquote("#{$parent}#{nth($parts, 1)}");
+
+				//
+				@if mixin-exists(nth($parts, 1)) {
+
+					//
+					$selector: call(unquote("#{$item}-selector"));
+				}
+
+				//
+				@else {
+
+					//
+					$selector: unquote("#{$parent}#{$item}");
+				}
 			}
 		}
 
-		//
+		// something like "m:inline"
 		@else {
+			$item: implode($parts, ':');
 
 			//
-			@if mixin-exists(nth($parts, 1)) {
-				$function: unquote("#{nth($parts, 1)}-selector");
-				$selector: call($function, nth($parts, 2));
+			@if (str-index(quote($item), quote('&'))) {
+				$selector: unquote("#{str-replace(quote($item), quote('&'), quote($parent))}");
 			}
 
-				//
+			//
 			@else {
-				@error "Mixin #{nth($parts, 1)} doesn't exists!";
+
+				//
+				@if mixin-exists(nth($parts, 1)) {
+					$function: unquote("#{nth($parts, 1)}-selector");
+					$selector: call($function, nth($parts, 2));
+				}
+
+				//
+				@else {
+					@error "Mixin #{nth($parts, 1)} doesn't exists!";
+				}
 			}
 		}
 
@@ -67,5 +109,13 @@
 		#{implode($collection, ', ')} {
 			@content;
 		}
+	}
+}
+
+/// @alias parse
+
+@mixin p($selectors...) {
+	@include parse($selectors...) {
+		@content;
 	}
 }

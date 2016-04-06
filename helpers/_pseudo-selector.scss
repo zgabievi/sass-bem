@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/// Pseudo selector with end of first-of-type.
+///
+/// @access private
+///
+/// @returns {String} - &:first-of-type
+///
+/// @see {mixin} first
+
+@function first-selector() {
+	@return unquote("&:first-of-type");
+}
+
+/// Pseudo selector with end of last-of-type.
+///
+/// @access private
+///
+/// @returns {String} - &:last-of-type
+///
+/// @see {mixin} last
+
+@function last-selector() {
+	@return unquote("&:last-of-type");
+}
+
+/// Pseudo selector with end of nth-child(even).
+///
+/// @access private
+///
+/// @returns {String} - &:nth-child(even)
+///
+/// @see {mixin} even
+
+@function even-selector() {
+	@return unquote("&:nth-child(even)");
+}
+
+/// Pseudo selector with end of nth-child(odd).
+///
+/// @access private
+///
+/// @returns {String} - &:nth-child(odd)
+///
+/// @see {mixin} odd
+
+@function odd-selector() {
+	@return unquote("&:nth-child(odd)");
+}
+
+/// Pseudo selector with end of before.
+///
+/// @access private
+///
+/// @returns {String} - &::before
+///
+/// @see {mixin} before
+
+@function before-selector() {
+	@return unquote("&::before");
+}
+
+/// Pseudo selector with end of after.
+///
+/// @access private
+///
+/// @returns {String} - &::after
+///
+/// @see {mixin} after
+
+@function after-selector() {
+	@return unquote("&::after");
+}
