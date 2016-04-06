@@ -8,9 +8,8 @@
 Collection of [BEM](https://en.bem.info/) Mixins &amp; Helpers for [sass](http://sass-lang.com/)
 
 + [Installation](#installation)
-+ [Usage](#usage)
-+ [Example](#example)
-+ [Wiki](#wiki)
++ [What? Why? How?](#what-why-how)
++ [Wiki](#wiki) or [Documentation](http://zgabievi.me/sass-bem/)
 + [License](#license)
 
 ## Installation
@@ -28,183 +27,19 @@ $ npm install sass-bem --save
 - [Download Package Archive](https://github.com/zgabievi/sass-bem/archive/master.zip)
 - Extract archive to your project.
 
-## Usage
+## What? Why? How?
 
-> If you want to read about usage, you can visit [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/) or read [Wiki](#wiki) documentation
+*Comming Soon!*
 
-## Example
-
-#### style.scss
-
-```scss
-@import "bower_components/sass-bem/bem";
-
-@include b('block') {
-	display: block;
-
-	@include e('element1') {
-		display: element1;
-
-		@include m('modifier1') {
-			display: modifier1;
-		}
-
-		@include is('state') {
-			display: is-state;
-		}
-
-		@include has('state') {
-			display: has-state;
-		}
-
-		@include js('state') {
-			display: js-state;
-		}
-	}
-
-	@include m('modifier2') {
-		display: modifier2;
-
-		@include while('modifier1') {
-			display: modifier2-1;
-		}
-	}
-
-	@include e('element2') {
-		display: element2;
-
-		@include duo {
-			display: element2-2;
-		}
-
-		@include with('element1') {
-			display: element2-1;
-		}
-
-		@include at('modifier2') {
-			display: modifier2;
-		}
-	}
-	
-	@include parse(':hover', 'm:hover') {
-		display: inline-block;
-	}
-}
-
-@include o('object') {
-	display: object;
-}
-
-@include c('component') {
-	display: component;
-}
-
-@include u('utility') {
-	display: utility;
-}
-
-@include t('theme') {
-	display: theme;
-}
-
-@include s('scope') {
-	display: scope;
-}
-
-@include _('hack') {
-	display: hack;
-}
-
-@include qa('test') {
-	display: test;
-}
-```
-
-#### style.css
-
-```css
-.block {
-  display: block; }
-
-  .block__element1 {
-    display: element1; }
-
-    .block__element1--modifier1 {
-      display: modifier1; }
-
-    .block__element1.is-state {
-      display: is-state; }
-
-    .block__element1.has-state {
-      display: has-state; }
-
-    .block__element1.js-state {
-      display: js-state; }
-
-  .block--modifier2 {
-    display: modifier2; }
-
-    .block--modifier2.block--modifier1 {
-      display: modifier2-1; }
-
-  .block__element2 {
-    display: element2; }
-
-    .block__element2 + .block__element2 {
-      display: element2-2; }
-
-    .block__element2 + .block__element1 {
-      display: element2-1; }
-      
-    .block--modifier2 .block__element2 {
-      display: modifier2; }
-      
-    .block:hover, .block--hover {
-      display: inline-block; }
-
-.o-object {
-  display: object; }
-
-.c-component {
-  display: component; }
-
-.u-utility {
-  display: utility; }
-
-.t-theme {
-  display: theme; }
-
-.s-scope {
-  display: scope; }
-
-._hack {
-  display: hack; }
-
-.qa-test {
-  display: test; }
-```
-
-## WiKi
+## Wiki
 
 > We would recomend you to read full documentation in our website: [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/)
 
-+ [**Mixins**](https://github.com/zgabievi/sass-bem/wiki/Mixins) - Collection of BEM Mixins
-	- [Block](https://github.com/zgabievi/sass-bem/wiki/Mixins#block-mixin) - Creates block type selector
-	- [Element](https://github.com/zgabievi/sass-bem/wiki/Mixins#element-mixin) - Creates element type selector
-	- [Modifier](https://github.com/zgabievi/sass-bem/wiki/Mixins#modifier-mixin) - Creates modifier type selector
-	- [Relations](https://github.com/zgabievi/sass-bem/wiki/Mixins#relations) - Relationship Mixins
-	- [States](https://github.com/zgabievi/sass-bem/wiki/Mixins#states) - Element State Mixins
-	- [Pseudo Element](https://github.com/zgabievi/sass-bem/wiki/Mixins#pseudo-elements) - Pseudo Class Mixins
-	- [Parse](https://github.com/zgabievi/sass-bem/wiki/Mixins#parse) - Parse multi-selector Mixin
-+ [**Functions**](https://github.com/zgabievi/sass-bem/wiki/Functions) - Collection of helper functions
-	- [bem-index()](https://github.com/zgabievi/sass-bem/wiki/Functions#bem-index) - Returns first index of bem separator
-	- [get-block()](https://github.com/zgabievi/sass-bem/wiki/Functions#get-block) - Returns bem block from string
-	- [is-block()](https://github.com/zgabievi/sass-bem/wiki/Functions#is-block) - Checks if given string is block
-	- [is-element()](https://github.com/zgabievi/sass-bem/wiki/Functions#is-element) - Checks if given string is element
-	- [is-modifier()](https://github.com/zgabievi/sass-bem/wiki/Functions#is-modifier) - Checks if given string is modifier
-	- [math-min()](https://github.com/zgabievi/sass-bem/wiki/Functions#math-min) - Returns smallest number from 2 numbers, or default
-	- [explode()](https://github.com/zgabievi/sass-bem/wiki/Functions#explode) - Returns list from string
-+ [**OOCSS**](https://github.com/zgabievi/sass-bem/wiki/OOCSS) - Object-Oriented CSS Classes
+> Still prefer Wiki? Then follow this table of contents or go to our [Wiki](https://github.com/zgabievi/sass-bem/wiki) page.
+
++ [**mixins**](https://github.com/zgabievi/sass-bem/wiki/Mixins): [block](https://github.com/zgabievi/sass-bem/wiki/Mixins#block-mixin), [element](https://github.com/zgabievi/sass-bem/wiki/Mixins#element-mixin), [modifier](https://github.com/zgabievi/sass-bem/wiki/Mixins#modifier-mixin), [relations](https://github.com/zgabievi/sass-bem/wiki/Mixins#relations), [states](https://github.com/zgabievi/sass-bem/wiki/Mixins#states), [pseudo elements](https://github.com/zgabievi/sass-bem/wiki/Mixins#pseudo-elements), [parse](https://github.com/zgabievi/sass-bem/wiki/Mixins#parse)
++ [**namespaces**](https://github.com/zgabievi/sass-bem/wiki/OOCSS): [object](https://github.com/zgabievi/sass-bem/wiki/OOCSS#object-mixin), [component](https://github.com/zgabievi/sass-bem/wiki/OOCSS#component-mixin), [utility](https://github.com/zgabievi/sass-bem/wiki/OOCSS#utility-mixin), [theme](https://github.com/zgabievi/sass-bem/wiki/OOCSS#theme-mixin), [scope](https://github.com/zgabievi/sass-bem/wiki/OOCSS#scope-mixin), [hack](https://github.com/zgabievi/sass-bem/wiki/OOCSS#hack-mixin), [state](https://github.com/zgabievi/sass-bem/wiki/OOCSS#state-mixin)
++ [**functions**](https://github.com/zgabievi/sass-bem/wiki/Functions)
 
 ## License
 The sass-bem package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
