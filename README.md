@@ -29,9 +29,9 @@ $ npm install sass-bem --save
 
 ## What? Why? How?
 
-I was inspired to create this package, after I read an article "[More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)" written by [Harry Roberts](https://twitter.com/csswizardry).
+> I was inspired to create this package, after I read an article "[More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)" written by [Harry Roberts](https://twitter.com/csswizardry).
 
-Also I can't miss about [bem](https://en.bem.info/), methodology for creating amazing html & css classes. If you don't know about it, you really should read more and get informed about bem.
+> Also I can't miss about [bem](https://en.bem.info/), methodology for creating amazing html & css classes. If you don't know about it, you really should read more and get informed about bem.
 
 **What about this package?**
 This is great tool, if you want to stay strict at writing code. If you want your code to be more readable and easy to maintenance. If you want to be advanced in writing sass, install this package and became pro.
