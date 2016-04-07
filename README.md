@@ -53,7 +53,7 @@ Visit your documentation website, and look at variables section. You will find [
 ## Wiki
 
 > We would recomend you to read full documentation in our website: [http://zgabievi.me/sass-bem/](http://zgabievi.me/sass-bem/)
-
+>
 > Still prefer Wiki? Then follow this table of contents or go to our [Wiki](https://github.com/zgabievi/sass-bem/wiki) page.
 
 + [**mixins**](https://github.com/zgabievi/sass-bem/wiki/Mixins): [block](https://github.com/zgabievi/sass-bem/wiki/Mixins#block-mixin), [element](https://github.com/zgabievi/sass-bem/wiki/Mixins#element-mixin), [modifier](https://github.com/zgabievi/sass-bem/wiki/Mixins#modifier-mixin), [relations](https://github.com/zgabievi/sass-bem/wiki/Mixins#relations), [states](https://github.com/zgabievi/sass-bem/wiki/Mixins#states), [pseudo elements](https://github.com/zgabievi/sass-bem/wiki/Mixins#pseudo-elements), [parse](https://github.com/zgabievi/sass-bem/wiki/Mixins#parse)
