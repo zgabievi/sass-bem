@@ -1,6 +1,6 @@
 # sass-bem
 
-[![sass-bem](https://i.imgsafe.org/49df123.jpg)](https://github.com/zgabievi/sass-bem/)
+[![sass-bem](https://i.imgsafe.org/88b7a66.jpg)](https://github.com/zgabievi/sass-bem/)
 
 [![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
