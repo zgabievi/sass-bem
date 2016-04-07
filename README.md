@@ -9,6 +9,8 @@ Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.
 
 **Pull requests** are welcome :tada:
 
+## Table of Contents
+
 + [Installation](#installation)
 + [What? Why? How?](#what-why-how)
 + [Wiki](#wiki) or [Documentation](http://zgabievi.me/sass-bem/)
