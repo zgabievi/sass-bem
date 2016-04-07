@@ -7,6 +7,8 @@
 
 Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.info/) classes, with namespaces and more advanced features.
 
+**Pull requests** are welcome :tada:
+
 + [Installation](#installation)
 + [What? Why? How?](#what-why-how)
 + [Wiki](#wiki) or [Documentation](http://zgabievi.me/sass-bem/)
