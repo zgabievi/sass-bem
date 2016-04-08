@@ -44,6 +44,8 @@ When I'm writing with **sass-bem** I'm always strict to use same structure each 
 
 - Second one is very helpfull to write more code in less time. You can define shortcodes to use in `parse` mixin. For example, you can define *"fha"* as list of `"focus", "hover", "active"`, and when you call `parse('fha')`, you will get pre-defined list parsed.
 
+I'll suggest you to create `"ha"` and `"lv"` shortcuts, for `"hover", "active"` and `"link", "visited"`, just like **HATE & LOVE**. Also you can create shortcut called something like `"dsbld"`, which will cover `"disabled", "is:disabled"` mixins. This one will be generated as `&[disabled], &.is-disabled`, because of `disabled` mixin and `is` mixin with param "disabled". Keep playing with shortcuts. :stuck_out_tongue_closed_eyes:
+
 **How to use package?**
 Simply `@import` *"bem"* at the very beggining of your *sass*/*scss* main file, configure some parameters at your will, and enjoy with great features.
 
