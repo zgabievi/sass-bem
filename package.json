@@ -1,7 +1,7 @@
 {
   "name": "sass-bem",
-  "version": "2.5.1",
-  "description": "Collection of BEM Mixins & Helpers",
+  "version": "2.5.2",
+  "description": "Amazing package for sass to write bem classes, with namespaces and more advanced features.",
   "main": "_bem.scss",
   "repository": {
     "type": "git",

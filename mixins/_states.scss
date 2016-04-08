@@ -58,6 +58,46 @@
 	}
 }
 
+/// Pseudo selector with end of link.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include link {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:link {
+///         color: black;
+///     }
+
+@mixin link {
+	&:link {
+		@content;
+	}
+}
+
+/// Pseudo selector with end of visited.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include visited {
+///             color: black;
+///         }
+///     }
+///
+/// @example css - Output
+///     .list:visited {
+///         color: black;
+///     }
+
+@mixin visited {
+	&:visited {
+		@content;
+	}
+}
+
 /// Pseudo selector with end of checked.
 ///
 /// @example scss - Usage

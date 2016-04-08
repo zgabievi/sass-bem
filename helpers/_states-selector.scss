@@ -36,6 +36,30 @@
 	@return unquote("&:active");
 }
 
+/// Pseudo selector with end of link.
+///
+/// @access private
+///
+/// @returns {String} - &:link
+///
+/// @see {mixin} link
+
+@function link-selector() {
+	@return unquote("&:link");
+}
+
+/// Pseudo selector with end of visited.
+///
+/// @access private
+///
+/// @returns {String} - &:visited
+///
+/// @see {mixin} visited
+
+@function visited-selector() {
+	@return unquote("&:visited");
+}
+
 /// Pseudo selector with end of checked.
 ///
 /// @access private
