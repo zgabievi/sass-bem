@@ -106,7 +106,7 @@ Let's work on [Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/t
     }
   }
     
-  @include element('thumb') {
+  @include element('thumb') { // or e('thumb')
     display: block;
   }
 }
