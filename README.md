@@ -13,6 +13,7 @@ Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.
 
 + [Installation](#installation)
 + [What? Why? How?](#what-why-how)
++ [Example](#example)
 + [Wiki](#wiki) or [Documentation](http://zgabievi.me/sass-bem/)
 + [License](#license)
 
@@ -51,6 +52,111 @@ Simply `@import` *"bem"* at the very beggining of your *sass*/*scss* main file, 
 
 **Looking for configuration docs?**
 Visit your documentation website, and look at variables section. You will find [`$bem` map](http://zgabievi.me/sass-bem/#undefined-variable-bem), where you can see all parameters. Or scroll down to see how to change them separately.
+
+## Example
+
+Let's work on [Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)'s post, about media object.
+
+`index.html`
+
+```html
+<div class="o-media">
+  <a href="#" class="o-media__image">
+    <img src="#" class="o-media__thumb" alt="Thumb" />
+  </a>
+  <!-- /.o-media__image -->
+
+  <div class="o-media__body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+    deserunt mollit anim id est laborum.
+  </div>
+  <!-- /.o-media__body -->
+</div>
+<!-- /.o-media -->
+```
+
+---
+
+`app.scss`
+
+```scss
+@import "bower_components/sass-bem/bem";
+
+// Register shortcodes: [optional]
+$bem-shortcodes: (
+  'ba': ('before', 'after'),
+  'lv': ('link', 'visited'),
+  'ha': ('hover', 'active'),
+  'dsbld': ('disabled', 'is:disabled')
+);
+
+// Nicole Sullivan’s media object example
+@include object('media') { // or o('media')
+  margin: 10px;
+  
+  @include parse('&', 'e:body') { // or p('&', 'e:body')
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+  }
+  
+  @include element('image') { // or e('image')
+    float:left;
+    margin-right: 10px;
+    
+    @include at('rtl') { // .o-media--rtl .o-media__image
+      float: right;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+    
+  @include element('thumb') {
+    display: block;
+  }
+}
+```
+
+---
+
+`app.css`
+
+```css
+.o-media {
+  margin: 10px;
+}
+
+.o-media,
+.o-media__body {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+
+.o-media__image {
+  float: left;
+  margin-right: 10px;
+}
+  
+.o-media--rtl .o-media__image {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.o-media__thumb {
+  display: block;
+}
+```
+
+---
+
+![Result](http://i.imgsafe.org/ecb22dd.png)
+
+---
 
 ## Wiki
 
