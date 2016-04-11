@@ -85,15 +85,7 @@ Let's work on [Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/t
 ```scss
 @import "bower_components/sass-bem/bem";
 
-// Register shortcodes: [optional]
-$bem-shortcodes: (
-  'ba': ('before', 'after'),
-  'lv': ('link', 'visited'),
-  'ha': ('hover', 'active'),
-  'dsbld': ('disabled', 'is:disabled')
-);
-
-// Nicole Sullivan’s media object example
+// coding...
 @include object('media') { // or o('media')
   margin: 10px;
   
