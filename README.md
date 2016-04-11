@@ -148,7 +148,7 @@ Let's work on [Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/t
 
 ![Result](http://i.imgsafe.org/ecb22dd.png)
 
-More examples [here](https://github.com/zgabievi/sass-bem/wiki/Examples) and even more will come soon...
+> More examples [here](https://github.com/zgabievi/sass-bem/wiki/Examples) and even more will come soon...
 
 ## Wiki
 
