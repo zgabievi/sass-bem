@@ -9,6 +9,8 @@ Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.
 
 **Pull requests** are welcome :tada:
 
+> **Important!** Changed `with` mixin and it will now get siblings with `~` sign. If you want to get first sibling with `+` sign, you can use `next` mixin.
+
 ## Table of Contents
 
 + [Installation](#installation)
