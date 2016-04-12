@@ -53,7 +53,7 @@ I suggest you to create `"ha"` and `"lv"` shortcuts, for `"hover", "active"` and
 Simply `@import` *"bem"* at the very beggining of your *sass*/*scss* main file, configure some parameters at your will, and enjoy with great features.
 
 **Looking for configuration docs?**
-Visit your documentation website, and look at variables section. You will find [`$bem` map](http://zgabievi.me/sass-bem/#undefined-variable-bem), where you can see all parameters. Or scroll down to see how to change them separately.
+Visit your documentation website, and look at variables section. You will find [`$bem` map](http://zgabievi.me/sass-bem/#variable-bem), where you can see all parameters. Or scroll down to see how to change them separately.
 
 ## Example
 
