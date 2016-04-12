@@ -24,26 +24,26 @@
 	}
 }
 
-/// Element with another element separated by plus sign
+/// Element with next element separated by plus sign
 ///
 /// @param {String} $element - Name of element that will be styled with parent element.
 ///
 /// @example scss - Usage
 ///     @include b('list') {
 ///         @include e('item') {
-///             @include with('title') {
+///             @include next('title') {
 ///                 color: black;
 ///             }
 ///         }
 ///     }
 ///
 /// @example css - Output
-///     .list__item .list__title {
+///     .list__item + .list__title {
 ///         color: black;
 ///     }
 
-@mixin with($element) {
-	#{with-selector($element)} {
+@mixin next($element) {
+	#{next-selector($element)} {
 		@content;
 	}
 }
@@ -66,6 +66,30 @@
 
 @mixin duo {
 	#{duo-selector()} {
+		@content;
+	}
+}
+
+/// Element with sibling elements separated by equivalency sign
+///
+/// @param {String} $element - Name of element that will be styled with parent element.
+///
+/// @example scss - Usage
+///     @include b('list') {
+///         @include e('item') {
+///             @include with('title') {
+///                 color: black;
+///             }
+///         }
+///     }
+///
+/// @example css - Output
+///     .list__item ~ .list__title {
+///         color: black;
+///     }
+
+@mixin with($element) {
+	#{with-selector($element)} {
 		@content;
 	}
 }

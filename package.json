@@ -1,6 +1,6 @@
 {
   "name": "sass-bem",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "Amazing package for sass to write bem classes, with namespaces and more advanced features.",
   "main": "_bem.scss",
   "repository": {
