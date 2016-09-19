@@ -1,15 +1,13 @@
 # sass-bem
 
+> **Important!** Changed `with` mixin and it will now get siblings with `~` sign. If you want to get first sibling with `+` sign, you can use `next` mixin.
+
 [![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
 | sass-bem |     |
 |:----------:|:----|
-| [![sass-bem](https://i.imgsafe.org/fbbe54a80d.png)](https://github.com/zgabievi/sass-bem/) | Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.info/) classes, with namespaces and more advanced features. |
-
-**Pull requests** are welcome :tada:
-
-> **Important!** Changed `with` mixin and it will now get siblings with `~` sign. If you want to get first sibling with `+` sign, you can use `next` mixin.
+| [![sass-bem](https://i.imgsafe.org/fbbe54a80d.png)](https://github.com/zgabievi/sass-bem/) | Amazing package for [sass](http://sass-lang.com/) to write [bem](https://en.bem.info/) classes, with namespaces and more advanced features. **Pull requests** are welcome :tada: |
 
 ## Table of Contents
 
