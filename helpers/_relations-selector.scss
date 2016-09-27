@@ -49,7 +49,7 @@
 ///
 /// @see {mixin} with
 
-@function with-selector($modifier) {
+@function with-selector($element) {
 	$block: get-block(unquote("#{&}"));
 
 	@return unquote("& ~ .#{$block}#{$bem-element-separator}#{$element}");
