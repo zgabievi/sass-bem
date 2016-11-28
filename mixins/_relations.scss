@@ -7,7 +7,10 @@
 /// @example scss - Usage
 ///     @include b('list') {
 ///         @include e('item') {
-///             @include m('inline') {
+///             @include at('inline') {
+///                 display: inline;
+///             }
+///             @include at(('inline','highlighted')) {
 ///                 color: black;
 ///             }
 ///         }
@@ -15,6 +18,9 @@
 ///
 /// @example css - Output
 ///     .list--inline .list__item {
+///         display: inline;
+///     }
+///     .list--inline.list--highlighted .list__item {
 ///         color: black;
 ///     }
 
