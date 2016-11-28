@@ -1,17 +1,22 @@
 @charset "UTF-8";
 
-/// Selector of at relationship.
+/// Selector of single or multiple at relationship.
 ///
-/// @param {String} $modifier - Name of modifier that will come after ".[block]--"
+/// @param {String | List} $modifiers - Name of modifier that will come after ".[block]--"
 ///
-/// @returns {String} - .[block]--[modifier]
+/// @returns {String} - .[block]--[modifier].[block]--[modifier]
 ///
 /// @see {mixin} at
 
-@function at-selector($modifier) {
+@function at-selector($modifiers) {
 	$block: get-block(unquote("#{&}"));
-
-	@return unquote(".#{$block}#{$bem-modifier-separator}#{$modifier} &");
+	$classes: "";
+	
+	@each $modifier in $modifiers {
+		$classes: unquote("#{$classes}.#{$block}#{$bem-modifier-separator}#{$modifier}");
+	}
+	
+	@return unquote("#{$classes} &");
 }
 
 /// Selector of adjacent relationship.
