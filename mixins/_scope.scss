@@ -24,19 +24,19 @@
 ///     }
 
 @mixin scope($scope, $namespace: $bem-scope-namespace) {
-	#{scope-selector($scope, $namespace)} {
-		@if $bem-debug == true {
-			outline: 5px solid #a2453d;
-		}
-
-		@content;
-	}
+  #{scope-selector($scope, $namespace)} {
+    @if $bem-debug == true {
+      outline: 5px solid #a2453d;
+    }
+    
+    @content;
+  }
 }
 
 /// @alias scope
 
 @mixin s($scope, $namespace: $bem-scope-namespace) {
-	@include scope($scope, $namespace) {
-		@content;
-	}
+  @include scope($scope, $namespace) {
+    @content;
+  }
 }

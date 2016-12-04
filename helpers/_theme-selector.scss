@@ -12,11 +12,11 @@
 /// @see {mixin} theme
 
 @function theme-selector($theme, $namespace) {
-	@return unquote(".#{$namespace}-#{$theme}");
+  @return unquote(".#{$namespace}-#{$theme}");
 }
 
 /// @alias theme-selector
 
 @function t-selector($theme) {
-	@return theme-selector($theme);
+  @return theme-selector($theme);
 }

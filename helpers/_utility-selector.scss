@@ -12,11 +12,11 @@
 /// @see {mixin} utility
 
 @function utility-selector($utility, $namespace) {
-	@return unquote(".#{$namespace}-#{$utility}");
+  @return unquote(".#{$namespace}-#{$utility}");
 }
 
 /// @alias utility-selector
 
 @function u-selector($utility) {
-	@return utility-selector($utility);
+  @return utility-selector($utility);
 }

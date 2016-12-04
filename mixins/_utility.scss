@@ -24,19 +24,19 @@
 ///     }
 
 @mixin utility($utility, $namespace: $bem-utility-namespace) {
-	#{utility-selector($utility, $namespace)} {
-		@if $bem-debug == true {
-			outline: 5px solid #635270;
-		}
-
-		@content;
-	}
+  #{utility-selector($utility, $namespace)} {
+    @if $bem-debug == true {
+      outline: 5px solid #635270;
+    }
+    
+    @content;
+  }
 }
 
 /// @alias utility
 
 @mixin u($utility, $namespace: $bem-utility-namespace) {
-	@include utility($utility, $namespace) {
-		@content;
-	}
+  @include utility($utility, $namespace) {
+    @content;
+  }
 }

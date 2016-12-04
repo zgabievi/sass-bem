@@ -12,11 +12,11 @@
 /// @see {mixin} test
 
 @function test-selector($test, $namespace) {
-	@return unquote(".#{$namespace}-#{$test}");
+  @return unquote(".#{$namespace}-#{$test}");
 }
 
 /// @alias test-selector
 
 @function qa-selector($test) {
-	@return test-selector($test);
+  @return test-selector($test);
 }

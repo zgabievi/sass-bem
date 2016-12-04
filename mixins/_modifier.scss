@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/// Modifier selector, that is generated from parent block
+/// Modifier selector, that is generated from parent block.
 ///
 /// @param {String} $modifier - Name of modifier that will come after ".[block]--"
 ///
@@ -17,12 +17,22 @@
 ///         }
 ///     }
 ///
+///     @include b('list') {
+///         @include m(('inline', 'ordered')) {
+///             color: black;
+///         }
+///     }
+///
 /// @example css - Output
 ///     .list--inline {
 ///         color: black;
 ///     }
 ///
 ///     .list--inline {
+///         color: black;
+///     }
+///
+///     .list--inline, .list--ordered {
 ///         color: black;
 ///     }
 

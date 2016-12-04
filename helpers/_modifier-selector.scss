@@ -11,24 +11,22 @@
 /// @see {mixin} modifier
 
 @function modifier-selector($modifier) {
-	$selector: unquote("&#{$bem-modifier-separator}#{$modifier}");
-
-	//
-	@if (type-of($modifier) == 'list') {
-		$selector: ();
-
-		//
-		@each $value in $modifier {
-			$current: unquote("&#{$bem-modifier-separator}#{$value}");
-			$selector: append($selector, $current, comma);
-		}
-	}
-
-	@return $selector;
+  $selector: unquote("&#{$bem-modifier-separator}#{$modifier}");
+  
+  @if (type-of($modifier) == 'list') {
+    $selector: ();
+    
+    @each $value in $modifier {
+      $current: unquote("&#{$bem-modifier-separator}#{$value}");
+      $selector: append($selector, $current, comma);
+    }
+  }
+  
+  @return $selector;
 }
 
 /// @alias modifier-selector
 
 @function m-selector($modifier) {
-	@return modifier-selector($modifier);
+  @return modifier-selector($modifier);
 }

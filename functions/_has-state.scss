@@ -9,9 +9,9 @@
 /// @returns {Boolean}
 
 @function has-state($selector) {
-    $separator_is: unquote(".is#{$bem-state-separator}");
-    $separator_js: unquote(".js#{$bem-state-separator}");
-    $separator_has: unquote(".has#{$bem-state-separator}");
-
-	@return str-index($selector, $separator_is) != null or str-index($selector, $separator_js) != null or str-index($selector, $separator_has) != null;
+  $separator_is: unquote(".is#{$bem-state-separator}");
+  $separator_js: unquote(".js#{$bem-state-separator}");
+  $separator_has: unquote(".has#{$bem-state-separator}");
+  
+  @return str-index($selector, $separator_is) != null or str-index($selector, $separator_js) != null or str-index($selector, $separator_has) != null;
 }

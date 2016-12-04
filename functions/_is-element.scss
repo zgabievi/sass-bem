@@ -9,6 +9,7 @@
 /// @returns {Boolean}
 
 @function is-element($selector) {
-    $separator: unquote("#{$bem-element-separator}");
-	@return str-index($selector, $separator) != null;
+  $separator: unquote("#{$bem-element-separator}");
+  
+  @return str-index($selector, $separator) != null;
 }

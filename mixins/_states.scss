@@ -13,9 +13,9 @@
 ///     }
 
 @mixin hover {
-	&:hover {
-		@content;
-	}
+  &:hover {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of focus.
@@ -33,9 +33,9 @@
 ///     }
 
 @mixin focus {
-	&:focus {
-		@content;
-	}
+  &:focus {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of active.
@@ -53,9 +53,9 @@
 ///     }
 
 @mixin active {
-	&:active {
-		@content;
-	}
+  &:active {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of link.
@@ -73,9 +73,9 @@
 ///     }
 
 @mixin link {
-	&:link {
-		@content;
-	}
+  &:link {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of visited.
@@ -93,9 +93,9 @@
 ///     }
 
 @mixin visited {
-	&:visited {
-		@content;
-	}
+  &:visited {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of checked.
@@ -113,9 +113,9 @@
 ///     }
 
 @mixin checked {
-	&:checked {
-		@content;
-	}
+  &:checked {
+    @content;
+  }
 }
 
 /// Selector with state of disabled.
@@ -133,9 +133,9 @@
 ///     }
 
 @mixin disabled {
-	&[disabled] {
-		@content;
-	}
+  &[disabled] {
+    @content;
+  }
 }
 
 /// Selector with state of readonly.
@@ -153,9 +153,9 @@
 ///     }
 
 @mixin readonly {
-	&[readonly] {
-		@content;
-	}
+  &[readonly] {
+    @content;
+  }
 }
 
 /// Selector with state of contenteditable.
@@ -173,15 +173,15 @@
 ///     }
 
 @mixin contenteditable {
-	&[contenteditable="true"] {
-		@content;
-	}
+  &[contenteditable="true"] {
+    @content;
+  }
 }
 
 /// @alias contenteditable
 
 @mixin editable {
-	@include contenteditable {
-		@content;
-	}
+  @include contenteditable {
+    @content;
+  }
 }

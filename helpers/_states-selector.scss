@@ -9,7 +9,7 @@
 /// @see {mixin} hover
 
 @function hover-selector() {
-	@return unquote("&:hover");
+  @return unquote("&:hover");
 }
 
 /// Pseudo selector with end of focus.
@@ -21,7 +21,7 @@
 /// @see {mixin} focus
 
 @function focus-selector() {
-	@return unquote("&:focus");
+  @return unquote("&:focus");
 }
 
 /// Pseudo selector with end of active.
@@ -33,7 +33,7 @@
 /// @see {mixin} active
 
 @function active-selector() {
-	@return unquote("&:active");
+  @return unquote("&:active");
 }
 
 /// Pseudo selector with end of link.
@@ -45,7 +45,7 @@
 /// @see {mixin} link
 
 @function link-selector() {
-	@return unquote("&:link");
+  @return unquote("&:link");
 }
 
 /// Pseudo selector with end of visited.
@@ -57,7 +57,7 @@
 /// @see {mixin} visited
 
 @function visited-selector() {
-	@return unquote("&:visited");
+  @return unquote("&:visited");
 }
 
 /// Pseudo selector with end of checked.
@@ -69,7 +69,7 @@
 /// @see {mixin} checked
 
 @function checked-selector() {
-	@return unquote("&:checked");
+  @return unquote("&:checked");
 }
 
 /// Selector with state of disabled.
@@ -81,7 +81,7 @@
 /// @see {mixin} disabled
 
 @function disabled-selector() {
-	@return unquote("&[disabled]");
+  @return unquote("&[disabled]");
 }
 
 /// Selector with state of readonly.
@@ -93,7 +93,7 @@
 /// @see {mixin} readonly
 
 @function readonly-selector() {
-	@return unquote("&[readonly]");
+  @return unquote("&[readonly]");
 }
 
 /// Selector with state of contenteditable.
@@ -105,12 +105,11 @@
 /// @see {mixin} contenteditable
 
 @function contenteditable-selector() {
-	@return unquote("&[contenteditable='true']");
+  @return unquote("&[contenteditable='true']");
 }
-
 
 /// @alias contenteditable-selector
 
 @function editable-selector() {
-	@return contenteditable-selector();
+  @return contenteditable-selector();
 }

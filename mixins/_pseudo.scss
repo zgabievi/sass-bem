@@ -15,9 +15,9 @@
 ///     }
 
 @mixin first {
-	&:first-of-type {
-		@content;
-	}
+  &:first-of-type {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of last-of-type.
@@ -35,9 +35,9 @@
 ///     }
 
 @mixin last {
-	&:last-of-type {
-		@content;
-	}
+  &:last-of-type {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of nth-child(even).
@@ -55,9 +55,9 @@
 ///     }
 
 @mixin even {
-	&:nth-child(even) {
-		@content;
-	}
+  &:nth-child(even) {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of nth-child(odd).
@@ -75,9 +75,9 @@
 ///     }
 
 @mixin odd {
-	&:nth-child(odd) {
-		@content;
-	}
+  &:nth-child(odd) {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of before.
@@ -95,9 +95,9 @@
 ///     }
 
 @mixin before {
-	&::before {
-		@content;
-	}
+  &::before {
+    @content;
+  }
 }
 
 /// Pseudo selector with end of after.
@@ -115,7 +115,7 @@
 ///     }
 
 @mixin after {
-	&::after {
-		@content;
-	}
+  &::after {
+    @content;
+  }
 }

@@ -9,6 +9,7 @@
 /// @returns {Boolean}
 
 @function is-modifier($selector) {
-    $separator: unquote("#{$bem-modifier-separator}");
-	@return str-index($selector, $separator) != null;
+  $separator: unquote("#{$bem-modifier-separator}");
+  
+  @return str-index($selector, $separator) != null;
 }

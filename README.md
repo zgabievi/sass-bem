@@ -1,6 +1,6 @@
 # sass-bem
 
-> **Important!** Changed `with` mixin and it will now get siblings with `~` sign. If you want to get first sibling with `+` sign, you can use `next` mixin.
+> **Please upgrade to version 2.6.0**, we have some great features. Thanks to @szalonna and @MartinN3 resolved issue in documentation and updated some mixins.
 
 [![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)

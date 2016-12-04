@@ -18,31 +18,31 @@
 ///     }
 
 @mixin state($state, $namespace: null) {
-	@at-root {
-		#{state-selector($state, $namespace)} {
-			@if $bem-debug == true {
-				outline: 5px solid #66a96b;
-			}
-
-			@content;
-		}
-	}
+  @at-root {
+    #{state-selector($state, $namespace)} {
+      @if $bem-debug == true {
+        outline: 5px solid #66a96b;
+      }
+      
+      @content;
+    }
+  }
 }
 
 /// @alias state
 
 @mixin is($state) {
-	@include state($state, 'is') {
-		@content;
-	}
+  @include state($state, 'is') {
+    @content;
+  }
 }
 
 /// @alias state
 
 @mixin has($state) {
-	@include state($state, 'has') {
-		@content;
-	}
+  @include state($state, 'has') {
+    @content;
+  }
 }
 
 /// Signify that this piece of the DOM has some behaviour acting upon it, and that JavaScript binds onto it to provide that behaviour. If you’re not a developer working with JavaScript, leave these well alone.
@@ -50,7 +50,7 @@
 /// @alias state
 
 @mixin js($state) {
-	@include state($state, 'js') {
-		@content;
-	}
+  @include state($state, 'js') {
+    @content;
+  }
 }

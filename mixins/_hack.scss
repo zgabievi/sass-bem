@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /// Signify that this class is the worst of the worst—a hack! Sometimes, although incredibly rarely, we need to add a class in our markup in order to force something to work. If we do this, we need to let others know that this class is less than ideal, and hopefully temporary (i.e. do not bind onto this).
-/// 
+///
 /// @param {String} $hack - Name of hack that will come after "._"
 /// @param {String} $namespace [null] - Hack element namespace.
 ///
@@ -24,19 +24,19 @@
 ///     }
 
 @mixin hack($hack, $namespace: $bem-hack-namespace) {
-	#{hack-selector($hack, $namespace)} {
-		@if $bem-debug == true {
-			outline: 5px solid #f33535;
-		}
-
-		@content;
-	}
+  #{hack-selector($hack, $namespace)} {
+    @if $bem-debug == true {
+      outline: 5px solid #f33535;
+    }
+    
+    @content;
+  }
 }
 
 /// @alias hack
 
 @mixin _($hack, $namespace: $bem-hack-namespace) {
-	@include hack($hack, $namespace) {
-		@content;
-	}
+  @include hack($hack, $namespace) {
+    @content;
+  }
 }

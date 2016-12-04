@@ -12,58 +12,48 @@
 /// @see {mixin} element
 
 @function element-selector($element, $nested: false) {
-	$selector: '';
-	$parent: unquote("#{&}");
-	
-	//
-	@if ($nested == true) {
-		$selector: unquote("&#{$bem-element-separator}#{$element}");
-	}
-	
-	//
-	@else {
-
-		//
-		@if (is-block($parent)) {
-			$selector: unquote("&#{$bem-element-separator}#{$element}");
-		} @else {
-			$block: get-block($parent);
-			$selector: unquote("& .#{$block}#{$bem-element-separator}#{$element}");
-		}
-	
-		//
-		@if (type-of($element) == 'list') {
-			$selector: ();
-	
-			//
-			@each $value in $element {
-				$current: '';
-	
-				//
-				@if (is-block($parent)) {
-					$current: unquote("&#{$bem-element-separator}#{$value}");
-				} @else {
-					$block: get-block($parent);
-					$current: unquote("& .#{$block}#{$bem-element-separator}#{$value}");
-				}
-	
-				//
-				$selector: append($selector, $current, comma);
-			}
-		}
-	}
-
-	@return $selector;
+  $selector: '';
+  $parent: unquote("#{&}");
+  
+  @if ($nested == true) {
+    $selector: unquote("&#{$bem-element-separator}#{$element}");
+  } @else {
+    @if (is-block($parent)) {
+      $selector: unquote("&#{$bem-element-separator}#{$element}");
+    } @else {
+      $block: get-block($parent);
+      $selector: unquote("& .#{$block}#{$bem-element-separator}#{$element}");
+    }
+    
+    @if (type-of($element) == 'list') {
+      $selector: ();
+      
+      @each $value in $element {
+        $current: '';
+        
+        @if (is-block($parent)) {
+          $current: unquote("&#{$bem-element-separator}#{$value}");
+        } @else {
+          $block: get-block($parent);
+          $current: unquote("& .#{$block}#{$bem-element-separator}#{$value}");
+        }
+        
+        $selector: append($selector, $current, comma);
+      }
+    }
+  }
+  
+  @return $selector;
 }
 
 /// @alias element-selector
 
 @function e-selector($element) {
-	@return element-selector($element);
+  @return element-selector($element);
 }
 
 /// @alias element-selector
 
 @function ee-selector($element) {
-	@return element-selector($element, true);
+  @return element-selector($element, true);
 }

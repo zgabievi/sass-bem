@@ -24,19 +24,19 @@
 ///     }
 
 @mixin theme($theme, $namespace: $bem-theme-namespace) {
-	#{theme-selector($theme, $namespace)} {
-		@if $bem-debug == true {
-			outline: 5px solid #60316e;
-		}
-
-		@content;
-	}
+  #{theme-selector($theme, $namespace)} {
+    @if $bem-debug == true {
+      outline: 5px solid #60316e;
+    }
+    
+    @content;
+  }
 }
 
 /// @alias theme
 
 @mixin t($theme, $namespace: $bem-theme-namespace) {
-	@include theme($theme, $namespace) {
-		@content;
-	}
+  @include theme($theme, $namespace) {
+    @content;
+  }
 }

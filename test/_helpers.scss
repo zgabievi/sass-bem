@@ -1,0 +1,45 @@
+@include test-module('Helpers') {
+  @include test('block-selector [function]') {
+    @include assert-equal(block-selector('list'), '.list', 'Selector of block.');
+  }
+  
+  @include test('b-selector [function]') {
+    @include assert-equal(b-selector('list'), '.list', 'Selector of block.');
+  }
+  
+  @include test('element-selector [function]') {
+    @include assert-equal(element-selector('item'), '&__item', 'Selector of element.');
+  }
+  
+  @include test('e-selector [function]') {
+    @include assert-equal(e-selector('item'), '&__item', 'Selector of element.');
+  }
+  
+  @include test('modifier-selector [function]') {
+    @include assert-equal(modifier-selector('inline'), '&--inline', 'Selector of modifier.');
+  }
+  
+  @include test('m-selector [function]') {
+    @include assert-equal(m-selector('inline'), '&--inline', 'Selector of modifier.');
+  }
+  
+  @include test('at-selector [function]') {
+    @include assert-equal(at-selector('inline'), '.--inline &', 'Selector of at relationship.');
+  }
+  
+  @include test('next-selector [function]') {
+    @include assert-equal(next-selector('item'), '& + .__item', 'Selector of adjacent relationship.');
+  }
+  
+  @include test('duo-selector [function]') {
+    @include assert-equal(duo-selector(true), '& + &', 'Selector of duo relationship.');
+  }
+  
+  @include test('with-selector [function]') {
+    @include assert-equal(with-selector('item'), '& ~ .__item', 'Selector of sibling relationship.');
+  }
+  
+  @include test('while-selector [function]') {
+    @include assert-equal(while-selector('inline'), '&.--inline', 'Selector of while relationship.');
+  }
+}

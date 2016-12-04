@@ -24,19 +24,19 @@
 ///     }
 
 @mixin test($test, $namespace: $bem-test-namespace) {
-	#{test-selector($test, $namespace)} {
-		@if $bem-debug == true {
-			outline: 5px solid #f8e796;
-		}
-
-		@content;
-	}
+  #{test-selector($test, $namespace)} {
+    @if $bem-debug == true {
+      outline: 5px solid #f8e796;
+    }
+    
+    @content;
+  }
 }
 
 /// @alias test
 
 @mixin qa($test, $namespace: $bem-test-namespace) {
-	@include test($test, $namespace) {
-		@content;
-	}
+  @include test($test, $namespace) {
+    @content;
+  }
 }

@@ -1,13 +1,21 @@
 @charset "UTF-8";
 
-/// Relationship of parent element with current modifier
+/// Relationship of parent element with current modifiers.
 ///
-/// @param {String} $modifier - Name of modifier that will make parent element child.
+/// @param {String} $modifiers - List of modifiers that will make parent element child.
 ///
 /// @example scss - Usage
 ///     @include b('list') {
 ///         @include e('item') {
-///             @include m('inline') {
+///             @include at('inline') {
+///                 color: black;
+///             }
+///         }
+///     }
+///
+///     @include b('list') {
+///         @include e('item') {
+///             @include at('inline', 'inverse') {
 ///                 color: black;
 ///             }
 ///         }
@@ -17,14 +25,18 @@
 ///     .list--inline .list__item {
 ///         color: black;
 ///     }
+///
+///     .list--inline.list--inverse .list__item {
+///         color: black;
+///     }
 
-@mixin at($modifier) {
-	#{at-selector($modifier)} {
-		@content;
-	}
+@mixin at($modifiers...) {
+  #{at-selector($modifiers...)} {
+    @content;
+  }
 }
 
-/// Element with next element separated by plus sign
+/// Element with next element separated by plus sign.
 ///
 /// @param {String} $element - Name of element that will be styled with parent element.
 ///
@@ -43,12 +55,12 @@
 ///     }
 
 @mixin next($element) {
-	#{next-selector($element)} {
-		@content;
-	}
+  #{next-selector($element)} {
+    @content;
+  }
 }
 
-/// Element with same element separated by plus sign
+/// Element with same element separated by plus sign.
 ///
 /// @example scss - Usage
 ///     @include b('list') {
@@ -65,12 +77,12 @@
 ///     }
 
 @mixin duo {
-	#{duo-selector()} {
-		@content;
-	}
+  #{duo-selector()} {
+    @content;
+  }
 }
 
-/// Element with sibling elements separated by equivalency sign
+/// Element with sibling elements separated by equivalency sign.
 ///
 /// @param {String} $element - Name of element that will be styled with parent element.
 ///
@@ -89,14 +101,14 @@
 ///     }
 
 @mixin with($element) {
-	#{with-selector($element)} {
-		@content;
-	}
+  #{with-selector($element)} {
+    @content;
+  }
 }
 
-/// While two selectors are on same element
+/// While two selectors are on same modifier.
 ///
-/// @param {String} $modifier - Name of modifier that will follow parent modifier.
+/// @param {String} $modifier - Name modifier that will follow parent modifier.
 ///
 /// @example scss - Usage
 ///     @include b('list') {
@@ -113,7 +125,7 @@
 ///     }
 
 @mixin while($modifier) {
-	#{while-selector($modifier)} {
-		@content;
-	}
+  #{while-selector($modifier)} {
+    @content;
+  }
 }

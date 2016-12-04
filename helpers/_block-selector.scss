@@ -11,11 +11,11 @@
 /// @see {mixin} block
 
 @function block-selector($block) {
-	@return unquote(".#{$block}");
+  @return unquote(".#{$block}");
 }
 
 /// @alias block-selector
 
 @function b-selector($block) {
-	@return block-selector($block);
+  @return block-selector($block);
 }

@@ -12,11 +12,11 @@
 /// @see {mixin} object
 
 @function object-selector($object, $namespace) {
-	@return unquote(".#{$namespace}-#{$object}");
+  @return unquote(".#{$namespace}-#{$object}");
 }
 
 /// @alias object-selector
 
 @function o-selector($object) {
-	@return object-selector($object);
+  @return object-selector($object);
 }

@@ -12,11 +12,11 @@
 /// @see {mixin} component
 
 @function component-selector($component, $namespace) {
-	@return unquote(".#{$namespace}-#{$component}");
+  @return unquote(".#{$namespace}-#{$component}");
 }
 
 /// @alias component-selector
 
 @function c-selector($component) {
-	@return component-selector($component);
+  @return component-selector($component);
 }

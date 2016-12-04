@@ -9,5 +9,5 @@
 /// @returns {Boolean}
 
 @function is-block($selector) {
-	@return (not is-element($selector) and not is-modifier($selector) and not has-state($selector) and not has-pseudo($selector));
+  @return not is-element($selector) and not is-modifier($selector) and not has-state($selector) and not has-pseudo($selector);
 }

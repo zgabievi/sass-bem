@@ -9,5 +9,5 @@
 /// @returns {Boolean}
 
 @function has-pseudo($selector) {
-	@return str-index($selector, ":") != null;
+  @return str-index($selector, ":") != null;
 }

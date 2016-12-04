@@ -24,19 +24,19 @@
 ///     }
 
 @mixin object($object, $namespace: $bem-object-namespace) {
-	#{object-selector($object, $namespace)} {
-		@if $bem-debug == true {
-			outline: 5px solid #9bcb3c;
-		}
-
-		@content;
-	}
+  #{object-selector($object, $namespace)} {
+    @if $bem-debug == true {
+      outline: 5px solid #9bcb3c;
+    }
+    
+    @content;
+  }
 }
 
 /// @alias object
 
 @mixin o($object, $namespace: $bem-object-namespace) {
-	@include object($object, $namespace) {
-		@content;
-	}
+  @include object($object, $namespace) {
+    @content;
+  }
 }

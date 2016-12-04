@@ -18,6 +18,20 @@
 ///         }
 ///     }
 ///
+///     @include b('list') {
+///         @include e('item') {
+///             @include ee('link') {
+///                 color: black;
+///             }
+///         }
+///     }
+///
+///     @include b('list') {
+///         @include e(('item', 'link')) {
+///             color: black;
+///         }
+///     }
+///
 /// @example css - Output
 ///     .list__item {
 ///         color: black;
@@ -26,31 +40,39 @@
 ///     .list__item {
 ///         color: black;
 ///     }
+///
+///     .list__item__link {
+///         color: black;
+///     }
+///
+///     .list__item, .list__link {
+///         color: black;
+///     }
 
 @mixin element($element, $nested: false) {
-	@at-root {
-		#{element-selector($element, $nested)} {
-			@if $bem-debug == true {
-				outline: 5px solid #635270;
-			}
-
-			@content;
-		}
-	}
+  @at-root {
+    #{element-selector($element, $nested)} {
+      @if $bem-debug == true {
+        outline: 5px solid #635270;
+      }
+      
+      @content;
+    }
+  }
 }
 
 /// @alias element
 
 @mixin e($element, $nested: false) {
-	@include element($element, $nested) {
-		@content;
-	}
+  @include element($element, $nested) {
+    @content;
+  }
 }
 
 /// @alias element
 
 @mixin ee($element) {
-	@include element($element, true) {
-		@content;
-	}
+  @include element($element, true) {
+    @content;
+  }
 }

@@ -12,11 +12,11 @@
 /// @see {mixin} hack
 
 @function hack-selector($hack, $namespace) {
-	@return unquote(".#{$namespace}#{$hack}");
+  @return unquote(".#{$namespace}#{$hack}");
 }
 
 /// @alias hack-selector
 
 @function _-selector($hack) {
-	@return hack-selector($hack, '_');
+  @return hack-selector($hack, '_');
 }

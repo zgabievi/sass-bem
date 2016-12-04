@@ -1,0 +1,737 @@
+@include test-module('Mixins') {
+  @include test('block [mixin]') {
+    @include assert('Block selector that will be parent of some elements, modifiers, states...') {
+      @include output {
+        @include block('list') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .list {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('b [mixin]') {
+    @include assert('Block selector that will be parent of some elements, modifiers, states...') {
+      @include output {
+        @include b('list') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .list {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('element [mixin]') {
+    @include assert('Element selector, that is generated from parent block.') {
+      @include output {
+        @include block('list') {
+          @include element('item') {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list__item {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('e [mixin]') {
+    @include assert('Element selector, that is generated from parent block.') {
+      @include output {
+        @include block('list') {
+          @include e('item') {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list__item {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('e [mixin]') {
+    @include assert('Element selector, that is generated from parent block.') {
+      @include output {
+        @include block('list') {
+          @include e(('item', 'link')) {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list__item, .list__link {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('ee [mixin]') {
+    @include assert('Element selector, that is generated from parent block.') {
+      @include output {
+        @include block('list') {
+          @include e('item') {
+            @include ee('link') {
+              color: black;
+            }
+          }
+        }
+      }
+      
+      @include expect {
+        .list__item__link {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('modifier [mixin]') {
+    @include assert('Modifier selector, that is generated from parent block.') {
+      @include output {
+        @include block('list') {
+          @include modifier('inline') {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list--inline {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('m [mixin]') {
+    @include assert('Modifier selector, that is generated from parent block.') {
+      @include output {
+        @include block('list') {
+          @include m('inline') {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list--inline {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('m [mixin]') {
+    @include assert('Modifier selector, that is generated from parent block.') {
+      @include output {
+        @include block('list') {
+          @include m(('inline', 'ordered')) {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list--inline, .list--ordered {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('at [mixin]') {
+    @include assert('Relationship of parent element with current modifier.') {
+      @include output {
+        @include block('list') {
+          @include e('item') {
+            @include at('inline') {
+              color: black;
+            }
+          }
+        }
+      }
+      
+      @include expect {
+        .list--inline .test-output .list__item {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('at [mixin]') {
+    @include assert('Relationship of parent element with current modifiers.') {
+      @include output {
+        @include block('list') {
+          @include e('item') {
+            @include at('inline', 'inverse') {
+              color: black;
+            }
+          }
+        }
+      }
+      
+      @include expect {
+        .list--inline.test-output .list--inverse .test-output .list__item {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('next [mixin]') {
+    @include assert('Element with next element separated by plus sign.') {
+      @include output {
+        @include block('list') {
+          @include e('item') {
+            @include next('title') {
+              color: black;
+            }
+          }
+        }
+      }
+      
+      @include expect {
+        .list__item + .test-output .list__title {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('duo [mixin]') {
+    @include assert('Element with same element separated by plus sign.') {
+      @include output {
+        @include block('list') {
+          @include e('item') {
+            @include duo {
+              color: black;
+            }
+          }
+        }
+      }
+      
+      @include expect {
+        .list__item + .list__item {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('with [mixin]') {
+    @include assert('Element with sibling elements separated by equivalency sign.') {
+      @include output {
+        @include block('list') {
+          @include e('item') {
+            @include with('title') {
+              color: black;
+            }
+          }
+        }
+      }
+      
+      @include expect {
+        .list__item ~ .test-output .list__title {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('while [mixin]') {
+    @include assert('While two selectors are on same modifier.') {
+      @include output {
+        @include block('list') {
+          @include m('inline') {
+            @include while('ordered') {
+              color: black;
+            }
+          }
+        }
+      }
+      
+      @include expect {
+        .list--inline.test-output .list--ordered {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('hover [mixin]') {
+    @include assert('Pseudo selector with end of hover.') {
+      @include output {
+        @include block('list') {
+          @include hover {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list:hover {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('focus [mixin]') {
+    @include assert('Pseudo selector with end of focus.') {
+      @include output {
+        @include block('list') {
+          @include focus {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list:focus {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('active [mixin]') {
+    @include assert('Pseudo selector with end of active.') {
+      @include output {
+        @include block('list') {
+          @include active {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list:active {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('link [mixin]') {
+    @include assert('Pseudo selector with end of link.') {
+      @include output {
+        @include block('list') {
+          @include link {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list:link {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('visited [mixin]') {
+    @include assert('Pseudo selector with end of visited.') {
+      @include output {
+        @include block('list') {
+          @include visited {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list:visited {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('checked [mixin]') {
+    @include assert('Pseudo selector with end of checked.') {
+      @include output {
+        @include block('list') {
+          @include checked {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list:checked {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('disabled [mixin]') {
+    @include assert('Selector with state of disabled.') {
+      @include output {
+        @include block('list') {
+          @include disabled {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list[disabled] {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('readonly [mixin]') {
+    @include assert('Selector with state of readonly.') {
+      @include output {
+        @include block('list') {
+          @include readonly {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list[readonly] {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('contenteditable [mixin]') {
+    @include assert('Selector with state of contenteditable.') {
+      @include output {
+        @include block('list') {
+          @include contenteditable {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list[contenteditable="true"] {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('editable [mixin]') {
+    @include assert('Selector with state of contenteditable.') {
+      @include output {
+        @include block('list') {
+          @include editable {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list[contenteditable="true"] {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('parse [mixin]') {
+    @include assert('Parse multiple mixins, pseudo elements and other states.') {
+      @include output {
+        @include block('list') {
+          @include parse('&', 'm:inline', ':hover', '[disabled]') {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list, .list--inline, .list:hover, .list[disabled] {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('p [mixin]') {
+    @include assert('Parse multiple mixins, pseudo elements and other states.') {
+      @include output {
+        @include block('list') {
+          @include p('&', 'm:inline', ':hover', '[disabled]') {
+            color: black;
+          }
+        }
+      }
+      
+      @include expect {
+        .list, .list--inline, .list:hover, .list[disabled] {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('object [mixin]') {
+    @include assert('Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.') {
+      @include output {
+        @include object('list') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .o-list {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('o [mixin]') {
+    @include assert('Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.') {
+      @include output {
+        @include o('list') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .o-list {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('component [mixin]') {
+    @include assert('Signify that something is a Component. This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.') {
+      @include output {
+        @include component('list') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .c-list {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('c [mixin]') {
+    @include assert('Signify that something is a Component. This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.') {
+      @include output {
+        @include c('list') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .c-list {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('utility [mixin]') {
+    @include assert('Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI. You will probably recognise this namespace from libraries and methodologies like SUIT.') {
+      @include output {
+        @include utility('hidden') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .u-hidden {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('u [mixin]') {
+    @include assert('Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed. It can be reused and is not tied to any specific piece of UI. You will probably recognise this namespace from libraries and methodologies like SUIT.') {
+      @include output {
+        @include u('hidden') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .u-hidden {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('theme [mixin]') {
+    @include assert('Signify that a class is responsible for adding a Theme to a view. It lets us know that UI Components’ current cosmetic appearance may be due to the presence of a theme.') {
+      @include output {
+        @include theme('dark') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .t-dark {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('t [mixin]') {
+    @include assert('Signify that a class is responsible for adding a Theme to a view. It lets us know that UI Components’ current cosmetic appearance may be due to the presence of a theme.') {
+      @include output {
+        @include t('dark') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .t-dark {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('scope [mixin]') {
+    @include assert('Signify that a class creates a new styling context or Scope. Similar to a Theme, but not necessarily cosmetic, these should be used sparingly—they can be open to abuse and lead to poor CSS if not used wisely.') {
+      @include output {
+        @include scope('paper') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .s-paper {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('s [mixin]') {
+    @include assert('Signify that a class creates a new styling context or Scope. Similar to a Theme, but not necessarily cosmetic, these should be used sparingly—they can be open to abuse and lead to poor CSS if not used wisely.') {
+      @include output {
+        @include s('paper') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        .s-paper {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('is [mixin]') {
+    @include assert('Signify that the piece of UI in question is currently styled a certain way because of a state or condition. This stateful namespace is gorgeous, and comes from SMACSS. It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.') {
+      @include output {
+        @include is('active') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        &.is-active {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('has [mixin]') {
+    @include assert('Signify that the piece of UI in question is currently styled a certain way because of a state or condition. This stateful namespace is gorgeous, and comes from SMACSS. It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.') {
+      @include output {
+        @include has('child') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        &.has-child {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('js [mixin]') {
+    @include assert('Signify that this piece of the DOM has some behaviour acting upon it, and that JavaScript binds onto it to provide that behaviour. If you’re not a developer working with JavaScript, leave these well alone.') {
+      @include output {
+        @include js('carousel') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        &.js-carousel {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('hack [mixin]') {
+    @include assert('Signify that this class is the worst of the worst—a hack! Sometimes, although incredibly rarely, we need to add a class in our markup in order to force something to work. If we do this, we need to let others know that this class is less than ideal, and hopefully temporary (i.e. do not bind onto this).') {
+      @include output {
+        @include hack('clearfix') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        ._clearfix {
+          color: black;
+        }
+      }
+    }
+  }
+  
+  @include test('_ [mixin]') {
+    @include assert('Signify that this class is the worst of the worst—a hack! Sometimes, although incredibly rarely, we need to add a class in our markup in order to force something to work. If we do this, we need to let others know that this class is less than ideal, and hopefully temporary (i.e. do not bind onto this).') {
+      @include output {
+        @include _('clearfix') {
+          color: black;
+        }
+      }
+      
+      @include expect {
+        ._clearfix {
+          color: black;
+        }
+      }
+    }
+  }
+}
