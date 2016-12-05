@@ -2,6 +2,8 @@
 
 > **Please upgrade to version 2.6.0**, we have some great features. Thanks to @szalonna and @MartinN3 resolved issue in documentation and updated some mixins.
 
+> **TEST RESULTS:** `124 Tests, 82 Passed, 0 Failed, 42 Output to CSS`
+
 [![Bower](https://img.shields.io/bower/v/zgabievi/sass-bem.svg?style=flat-square)](http://bower.io/search/?q=sass-bem)
 [![NPM](https://img.shields.io/npm/v/sass-bem.svg?style=flat-square)](https://www.npmjs.com/package/sass-bem)
 
