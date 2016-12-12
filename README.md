@@ -85,7 +85,7 @@ Let's work on [Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/t
 `app.scss`
 
 ```scss
-@import "bower_components/sass-bem/bem";
+@import "node_modules/sass-bem/bem";
 
 // coding...
 @include object('media') { // or o('media')
