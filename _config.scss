@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "node_modules/sass-config/config";
+
 /// Default sass-bem configuration settings.
 ///
 /// @type map
@@ -31,94 +33,96 @@
 /// @access public
 
 $bem: (
-	'debug': false,
-	'separator': (
-		'element': "__",
-		'modifier': "--",
-		'state': "-",
-	),
-	'namespace': (
-		'component': "c",
-		'hack': "_",
-		'object': "o",
-		'scope': "s",
-		'test': "qa",
-		'theme': "t",
-		'utility': "u",
-	),
-	'shortcodes': (
-		'ab': ('before', 'after')
-	)
+  'debug': false,
+  'separator': (
+    'element': "__",
+    'modifier': "--",
+    'state': "-",
+  ),
+  'namespace': (
+    'component': "c",
+    'hack': "_",
+    'object': "o",
+    'scope': "s",
+    'test': "qa",
+    'theme': "t",
+    'utility': "u",
+  ),
+  'shortcodes': (
+    'ab': ('before', 'after')
+  )
 ) !default;
+
+@include config('bem', $bem);
 
 /// Turn debug mode on/off. To get outlines on selectors.
 ///
 /// @type Boolean
 
-$bem-debug: map-get($bem, 'debug') !default;
+$bem-debug: config('bem.debug') !default;
 
 /// Element separator from parent block.
 ///
 /// @type String
 
-$bem-element-separator: map-get(map-get($bem, 'separator'), 'element') !default;
+$bem-element-separator: config('bem.separator.element') !default;
 
 /// Modifier separator from parent block.
 ///
 /// @type String
 
-$bem-modifier-separator: map-get(map-get($bem, 'separator'), 'modifier') !default;
+$bem-modifier-separator: config('bem.separator.modifier') !default;
 
 /// States separator from parent block.
 ///
 /// @type String
 
-$bem-state-separator: map-get(map-get($bem, 'separator'), 'state') !default;
+$bem-state-separator: config('bem.separator.state') !default;
 
 /// Component selector namespace.
 ///
 /// @type String
 
-$bem-component-namespace: map-get(map-get($bem, 'namespace'), 'component') !default;
+$bem-component-namespace: config('bem.namespace.component') !default;
 
 /// Hack selector namespace.
 ///
 /// @type String
 
-$bem-hack-namespace: map-get(map-get($bem, 'namespace'), 'hack') !default;
+$bem-hack-namespace: config('bem.namespace.hack') !default;
 
 /// Object selector namespace.
 ///
 /// @type String
 
-$bem-object-namespace: map-get(map-get($bem, 'namespace'), 'object') !default;
+$bem-object-namespace: config('bem.namespace.object') !default;
 
 /// Scope selector namespace.
 ///
 /// @type String
 
-$bem-scope-namespace: map-get(map-get($bem, 'namespace'), 'scope') !default;
+$bem-scope-namespace: config('bem.namespace.scope') !default;
 
 /// Test selector namespace.
 ///
 /// @type String
 
-$bem-test-namespace: map-get(map-get($bem, 'namespace'), 'test') !default;
+$bem-test-namespace: config('bem.namespace.test') !default;
 
 /// Theme selector namespace.
 ///
 /// @type String
 
-$bem-theme-namespace: map-get(map-get($bem, 'namespace'), 'theme') !default;
+$bem-theme-namespace: config('bem.namespace.theme') !default;
 
 /// Utility selector namespace.
 ///
 /// @type String
 
-$bem-utility-namespace: map-get(map-get($bem, 'namespace'), 'utility') !default;
+$bem-utility-namespace: config('bem.namespace.utility') !default;
 
 /// Shortcodes list for parsing.
 ///
 /// @type List
 
-$bem-shortcodes: map-get($bem, 'shortcodes') !default;
+$bem-shortcodes: config('bem.shortcodes') !default;
