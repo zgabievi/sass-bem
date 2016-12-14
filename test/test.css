@@ -1,22 +1,51 @@
 /*
-Error: File to import not found or unreadable: true.
-        on line 2 of test.scss
-
-1: @import "../bem";
-2: @import "true";
-3: 
-4: $true-terminal-output: true;
-5: 
-6: @import "functions";
-7: @import "helpers";
+Error: sass-config package need to be imported before sass-bem package
+        on line 36 of ../src/_config.scss
+        from line 9 of ../_bem.scss
+        from line 1 of test.scss
 
 Backtrace:
-test.scss:2
-/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
-/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+../src/_config.scss:36
+../_bem.scss:9
+test.scss:1
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:226:in `visit_error'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `block (2 levels) in visit_if'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `map'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:301:in `block in visit_if'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:300:in `visit_if'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
 /Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 /Users/zgabievi/.rvm/gems/ruby-2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -56,4 +85,4 @@ test.scss:2
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: true.\A         on line 2 of test.scss\A \A 1: @import \"../bem\";\A 2: @import \"true\";\A 3: \A 4: $true-terminal-output: true;\A 5: \A 6: @import \"functions\";\A 7: @import \"helpers\";"; }
+  content: "Error: sass-config package need to be imported before sass-bem package\A         on line 36 of ../src/_config.scss\A         from line 9 of ../_bem.scss\A         from line 1 of test.scss"; }
