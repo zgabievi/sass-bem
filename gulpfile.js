@@ -1,4 +1,4 @@
-const { src, dest, parallel, watch } = require('gulp');
+const { src, watch } = require('gulp');
 const _sassdoc = require('sassdoc');
 const mocha = require('gulp-mocha');
 
