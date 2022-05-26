@@ -29,19 +29,19 @@
 		"tests"
 	],
 	"scripts": {
-		"test": "./node_modules/.bin/mocha --reporter spec",
-		"sass": "./node_modules/.bin/node-sass style.scss style.css",
-		"sassdoc": "./node_modules/.bin/node-sass style.scss style.css"
+		"test": "mocha --reporter spec",
+		"sass": "sass style.scss style.css",
+		"sassdoc": "sass style.scss style.css"
 	},
 	"dependencies": {
 		"sass-config": "^1.1.1"
 	},
 	"devDependencies": {
-		"gulp": "^3.9.1",
-		"gulp-mocha": "^3.0.1",
-		"mocha": "^3.2.0",
-		"node-sass": "^3.13.0",
-		"sass-true": "^2.1.3",
-		"sassdoc": "^2.1.20"
+		"gulp": "^4.0.2",
+		"gulp-mocha": "^8.0.0",
+		"mocha": "^10.0.0",
+		"sass": "^1.52.1",
+		"sass-true": "^6.1.0",
+		"sassdoc": "^2.7.4"
 	}
 }

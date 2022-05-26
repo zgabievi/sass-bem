@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Selector of utility.
 ///
@@ -12,7 +13,7 @@
 /// @see {mixin} utility
 
 @function utility-selector($utility, $namespace) {
-  @return unquote(".#{$namespace}-#{$utility}");
+  @return string.unquote(".#{$namespace}-#{$utility}");
 }
 
 /// @alias utility-selector

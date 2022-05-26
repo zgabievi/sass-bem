@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@use "sass:string";
+@use "sass:list";
 
 /// Selector(s) of at relationship.
 ///
@@ -9,14 +11,14 @@
 /// @see {mixin} at
 
 @function at-selector($modifiers...) {
-  $block: get-block(unquote("#{&}"));
+  $block: get-block(string.unquote("#{&}"));
   $classes: ();
-  
+
   @each $modifier in $modifiers {
-    $classes: append($classes, unquote(".#{$block}#{$bem-modifier-separator}#{$modifier}"));
+    $classes: list.append($classes, string.unquote(".#{$block}#{$bem-modifier-separator}#{$modifier}"));
   }
-  
-  @return unquote("#{implode($classes)} &");
+
+  @return string.unquote("#{implode($classes)} &");
 }
 
 /// Selector of adjacent relationship.
@@ -28,9 +30,9 @@
 /// @see {mixin} next
 
 @function next-selector($element) {
-  $block: get-block(unquote("#{&}"));
-  
-  @return unquote("& + .#{$block}#{$bem-element-separator}#{$element}");
+  $block: get-block(string.unquote("#{&}"));
+
+  @return string.unquote("& + .#{$block}#{$bem-element-separator}#{$element}");
 }
 
 /// Selector of duo relationship.
@@ -40,15 +42,15 @@
 /// @see {mixin} duo
 
 @function duo-selector($debug: false) {
-  $list: explode(unquote("#{&}"), ' ');
-  
-  @if ($debug == true and length($list) == 0) {
+  $list: explode(string.unquote("#{&}"), ' ');
+
+  @if ($debug == true and list.length($list) == 0) {
     $list: ('&');
   }
-  
-  $last: nth($list, length($list));
-  
-  @return unquote("& + #{$last}");
+
+  $last: list.nth($list, list.length($list));
+
+  @return string.unquote("& + #{$last}");
 }
 
 /// Selector of sibling relationship.
@@ -60,9 +62,9 @@
 /// @see {mixin} with
 
 @function with-selector($element) {
-  $block: get-block(unquote("#{&}"));
-  
-  @return unquote("& ~ .#{$block}#{$bem-element-separator}#{$element}");
+  $block: get-block(string.unquote("#{&}"));
+
+  @return string.unquote("& ~ .#{$block}#{$bem-element-separator}#{$element}");
 }
 
 /// Selector(s) of while relationship.
@@ -74,7 +76,7 @@
 /// @see {mixin} while
 
 @function while-selector($modifier) {
-  $block: get-block(unquote("#{&}"));
-  
-  @return unquote("&.#{$block}#{$bem-modifier-separator}#{$modifier}");
+  $block: get-block(string.unquote("#{&}"));
+
+  @return string.unquote("&.#{$block}#{$bem-modifier-separator}#{$modifier}");
 }

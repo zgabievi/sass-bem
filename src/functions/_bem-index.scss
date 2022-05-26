@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Get index of separator.
 ///
@@ -11,30 +12,30 @@
 @function bem-index($string) {
   $e_index: null;
   $m_index: null;
-  
-  @if (str-index($string, unquote("#{$bem-element-separator}")) != null) {
-    $e_index: str-index($string, unquote("#{$bem-element-separator}"));
+
+  @if (string.index($string, string.unquote("#{$bem-element-separator}")) != null) {
+    $e_index: string.index($string, string.unquote("#{$bem-element-separator}"));
   }
-  
-  @if (str-index($string, unquote("#{$bem-modifier-separator}")) != null) {
-    $m_index: str-index($string, unquote("#{$bem-modifier-separator}"));
+
+  @if (string.index($string, string.unquote("#{$bem-modifier-separator}")) != null) {
+    $m_index: string.index($string, string.unquote("#{$bem-modifier-separator}"));
   }
-  
-  @if (str-index($string, ".is") != null) {
-    $m_index: str-index($string, ".is");
+
+  @if (string.index($string, ".is") != null) {
+    $m_index: string.index($string, ".is");
   }
-  
-  @if (str-index($string, ".js") != null) {
-    $m_index: str-index($string, ".js");
+
+  @if (string.index($string, ".js") != null) {
+    $m_index: string.index($string, ".js");
   }
-  
-  @if (str-index($string, ".has") != null) {
-    $m_index: str-index($string, ".has");
+
+  @if (string.index($string, ".has") != null) {
+    $m_index: string.index($string, ".has");
   }
-  
-  @if (str-index($string, ":") != null) {
-    $m_index: str-index($string, ":");
+
+  @if (string.index($string, ":") != null) {
+    $m_index: string.index($string, ":");
   }
-  
+
   @return math-min($e_index, $m_index, 0);
 }

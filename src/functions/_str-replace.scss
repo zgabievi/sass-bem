@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Replace string with another string.
 ///
@@ -11,11 +12,11 @@
 /// @returns {String}
 
 @function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  
+  $index: string.index($string, $search);
+
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
   }
-  
+
   @return $string;
 }

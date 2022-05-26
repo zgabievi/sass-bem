@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Selector of hack.
 ///
@@ -12,7 +13,7 @@
 /// @see {mixin} hack
 
 @function hack-selector($hack, $namespace) {
-  @return unquote(".#{$namespace}#{$hack}");
+  @return string.unquote(".#{$namespace}#{$hack}");
 }
 
 /// @alias hack-selector

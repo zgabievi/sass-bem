@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@use "sass:string";
+@use "sass:list";
+@use "sass:meta";
 
 /// Explode string to get list of strings.
 ///
@@ -11,22 +14,22 @@
 
 @function explode($string, $separator) {
   $list: ();
-  $length: str-length($string);
-  
+  $length: string.length($string);
+
   @for $i from 1 through $length {
-    $index: str-index($string, $separator);
-    
-    @if str-length($string) >= 1 and $index == null {
-      $list: append($list, $string);
+    $index: string.index($string, $separator);
+
+    @if string.length($string) >= 1 and $index == null {
+      $list: list.append($list, $string);
       $string: '';
     }
-    
-    @if type-of($index) == number {
-      $each: str-slice($string, 0, ($index - 1));
-      $list: append($list, $each);
-      $string: str-slice($string, ($index + 1), $length);
+
+    @if meta.type-of($index) == number {
+      $each: string.slice($string, 0, ($index - 1));
+      $list: list.append($list, $each);
+      $string: string.slice($string, ($index + 1), $length);
     }
   }
-  
+
   @return $list;
 }

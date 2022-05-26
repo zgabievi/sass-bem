@@ -9,7 +9,7 @@
     @include assert-equal(bem-index('.has-child'), 1, 'Get index of separator #7.');
     @include assert-equal(bem-index('.list::before'), 6, 'Get index of separator #8.');
   }
-  
+
   @include test('is-modifier [function]') {
     @include assert-false(is-modifier('.list'), 'Check if selector is modifier #1.');
     @include assert-false(is-modifier('.list__item'), 'Check if selector is modifier #2.');
@@ -20,7 +20,7 @@
     @include assert-false(is-modifier('.has-child'), 'Check if selector is modifier #7.');
     @include assert-false(is-modifier('.list::before'), 'Check if selector is modifier #8.');
   }
-  
+
   @include test('is-element [function]') {
     @include assert-false(is-element('.list'), 'Check if selector is element #1.');
     @include assert-true(is-element('.list__item'), 'Check if selector is element #2.');
@@ -31,7 +31,7 @@
     @include assert-false(is-element('.has-child'), 'Check if selector is element #7.');
     @include assert-false(is-element('.list::before'), 'Check if selector is element #8.');
   }
-  
+
   @include test('has-state [function]') {
     @include assert-false(has-state('.list'), 'Check if selector contains state #1.');
     @include assert-false(has-state('.list__item'), 'Check if selector contains state #2.');
@@ -42,7 +42,7 @@
     @include assert-true(has-state('.has-child'), 'Check if selector contains state #7.');
     @include assert-false(has-state('.list::before'), 'Check if selector contains state #8.');
   }
-  
+
   @include test('has-pseudo [function]') {
     @include assert-false(has-pseudo('.list'), 'Check if selector contains pseudo element #1.');
     @include assert-false(has-pseudo('.list__item'), 'Check if selector contains pseudo element #2.');
@@ -53,7 +53,7 @@
     @include assert-false(has-pseudo('.has-child'), 'Check if selector contains pseudo element #7.');
     @include assert-true(has-pseudo('.list::before'), 'Check if selector contains pseudo element #8.');
   }
-  
+
   @include test('is-block [function]') {
     @include assert-true(is-block('.list'), 'Check if selector is block #1.');
     @include assert-false(is-block('.list__item'), 'Check if selector is block #2.');
@@ -64,7 +64,7 @@
     @include assert-false(is-block('.has-child'), 'Check if selector is block #7.');
     @include assert-false(is-block('.list::before'), 'Check if selector is block #8.');
   }
-  
+
   @include test('get-block [function]') {
     @include assert-equal(get-block('.list'), 'list', 'Get block element from selector #1.');
     @include assert-equal(get-block('.list__item'), 'list', 'Get block element from selector #2.');
@@ -75,13 +75,13 @@
     @include assert-unequal(get-block('.has-child'), 'list', 'Get block element from selector #7.');
     @include assert-equal(get-block('.list::before'), 'list', 'Get block element from selector #8.');
   }
-  
+
   @include test('str-replace [function]') {
     @include assert-equal(str-replace('foobar', 'f'), 'oobar', 'Replace string with another string #1.');
     @include assert-equal(str-replace('foobar', 'oo'), 'fbar', 'Replace string with another string #2.');
     @include assert-equal(str-replace('foobar', 'r'), 'fooba', 'Replace string with another string #3.');
   }
-  
+
   @include test('math-min [function]') {
     @include assert-equal(math-min(1, 2), 1, 'Get minimum number from two of them, or get default #1.');
     @include assert-unequal(math-min(2, 3), 3, 'Get minimum number from two of them, or get default #2.');
@@ -89,20 +89,22 @@
     @include assert-equal(math-min(null, 3, 4), 3, 'Get minimum number from two of them, or get default #4.');
     @include assert-equal(math-min(null, 4, 5), 4, 'Get minimum number from two of them, or get default #5.');
   }
-  
+
   @include test('explode [function]') {
     @include assert-equal(explode('foo-bar-baz', '-'), ('foo' 'bar' 'baz'), 'Explode string to get list of strings #1.');
     @include assert-equal(explode('foo.bar', '.'), ('foo' 'bar'), 'Explode string to get list of strings #2.');
   }
-  
+
   @include test('implode [function]') {
     @include assert-equal(implode(('foo' 'bar' 'baz'), '-', true), 'foo-bar-baz-', 'Implode list to get string #1.');
     @include assert-equal(implode(('foo' 'bar' 'baz'), '-'), 'foo-bar-baz', 'Implode list to get string #2.');
     @include assert-equal(implode(('foo' 'bar'), '.'), 'foo.bar', 'Implode list to get string #3.');
   }
-  
+
   @include test('splice [function]') {
     @include assert-equal(splice(('foo' 'bar' 'baz'), 'bar', true), ('foo' 'baz'), 'Unset item from list #1.');
     @include assert-equal(splice(('foo' 'bar' 'baz'), 'bar'), ('foo' 'baz'), 'Unset item from list #2.');
+    @include assert-equal(splice(('foo' ('foo' 'bar' 'baz') 'baz'), 'bar', true), ('foo' ('foo' 'baz') 'baz'), 'Unset item from list #3.');
+    @include assert-equal(splice(('foo' ('foo' 'bar' 'baz') 'baz'), 'bar'), ('foo' ('foo' 'bar' 'baz') 'baz'), 'Unset item from list #4.');
   }
 }

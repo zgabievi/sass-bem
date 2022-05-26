@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Selector of theme.
 ///
@@ -12,7 +13,7 @@
 /// @see {mixin} theme
 
 @function theme-selector($theme, $namespace) {
-  @return unquote(".#{$namespace}-#{$theme}");
+  @return string.unquote(".#{$namespace}-#{$theme}");
 }
 
 /// @alias theme-selector

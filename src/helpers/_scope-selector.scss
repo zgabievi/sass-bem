@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Selector of scope.
 ///
@@ -12,7 +13,7 @@
 /// @see {mixin} scope
 
 @function scope-selector($scope, $namespace) {
-  @return unquote(".#{$namespace}-#{$scope}");
+  @return string.unquote(".#{$namespace}-#{$scope}");
 }
 
 /// @alias scope-selector

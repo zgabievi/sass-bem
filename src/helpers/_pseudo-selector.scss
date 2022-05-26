@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Pseudo selector with end of first-of-type.
 ///
@@ -9,7 +10,7 @@
 /// @see {mixin} first
 
 @function first-selector() {
-  @return unquote("&:first-of-type");
+  @return string.unquote("&:first-of-type");
 }
 
 /// Pseudo selector with end of last-of-type.
@@ -21,7 +22,7 @@
 /// @see {mixin} last
 
 @function last-selector() {
-  @return unquote("&:last-of-type");
+  @return string.unquote("&:last-of-type");
 }
 
 /// Pseudo selector with end of nth-child(even).
@@ -33,7 +34,7 @@
 /// @see {mixin} even
 
 @function even-selector() {
-  @return unquote("&:nth-child(even)");
+  @return string.unquote("&:nth-child(even)");
 }
 
 /// Pseudo selector with end of nth-child(odd).
@@ -45,7 +46,7 @@
 /// @see {mixin} odd
 
 @function odd-selector() {
-  @return unquote("&:nth-child(odd)");
+  @return string.unquote("&:nth-child(odd)");
 }
 
 /// Pseudo selector with end of before.
@@ -57,7 +58,7 @@
 /// @see {mixin} before
 
 @function before-selector() {
-  @return unquote("&::before");
+  @return string.unquote("&::before");
 }
 
 /// Pseudo selector with end of after.
@@ -69,5 +70,5 @@
 /// @see {mixin} after
 
 @function after-selector() {
-  @return unquote("&::after");
+  @return string.unquote("&::after");
 }

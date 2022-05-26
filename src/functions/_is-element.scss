@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Check if selector is element.
 ///
@@ -9,7 +10,7 @@
 /// @returns {Boolean}
 
 @function is-element($selector) {
-  $separator: unquote("#{$bem-element-separator}");
-  
-  @return str-index($selector, $separator) != null;
+  $separator: string.unquote("#{$bem-element-separator}");
+
+  @return string.index($selector, $separator) != null;
 }

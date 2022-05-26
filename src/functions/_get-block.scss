@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Get block element from selector.
 ///
@@ -9,11 +10,11 @@
 /// @returns {String} - Block element
 
 @function get-block($selector) {
-  $block: str-slice($selector, 2, bem-index($selector) - 1);
-  
+  $block: string.slice($selector, 2, bem-index($selector) - 1);
+
   @while (is-block($block) == false) {
-    $block: str-slice($block, 0, bem-index($block) - 1);
+    $block: string.slice($block, 0, bem-index($block) - 1);
   }
-  
+
   @return $block;
 }

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Check if selector contains pseudo element.
 ///
@@ -9,5 +10,5 @@
 /// @returns {Boolean}
 
 @function has-pseudo($selector) {
-  @return str-index($selector, ":") != null;
+  @return string.index($selector, ":") != null;
 }

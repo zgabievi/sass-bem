@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Check if selector is modifier.
 ///
@@ -9,7 +10,7 @@
 /// @returns {Boolean}
 
 @function is-modifier($selector) {
-  $separator: unquote("#{$bem-modifier-separator}");
-  
-  @return str-index($selector, $separator) != null;
+  $separator: string.unquote("#{$bem-modifier-separator}");
+
+  @return string.index($selector, $separator) != null;
 }

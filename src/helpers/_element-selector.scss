@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@use "sass:string";
+@use "sass:list";
+@use "sass:meta";
 
 /// Selector of element.
 ///
@@ -13,36 +16,36 @@
 
 @function element-selector($element, $nested: false) {
   $selector: '';
-  $parent: unquote("#{&}");
-  
+  $parent: string.unquote("#{&}");
+
   @if ($nested == true) {
-    $selector: unquote("&#{$bem-element-separator}#{$element}");
+    $selector: string.unquote("&#{$bem-element-separator}#{$element}");
   } @else {
     @if (is-block($parent)) {
-      $selector: unquote("&#{$bem-element-separator}#{$element}");
+      $selector: string.unquote("&#{$bem-element-separator}#{$element}");
     } @else {
       $block: get-block($parent);
-      $selector: unquote("& .#{$block}#{$bem-element-separator}#{$element}");
+      $selector: string.unquote("& .#{$block}#{$bem-element-separator}#{$element}");
     }
-    
-    @if (type-of($element) == 'list') {
+
+    @if (meta.type-of($element) == 'list') {
       $selector: ();
-      
+
       @each $value in $element {
         $current: '';
-        
+
         @if (is-block($parent)) {
-          $current: unquote("&#{$bem-element-separator}#{$value}");
+          $current: string.unquote("&#{$bem-element-separator}#{$value}");
         } @else {
           $block: get-block($parent);
-          $current: unquote("& .#{$block}#{$bem-element-separator}#{$value}");
+          $current: string.unquote("& .#{$block}#{$bem-element-separator}#{$value}");
         }
-        
-        $selector: append($selector, $current, comma);
+
+        $selector: list.append($selector, $current, comma);
       }
     }
   }
-  
+
   @return $selector;
 }
 

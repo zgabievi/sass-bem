@@ -28,7 +28,7 @@
     @if $bem-debug == true {
       outline: 5px solid #00b8a9;
     }
-    
+
     @content;
   }
 }

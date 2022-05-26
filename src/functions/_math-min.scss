@@ -12,7 +12,7 @@
 
 @function math-min($a, $b, $default: 0) {
   $min: $default;
-  
+
   @if ($a == null) {
     @if ($b != null) {
       $min: $b;
@@ -26,6 +26,6 @@
       $min: $b;
     }
   }
-  
+
   @return $min;
 }

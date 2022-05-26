@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Selector of state.
 ///
@@ -12,13 +13,13 @@
 /// @see {mixin} state
 
 @function state-selector($state, $namespace: null) {
-  $selector: unquote("&.#{$state}");
-  
+  $selector: string.unquote("&.#{$state}");
+
   //
   @if $namespace != null {
-    $selector: unquote("&.#{$namespace}-#{$state}");
+    $selector: string.unquote("&.#{$namespace}-#{$state}");
   }
-  
+
   @return $selector;
 }
 

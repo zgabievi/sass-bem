@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Selector of component.
 ///
@@ -12,7 +13,7 @@
 /// @see {mixin} component
 
 @function component-selector($component, $namespace) {
-  @return unquote(".#{$namespace}-#{$component}");
+  @return string.unquote(".#{$namespace}-#{$component}");
 }
 
 /// @alias component-selector

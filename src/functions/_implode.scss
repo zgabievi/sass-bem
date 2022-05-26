@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@use "sass:list";
+@use "sass:string";
+@use "sass:meta";
 
 /// Implode list to get string.
 ///
@@ -12,16 +15,16 @@
 
 @function implode($list, $glue: '', $is-nested: false) {
   $result: null;
-  
-  @for $i from 1 through length($list) {
-    $e: nth($list, $i);
-    
-    @if type-of($e) == list {
-      $result: unquote("#{$result}#{implode($e, $glue, true)}");
+
+  @for $i from 1 through list.length($list) {
+    $e: list.nth($list, $i);
+
+    @if meta.type-of($e) == list {
+      $result: string.unquote("#{$result}#{implode($e, $glue, true)}");
     } @else {
-      $result: if($i != length($list) or $is-nested, unquote("#{$result}#{$e}#{$glue}"), unquote("#{$result}#{$e}"));
+      $result: if($i != list.length($list) or $is-nested, string.unquote("#{$result}#{$e}#{$glue}"), string.unquote("#{$result}#{$e}"));
     }
   }
-  
+
   @return $result;
 }

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@use "sass:meta";
+@use "sass:list";
 
 /// Unset item from list.
 ///
@@ -12,14 +14,14 @@
 
 @function splice($list, $value, $recursive: false) {
   $result: ();
-  
-  @for $i from 1 through length($list) {
-    @if type-of(nth($list, $i)) == list and $recursive {
-      $result: append($result, remove(nth($list, $i), $value, $recursive));
-    } @else if nth($list, $i) != $value {
-      $result: append($result, nth($list, $i));
+
+  @for $i from 1 through list.length($list) {
+    @if meta.type-of(list.nth($list, $i)) == list and $recursive {
+      $result: list.append($result, splice(list.nth($list, $i), $value, $recursive));
+    } @else if list.nth($list, $i) != $value {
+      $result: list.append($result, list.nth($list, $i));
     }
   }
-  
+
   @return $result;
 }

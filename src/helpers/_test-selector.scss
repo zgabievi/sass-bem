@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Selector of test.
 ///
@@ -12,7 +13,7 @@
 /// @see {mixin} test
 
 @function test-selector($test, $namespace) {
-  @return unquote(".#{$namespace}-#{$test}");
+  @return string.unquote(".#{$namespace}-#{$test}");
 }
 
 /// @alias test-selector

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:string";
 
 /// Pseudo selector with end of hover.
 ///
@@ -9,7 +10,7 @@
 /// @see {mixin} hover
 
 @function hover-selector() {
-  @return unquote("&:hover");
+  @return string.unquote("&:hover");
 }
 
 /// Pseudo selector with end of focus.
@@ -21,7 +22,7 @@
 /// @see {mixin} focus
 
 @function focus-selector() {
-  @return unquote("&:focus");
+  @return string.unquote("&:focus");
 }
 
 /// Pseudo selector with end of active.
@@ -33,7 +34,7 @@
 /// @see {mixin} active
 
 @function active-selector() {
-  @return unquote("&:active");
+  @return string.unquote("&:active");
 }
 
 /// Pseudo selector with end of link.
@@ -45,7 +46,7 @@
 /// @see {mixin} link
 
 @function link-selector() {
-  @return unquote("&:link");
+  @return string.unquote("&:link");
 }
 
 /// Pseudo selector with end of visited.
@@ -57,7 +58,7 @@
 /// @see {mixin} visited
 
 @function visited-selector() {
-  @return unquote("&:visited");
+  @return string.unquote("&:visited");
 }
 
 /// Pseudo selector with end of checked.
@@ -69,7 +70,7 @@
 /// @see {mixin} checked
 
 @function checked-selector() {
-  @return unquote("&:checked");
+  @return string.unquote("&:checked");
 }
 
 /// Selector with state of disabled.
@@ -81,7 +82,7 @@
 /// @see {mixin} disabled
 
 @function disabled-selector() {
-  @return unquote("&[disabled]");
+  @return string.unquote("&[disabled]");
 }
 
 /// Selector with state of readonly.
@@ -93,7 +94,7 @@
 /// @see {mixin} readonly
 
 @function readonly-selector() {
-  @return unquote("&[readonly]");
+  @return string.unquote("&[readonly]");
 }
 
 /// Selector with state of contenteditable.
@@ -105,7 +106,7 @@
 /// @see {mixin} contenteditable
 
 @function contenteditable-selector() {
-  @return unquote("&[contenteditable='true']");
+  @return string.unquote("&[contenteditable='true']");
 }
 
 /// @alias contenteditable-selector

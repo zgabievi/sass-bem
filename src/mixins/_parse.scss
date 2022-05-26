@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@use "sass:map";
+@use "sass:string";
+@use "sass:list";
+@use "sass:meta";
 
 /// Parse multiple mixins, pseudo elements and other states.
 ///
@@ -19,54 +23,54 @@
 /// @throws Mixin doesn't exist
 
 @mixin parse($selectors...) {
-  $parent: unquote("#{&}");
+  $parent: string.unquote("#{&}");
   $collection: ();
-  
+
   @each $selector in $selectors {
-    @if (map-get($bem-shortcodes, $selector)) {
+    @if (map.get($bem-shortcodes, $selector)) {
       $selectors: splice($selectors, $selector);
-      
-      @each $mixin in map-get($bem-shortcodes, $selector) {
-        $selectors: append($selectors, $mixin);
+
+      @each $mixin in map.get($bem-shortcodes, $selector) {
+        $selectors: list.append($selectors, $mixin);
       }
     }
   }
-  
+
   @each $selector in $selectors {
     $parts: explode($selector, ':');
-    
-    @if (str-length(nth($parts, 1)) == 0) {
-      $selector: unquote("#{$parent}:#{nth($parts, 2)}");
-    } @else if (length($parts) == 1) {
-      $item: nth($parts, 1);
-      
-      @if (str-index(quote($item), quote('&'))) {
-        $selector: unquote("#{str-replace(quote($item), quote('&'), quote($parent))}");
+
+    @if (string.length(list.nth($parts, 1)) == 0) {
+      $selector: string.unquote("#{$parent}:#{list.nth($parts, 2)}");
+    } @else if (list.length($parts) == 1) {
+      $item: list.nth($parts, 1);
+
+      @if (string.index(string.quote($item), string.quote('&'))) {
+        $selector: string.unquote("#{str-replace(string.quote($item), string.quote('&'), string.quote($parent))}");
       } @else {
-        @if mixin-exists(nth($parts, 1)) {
-          $selector: call(unquote("#{$item}-selector"));
+        @if mixin-exists(list.nth($parts, 1)) {
+          $selector: meta.call(map.get-function(string.unquote("#{$item}-selector")));
         } @else {
-          $selector: unquote("#{$parent}#{$item}");
+          $selector: string.unquote("#{$parent}#{$item}");
         }
       }
     } @else {
       $item: implode($parts, ':');
-      
-      @if (str-index(quote($item), quote('&'))) {
-        $selector: unquote("#{str-replace(quote($item), quote('&'), quote($parent))}");
+
+      @if (string.index(string.quote($item), string.quote('&'))) {
+        $selector: string.unquote("#{str-replace(string.quote($item), string.quote('&'), string.quote($parent))}");
       } @else {
-        @if mixin-exists(nth($parts, 1)) {
-          $function: unquote("#{nth($parts, 1)}-selector");
-          $selector: call($function, nth($parts, 2));
+        @if mixin-exists(list.nth($parts, 1)) {
+          $function: meta.get-function(string.unquote("#{list.nth($parts, 1)}-selector"));
+          $selector: meta.call($function, list.nth($parts, 2));
         } @else {
-          @error "Mixin #{nth($parts, 1)} doesn't exists!";
+          @error "Mixin #{list.nth($parts, 1)} doesn't exists!";
         }
       }
     }
-    
-    $collection: append($collection, $selector);
+
+    $collection: list.append($collection, $selector);
   }
-  
+
   @at-root {
     #{implode($collection, ', ')} {
       @content;
