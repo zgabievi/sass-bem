@@ -1,6 +1,6 @@
 {
 	"name": "sass-bem-next",
-	"version": "2.6.5",
+	"version": "3.0.0",
 	"description": "Amazing package for sass to write bem classes, with namespaces and more advanced features.",
 	"main": "_bem.scss",
 	"repository": {
