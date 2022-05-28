@@ -1,11 +1,11 @@
 {
-	"name": "sass-bem",
+	"name": "sass-bem-next",
 	"version": "2.6.5",
 	"description": "Amazing package for sass to write bem classes, with namespaces and more advanced features.",
 	"main": "_bem.scss",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zgabievi/sass-bem.git"
+		"url": "git+https://github.com/savoygu/sass-bem-next.git"
 	},
 	"keywords": [
 		"bem",
@@ -15,11 +15,14 @@
 		"helpers"
 	],
 	"author": "zgabievi <zura.gabievi@gmail.com>",
+	"contributors": [
+		"savoygu <1029559886@qq.com>"
+	],
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/zgabievi/sass-bem/issues"
+		"url": "https://github.com/savoygu/sass-bem-next/issues"
 	},
-	"homepage": "https://github.com/zgabievi/sass-bem#readme",
+	"homepage": "https://github.com/savoygu/sass-bem-next#readme",
 	"ignore": [
 		"**/.*",
 		"node_modules",

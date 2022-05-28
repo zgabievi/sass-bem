@@ -1,10 +1,11 @@
 {
-  "name": "sass-bem",
+  "name": "sass-bem-next",
   "version": "2.6.5",
   "main": "_bem.scss",
   "description": "Amazing package for sass to write bem classes, with namespaces and more advanced features.",
   "authors": [
-    "zgabievi <zura.gabievi@gmail.com>"
+    "zgabievi <zura.gabievi@gmail.com>",
+    "savoygu <1029559886@qq.com>"
   ],
   "license": "MIT",
   "ignore": [
