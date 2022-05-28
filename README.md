@@ -1,3 +1,12 @@
+<p>
+  <a href="https://www.npmjs.com/package/sass-bem-next" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/sass-bem-next.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/sass-bem-next" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/dt/sass-bem-next">
+  </a>
+</p>
+
 # sass-bem-next
 
 [sass-bem v2.6.5](./README.v2.6.5.md)
