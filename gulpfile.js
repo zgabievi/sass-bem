@@ -23,7 +23,8 @@ function sassdoc(done) {
     './src/functions/*.scss'
   ]).pipe(
     _sassdoc({
-      dest: 'gh-pages',
+      theme: 'default-next',
+      dest: 'docs',
       verbose: true,
       display: {
         access: ['public', 'private'],

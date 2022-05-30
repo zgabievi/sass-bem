@@ -2,7 +2,7 @@
 .sass-cache/
 test/.sass-cache/
 node_modules/
-gh-pages/
+docs/
 coverage/
 
 **/.DS_Store
