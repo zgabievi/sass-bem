@@ -33,8 +33,7 @@
 	],
 	"scripts": {
 		"test": "mocha --reporter spec",
-		"sass": "sass style.scss style.css",
-		"sassdoc": "sass style.scss style.css"
+		"docs:build": "gulp sassdoc"
 	},
 	"dependencies": {
 		"sass-config": "^1.1.1"
